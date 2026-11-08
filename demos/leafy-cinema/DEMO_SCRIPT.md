@@ -53,7 +53,7 @@ aggregation example.
 - `stage/prompts.txt` open. Paste the prompts; don't type them.
 - A terminal at the project root for the live insert (the connection string loads from `.env`).
 - A recording of your own dry run, in case Copilot stalls. The repo does not include one.
-- The film from your last rehearsal is removed. If you rehearsed since you last ran it, run:
+- The film from your last rehearsal is gone. If you are not sure, run:
 
   ```bash
   .venv/bin/python demos/leafy-cinema/scripts/live_insert.py --undo
