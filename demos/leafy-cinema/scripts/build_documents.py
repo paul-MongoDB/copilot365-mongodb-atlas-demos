@@ -1,0 +1,223 @@
+"""Build the Word documents for the movie demo, and the Teams post sheet.
+
+    python demos/leafy-cinema/scripts/build_documents.py
+        ->  onedrive/*.docx            (upload these to OneDrive)
+        ->  teams/TEAMS_MESSAGES.md    (post these in Teams)
+        ->  fallback/Hidden Gems channel export.docx   (upload only if Teams is not indexed)
+
+All wording is original and fictional. Leafy Cinema is not a real business.
+"""
+
+from __future__ import annotations
+
+from datetime import datetime
+from pathlib import Path
+
+from docx import Document
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.shared import Inches, Pt, RGBColor
+
+ROOT = Path(__file__).resolve().parent.parent
+FOOTER = "Leafy Cinema. Fictional document created for a product demonstration."
+TEAM, CHANNEL = "Leafy Cinema (DEMO)", "Hidden Gems"
+
+# (subject, sender, role, date, paragraphs, bullets). Bullets follow the paragraphs.
+POSTS = [
+    ("Hidden Gems winter series: draft lineup", "Helen Marsh", "General Manager", "Mon Oct 26",
+     ["Team, here is my draft for the winter Hidden Gems series, one film each Friday:"],
+     ["Song of the Sea (2014)", "'71 (2014)", "Murderball (2005)", "Leviathan (2014, the Russian drama)",
+      "The Fog of War (2003)", "Wings of Desire (1987)"],
+     ["The license budget for the whole series is $4,800. The guidelines and the rate card are in OneDrive. "
+      "I sign the contracts on Friday, so Paul, please check this before then."]),
+    ("A customer is trying to remember a movie", "Dana Whitaker", "Box Office Lead", "Tue Oct 27",
+     ["A customer at the box office tonight is desperate to find a movie she saw years ago. She cannot "
+      "remember the title. This is how she described it: \"It is about angels who watch over a city and "
+      "can hear what everyone is thinking. One of them wants to become human because he falls in love "
+      "with a trapeze artist.\"",
+      "She says she would buy tickets for the whole series if we showed it. Does anyone recognize it?"],
+     [], []),
+    ("Bring back The Fog of War?", "Sam Porter", "Marketing", "Wed Oct 28",
+     ["The Fog of War sold out last year and people still ask me about it. Can we put it back in this "
+      "year's series? It is the easiest film we have ever sold."],
+     [], []),
+    ("Friday show length limit", "Walt Kessler", "Head Projectionist", "Thu Oct 29",
+     ["Reminder for whoever picks the films: the Friday 7:30 show has to be out of the building by 10:00 pm "
+      "because of the new curfew. That means nothing longer than 125 minutes."],
+     [], []),
+]
+
+
+def new_doc(title: str, subtitle: str, created=datetime(2026, 9, 14, 9, 0), modified=datetime(2026, 10, 26, 9, 0)) -> Document:
+    doc = Document()
+    style = doc.styles["Normal"]
+    style.font.name = "Calibri"
+    style.font.size = Pt(10.5)
+    p = doc.add_paragraph()
+    r = p.add_run("LEAFY CINEMA")
+    r.bold = True
+    r.font.size = Pt(9)
+    r.font.color.rgb = RGBColor(0x00, 0x68, 0x4A)
+    doc.add_heading(title, level=0)
+    s = doc.add_paragraph(subtitle)
+    s.runs[0].italic = True
+    cp = doc.core_properties  # python-docx defaults to 2013 and 'python-docx'; Copilot shows these
+    cp.author = cp.last_modified_by = "Leafy Cinema Programming"
+    cp.title = title
+    cp.created, cp.modified = created, modified
+    footer = doc.sections[0].footer.paragraphs[0]
+    footer.text = FOOTER
+    footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    footer.runs[0].font.size = Pt(8)
+    return doc
+
+
+def numbered(doc: Document, *items: str) -> None:
+    # Literal numbers, so "rule 2" means the same thing in Word, PDF and Copilot's text extract.
+    for i, t in enumerate(items, 1):
+        p = doc.add_paragraph(f"{i}.\t{t}")
+        p.paragraph_format.left_indent = Inches(0.35)
+        p.paragraph_format.first_line_indent = Inches(-0.25)
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(0.35))
+
+
+def table(doc: Document, header: list[str], rows: list[list[str]]) -> None:
+    t = doc.add_table(rows=1, cols=len(header))
+    t.style = "Light Grid Accent 1"
+    for cell, h in zip(t.rows[0].cells, header):
+        cell.text = h
+        cell.paragraphs[0].runs[0].bold = True
+    for row in rows:
+        for cell, v in zip(t.add_row().cells, row):
+            cell.text = v
+    doc.add_paragraph()
+
+
+def guidelines() -> None:
+    doc = new_doc("Hidden Gems Series: Programming Guidelines",
+                  "Applies to every Hidden Gems series. Owner: Programming. Last updated October 2026.")
+    doc.add_heading("1. What counts as a hidden gem", level=1)
+    doc.add_paragraph("A hidden gem is a film that critics love and most people have never heard of. A film "
+                      "qualifies only if both of these are true in the film catalog:")
+    numbered(doc,
+             "The critic score is 95% or higher, based on at least 40 critic reviews.",
+             "The film has fewer than 50,000 IMDb votes.")
+    doc.add_heading("2. Rules for every six-film series", level=1)
+    numbered(doc,
+             "Six films, one each Friday.",
+             "At most two of the six films may be rated R.",
+             "At least two of the six films must have a first-listed language other than English.",
+             "No more than one film per director.",
+             "No film that played in last year's series. The list is in the document Past Series Lineups.",
+             "The total of the license fees must stay within the budget the General Manager sets for "
+             "the series. License fees come from the Film License Rate Card.")
+    doc.add_heading("3. Show length", level=1)
+    doc.add_paragraph("Show length depends on the building schedule, which changes. The Head Projectionist "
+                      "posts the current limit in the Hidden Gems channel. Check the channel before you "
+                      "finalize a lineup.")
+    doc.add_heading("4. Review before signing", level=1)
+    doc.add_paragraph("The Programming Manager checks every draft lineup against sections 1 to 3 before the "
+                      "General Manager signs the license contracts. An exception to any rule needs the "
+                      "General Manager's written approval.")
+    doc.save(ROOT / "onedrive" / "Hidden Gems Programming Guidelines.docx")
+
+
+def rate_card() -> None:
+    doc = new_doc("Film License Rate Card 2026",
+                  "What a distributor charges Leafy Cinema for one Friday screening of one film.")
+    doc.add_paragraph("The fee depends on the year the film was released, as shown in the film catalog. "
+                      "Older films cost less because the distributors have already earned back their costs.")
+    table(doc, ["Release year", "License fee per film"], [
+        ["Before 1970", "$500"],
+        ["1970 to 1989", "$650"],
+        ["1990 to 1999", "$750"],
+        ["2000 to 2009", "$850"],
+        ["2010 and later", "$1,000"],
+    ])
+    doc.add_heading("Notes", level=1)
+    doc.add_paragraph("The fee covers one screening. Fees are not negotiable and there are no volume discounts. "
+                      "Payment is due 30 days after the screening.")
+    doc.save(ROOT / "onedrive" / "Film License Rate Card 2026.docx")
+
+
+def past_lineups() -> None:
+    doc = new_doc("Hidden Gems: Past Series Lineups",
+                  "Films that already played at Leafy Cinema. Used to avoid repeats.")
+    doc.add_heading("Last year's series (winter 2026)", level=1)
+    table(doc, ["Friday", "Film", "Year", "Attendance"], [
+        ["Jan 9", "Spellbound", "2002", "168 of 212 seats"],
+        ["Jan 16", "The Man Without a Past", "2002", "141 of 212 seats"],
+        ["Jan 23", "The Fog of War", "2003", "212 of 212 seats (sold out)"],
+        ["Jan 30", "Wadjda", "2012", "157 of 212 seats"],
+        ["Feb 6", "Winged Migration", "2001", "176 of 212 seats"],
+        ["Feb 13", "Monsieur Lazhar", "2011", "149 of 212 seats"],
+    ])
+    doc.add_paragraph("Under the programming guidelines, none of these six films may play again this year.")
+    doc.save(ROOT / "onedrive" / "Hidden Gems Past Series Lineups.docx")
+
+
+def channel_export() -> None:
+    """Fallback only: the Teams posts as a Word file, in case Teams is not indexed yet.
+    Written to fallback/, not onedrive/, so it is never uploaded by accident."""
+    doc = new_doc(f"{CHANNEL} channel export",
+                  f"Team: {TEAM}. Channel: {CHANNEL}. Posts in the order they were made.",
+                  created=datetime(2026, 10, 29, 17, 0), modified=datetime(2026, 10, 29, 17, 0))
+    for subject, sender, role, date, paras, bullets, tail in POSTS:
+        doc.add_heading(subject, level=2)
+        doc.add_paragraph(f"Posted by {sender} ({role}), {date}").runs[0].italic = True
+        for t in paras:
+            doc.add_paragraph(t)
+        for b in bullets:
+            doc.add_paragraph(b, style="List Bullet")
+        for t in tail:
+            doc.add_paragraph(t)
+    out = ROOT / "fallback"
+    out.mkdir(exist_ok=True)
+    doc.save(out / f"{CHANNEL} channel export.docx")
+
+
+def teams_sheet() -> None:
+    lines = [
+        "# Teams messages to seed before the demo", "",
+        "**Post these at least two days before the demo.** On 2026-11-02, Teams posts were still not",
+        "searchable by Copilot several hours after posting. If they are still missing on the day,",
+        f"upload `fallback/{CHANNEL} channel export.docx` to OneDrive. It holds the same posts.", "",
+        f"**Where:** create a team called **{TEAM}** with a standard channel called **{CHANNEL}**.",
+        "Use the exact names. The expected answers do not depend on them, but the export file does.", "",
+        "**Who posts:** if you post everything yourself, start each message with the italic line under",
+        "its sender (for example \"Posting for Helen Marsh, General Manager:\"). Copilot still finds the",
+        "facts and attributes them to the right person.", "",
+        "Each post needs a **subject**. Use the subject given in the heading. Do not reword titles,",
+        "years, minutes or dollar amounts. The expected answers in `DEMO_SCRIPT.md` depend on them.",
+        "", "---", ""]
+    for i, (subject, sender, role, date, paras, bullets, tail) in enumerate(POSTS, 1):
+        lines += [f"## Post {i}: {subject}", "",
+                  f"**From:** {sender} ({role})", f"*Solo prefix: \"Posting for {sender}, {role}:\"*",
+                  f"**Subject:** {subject}", ""]
+        body = []
+        for t in paras:
+            body += [f"> {t}", ">"]
+        for b in bullets:
+            body.append(f"> - {b}")
+        if bullets:
+            body.append(">")
+        for t in tail:
+            body += [f"> {t}", ">"]
+        lines += body[:-1] if body and body[-1] == ">" else body
+        lines += ["", "---", ""]
+    (ROOT / "teams" / "TEAMS_MESSAGES.md").write_text("\n".join(lines))
+
+
+def main() -> None:
+    for d in ("onedrive", "teams", "fallback"):
+        (ROOT / d).mkdir(exist_ok=True)
+    guidelines()
+    rate_card()
+    past_lineups()
+    channel_export()
+    teams_sheet()
+    for p in sorted((ROOT / "onedrive").glob("*.docx")):
+        print(p.name)
+
+
+if __name__ == "__main__":
+    main()

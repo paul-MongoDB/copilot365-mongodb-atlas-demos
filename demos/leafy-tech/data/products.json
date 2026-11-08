@@ -1,0 +1,8619 @@
+[
+ {
+  "sku": "FB-MB14C",
+  "name": "Fabrikam MedBook 14 Clinical",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1800,
+  "cost": 1350,
+  "status": "active",
+  "description": "A 14-inch notebook made for hospital floors. The sealed antimicrobial chassis stands up to repeated cleaning with disinfectant wipes. Two hot-swappable batteries keep it running through long clinical rounds without a shutdown, and it is drop-tested to four feet. Locks onto mobile workstations.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 150,
+    "reserved": 0,
+    "available": 150
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 240,
+    "reserved": 100,
+    "available": 140
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 30,
+    "reserved": 0,
+    "available": 30
+   }
+  ]
+ },
+ {
+  "sku": "WT-CD1",
+  "name": "Wingtip CartDock G1",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 200,
+  "cost": 140,
+  "status": "end_of_life",
+  "description": "First-generation locking dock for mobile workstations. Fits the G1 cart mount only. Discontinued by the vendor; replaced by the CartDock G2.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 0,
+    "reserved": 0,
+    "available": 0
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 12,
+    "reserved": 0,
+    "available": 12
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 0,
+    "reserved": 0,
+    "available": 0
+   }
+  ],
+  "replaced_by": "WT-CD2"
+ },
+ {
+  "sku": "WT-CD2",
+  "name": "Wingtip CartDock G2",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 220,
+  "cost": 155,
+  "status": "active",
+  "description": "Locking dock with charging and network pass-through. Fits the G2 cart mount.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 420,
+    "reserved": 0,
+    "available": 420
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 180,
+    "reserved": 0,
+    "available": 180
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 60,
+    "reserved": 0,
+    "available": 60
+   }
+  ]
+ },
+ {
+  "sku": "FB-W3",
+  "name": "Fabrikam 3-Year Onsite Warranty",
+  "vendor": "Fabrikam",
+  "category": "Warranties",
+  "list_price": 120,
+  "cost": 80,
+  "status": "active",
+  "description": "Three years of next-business-day onsite repair for Fabrikam notebooks.",
+  "stock": []
+ },
+ {
+  "sku": "FB-W4",
+  "name": "Fabrikam 4-Year Onsite Warranty",
+  "vendor": "Fabrikam",
+  "category": "Warranties",
+  "list_price": 160,
+  "cost": 105,
+  "status": "active",
+  "description": "Four years of next-business-day onsite repair for Fabrikam notebooks.",
+  "stock": []
+ },
+ {
+  "sku": "LT-IMG",
+  "name": "Leafy Tech Imaging and Asset Tagging",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 45,
+  "cost": 30,
+  "status": "active",
+  "description": "Leafy Tech loads the customer's standard software image on each device and applies an asset tag before shipping. Priced per device.",
+  "stock": []
+ },
+ {
+  "sku": "FB-MB13C",
+  "name": "Fabrikam MedBook 13 Clinical",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1500,
+  "cost": 1140,
+  "status": "end_of_life",
+  "description": "The previous 13-inch clinical notebook. Wipeable keyboard and a single battery. Suited to shared desks on hospital wards.",
+  "stock": [
+   {
+    "warehouse": "Dallas",
+    "on_hand": 25,
+    "reserved": 0,
+    "available": 25
+   }
+  ],
+  "replaced_by": "FB-MB14C"
+ },
+ {
+  "sku": "FB-FP13",
+  "name": "Fabrikam FieldPro 13 Rugged",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2400,
+  "cost": 1820,
+  "status": "active",
+  "description": "A fully rugged notebook for utility crews and field technicians. Sealed against rain, mud and dust, with a sunlight-readable screen and a carry handle for work outdoors.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 60,
+    "reserved": 0,
+    "available": 60
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 45,
+    "reserved": 0,
+    "available": 45
+   }
+  ]
+ },
+ {
+  "sku": "FB-MT11",
+  "name": "Fabrikam MedTab 11",
+  "vendor": "Fabrikam",
+  "category": "Tablets",
+  "list_price": 1100,
+  "cost": 830,
+  "status": "active",
+  "description": "An 11-inch tablet for bedside charting. Light enough to carry in one hand, with a barcode scanner for wristbands and medication labels.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 90,
+    "reserved": 0,
+    "available": 90
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 70,
+    "reserved": 0,
+    "available": 70
+   }
+  ]
+ },
+ {
+  "sku": "FB-AIO22",
+  "name": "Fabrikam CareView 22 All-in-One",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1300,
+  "cost": 960,
+  "status": "active",
+  "description": "A 22-inch all-in-one computer for nurses' stations. Fanless design with an easy-clean glass front, mounted on a wall arm.",
+  "stock": [
+   {
+    "warehouse": "Dallas",
+    "on_hand": 110,
+    "reserved": 0,
+    "available": 110
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 40,
+    "reserved": 0,
+    "available": 40
+   }
+  ]
+ },
+ {
+  "sku": "FB-WH16",
+  "name": "Fabrikam WarehouseMate 16",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1650,
+  "cost": 1230,
+  "status": "active",
+  "description": "A forklift-mounted notebook for distribution centers. Vibration-resistant, with a glove-friendly touchscreen and a battery that works in cold storage.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 35,
+    "reserved": 0,
+    "available": 35
+   }
+  ]
+ },
+ {
+  "sku": "AD-CART1",
+  "name": "Adatum RoundsCart Mobile Workstation",
+  "vendor": "Adatum",
+  "category": "Peripherals",
+  "list_price": 950,
+  "cost": 700,
+  "status": "active",
+  "description": "A height-adjustable mobile workstation with a G2 mount, a large power pack and a scanner holder for clinical teams.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 80,
+    "reserved": 0,
+    "available": 80
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 55,
+    "reserved": 0,
+    "available": 55
+   }
+  ]
+ },
+ {
+  "sku": "FA-101",
+  "name": "Fabrikam EliteLine 2 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1522,
+  "cost": 1208,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 76,
+    "reserved": 10,
+    "available": 66
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 75,
+    "reserved": 5,
+    "available": 70
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 43,
+    "reserved": 0,
+    "available": 43
+   }
+  ]
+ },
+ {
+  "sku": "FA-102",
+  "name": "Fabrikam EliteLine 2 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1610,
+  "cost": 1348,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 3,
+    "reserved": 3,
+    "available": 0
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 17,
+    "reserved": 0,
+    "available": 17
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 287,
+    "reserved": 0,
+    "available": 287
+   }
+  ]
+ },
+ {
+  "sku": "FA-103",
+  "name": "Fabrikam EliteLine 2 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1621,
+  "cost": 1232,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 124,
+    "reserved": 0,
+    "available": 124
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 94,
+    "reserved": 5,
+    "available": 89
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 198,
+    "reserved": 0,
+    "available": 198
+   }
+  ]
+ },
+ {
+  "sku": "FA-104",
+  "name": "Fabrikam EliteLine 2 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1570,
+  "cost": 1270,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 176,
+    "reserved": 0,
+    "available": 176
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 157,
+    "reserved": 10,
+    "available": 147
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 274,
+    "reserved": 0,
+    "available": 274
+   }
+  ]
+ },
+ {
+  "sku": "FA-105",
+  "name": "Fabrikam EliteLine 3 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1665,
+  "cost": 1378,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 201,
+    "reserved": 5,
+    "available": 196
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 63,
+    "reserved": 5,
+    "available": 58
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 8,
+    "reserved": 5,
+    "available": 3
+   }
+  ]
+ },
+ {
+  "sku": "FA-106",
+  "name": "Fabrikam EliteLine 3 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1774,
+  "cost": 1370,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 205,
+    "reserved": 10,
+    "available": 195
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 235,
+    "reserved": 5,
+    "available": 230
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 299,
+    "reserved": 0,
+    "available": 299
+   }
+  ]
+ },
+ {
+  "sku": "FA-107",
+  "name": "Fabrikam EliteLine 3 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1748,
+  "cost": 1261,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 58,
+    "reserved": 10,
+    "available": 48
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 252,
+    "reserved": 10,
+    "available": 242
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 244,
+    "reserved": 5,
+    "available": 239
+   }
+  ]
+ },
+ {
+  "sku": "FA-108",
+  "name": "Fabrikam EliteLine 3 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1567,
+  "cost": 1211,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 172,
+    "reserved": 0,
+    "available": 172
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 113,
+    "reserved": 0,
+    "available": 113
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 104,
+    "reserved": 0,
+    "available": 104
+   }
+  ]
+ },
+ {
+  "sku": "FA-109",
+  "name": "Fabrikam EliteLine 4 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1698,
+  "cost": 1409,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 227,
+    "reserved": 10,
+    "available": 217
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 135,
+    "reserved": 0,
+    "available": 135
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 164,
+    "reserved": 0,
+    "available": 164
+   }
+  ]
+ },
+ {
+  "sku": "FA-110",
+  "name": "Fabrikam EliteLine 4 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1755,
+  "cost": 1446,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 163,
+    "reserved": 0,
+    "available": 163
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 164,
+    "reserved": 5,
+    "available": 159
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 52,
+    "reserved": 0,
+    "available": 52
+   }
+  ]
+ },
+ {
+  "sku": "FA-111",
+  "name": "Fabrikam EliteLine 4 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1677,
+  "cost": 1367,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 173,
+    "reserved": 0,
+    "available": 173
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 79,
+    "reserved": 5,
+    "available": 74
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 13,
+    "reserved": 10,
+    "available": 3
+   }
+  ]
+ },
+ {
+  "sku": "FA-112",
+  "name": "Fabrikam EliteLine 4 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1892,
+  "cost": 1450,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 4, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 252,
+    "reserved": 10,
+    "available": 242
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 163,
+    "reserved": 5,
+    "available": 158
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 284,
+    "reserved": 0,
+    "available": 284
+   }
+  ]
+ },
+ {
+  "sku": "FA-113",
+  "name": "Fabrikam EliteLine 5 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2029,
+  "cost": 1550,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 85,
+    "reserved": 0,
+    "available": 85
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 134,
+    "reserved": 10,
+    "available": 124
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 215,
+    "reserved": 0,
+    "available": 215
+   }
+  ]
+ },
+ {
+  "sku": "FA-114",
+  "name": "Fabrikam EliteLine 5 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2138,
+  "cost": 1763,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 211,
+    "reserved": 0,
+    "available": 211
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 239,
+    "reserved": 0,
+    "available": 239
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 47,
+    "reserved": 0,
+    "available": 47
+   }
+  ]
+ },
+ {
+  "sku": "FA-115",
+  "name": "Fabrikam EliteLine 5 L",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1836,
+  "cost": 1498,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 7,
+    "reserved": 0,
+    "available": 7
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 261,
+    "reserved": 5,
+    "available": 256
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 176,
+    "reserved": 10,
+    "available": 166
+   }
+  ]
+ },
+ {
+  "sku": "FA-116",
+  "name": "Fabrikam EliteLine 5 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1863,
+  "cost": 1548,
+  "status": "active",
+  "description": "Thin and light business notebook for executives who travel weekly. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 162,
+    "reserved": 0,
+    "available": 162
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 119,
+    "reserved": 5,
+    "available": 114
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 13,
+    "reserved": 0,
+    "available": 13
+   }
+  ]
+ },
+ {
+  "sku": "FA-117",
+  "name": "Fabrikam OfficeBook 2 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 979,
+  "cost": 792,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 178,
+    "reserved": 10,
+    "available": 168
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 126,
+    "reserved": 0,
+    "available": 126
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 6,
+    "reserved": 6,
+    "available": 0
+   }
+  ]
+ },
+ {
+  "sku": "FA-118",
+  "name": "Fabrikam OfficeBook 2 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 983,
+  "cost": 770,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 13,
+    "reserved": 0,
+    "available": 13
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 108,
+    "reserved": 0,
+    "available": 108
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 221,
+    "reserved": 5,
+    "available": 216
+   }
+  ]
+ },
+ {
+  "sku": "FA-119",
+  "name": "Fabrikam OfficeBook 2 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1092,
+  "cost": 819,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 273,
+    "reserved": 0,
+    "available": 273
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 144,
+    "reserved": 10,
+    "available": 134
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 174,
+    "reserved": 0,
+    "available": 174
+   }
+  ]
+ },
+ {
+  "sku": "FA-120",
+  "name": "Fabrikam OfficeBook 2 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1090,
+  "cost": 895,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 201,
+    "reserved": 0,
+    "available": 201
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 20,
+    "reserved": 0,
+    "available": 20
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 142,
+    "reserved": 0,
+    "available": 142
+   }
+  ]
+ },
+ {
+  "sku": "FA-121",
+  "name": "Fabrikam OfficeBook 3 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1134,
+  "cost": 891,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 271,
+    "reserved": 0,
+    "available": 271
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 194,
+    "reserved": 0,
+    "available": 194
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 33,
+    "reserved": 0,
+    "available": 33
+   }
+  ]
+ },
+ {
+  "sku": "FA-122",
+  "name": "Fabrikam OfficeBook 3 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1225,
+  "cost": 985,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 148,
+    "reserved": 0,
+    "available": 148
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 4,
+    "reserved": 0,
+    "available": 4
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 188,
+    "reserved": 0,
+    "available": 188
+   }
+  ]
+ },
+ {
+  "sku": "FA-123",
+  "name": "Fabrikam OfficeBook 3 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1193,
+  "cost": 918,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 130,
+    "reserved": 5,
+    "available": 125
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 246,
+    "reserved": 0,
+    "available": 246
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 16,
+    "reserved": 0,
+    "available": 16
+   }
+  ]
+ },
+ {
+  "sku": "FA-124",
+  "name": "Fabrikam OfficeBook 3 L",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1142,
+  "cost": 959,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 54,
+    "reserved": 0,
+    "available": 54
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 298,
+    "reserved": 5,
+    "available": 293
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 156,
+    "reserved": 5,
+    "available": 151
+   }
+  ]
+ },
+ {
+  "sku": "FA-125",
+  "name": "Fabrikam OfficeBook 4 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1226,
+  "cost": 918,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 93,
+    "reserved": 0,
+    "available": 93
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 25,
+    "reserved": 0,
+    "available": 25
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 104,
+    "reserved": 10,
+    "available": 94
+   }
+  ]
+ },
+ {
+  "sku": "FA-126",
+  "name": "Fabrikam OfficeBook 4 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1157,
+  "cost": 901,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 182,
+    "reserved": 0,
+    "available": 182
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 235,
+    "reserved": 0,
+    "available": 235
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 152,
+    "reserved": 0,
+    "available": 152
+   }
+  ]
+ },
+ {
+  "sku": "FA-127",
+  "name": "Fabrikam OfficeBook 4 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1141,
+  "cost": 884,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 85,
+    "reserved": 5,
+    "available": 80
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 187,
+    "reserved": 0,
+    "available": 187
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 17,
+    "reserved": 0,
+    "available": 17
+   }
+  ]
+ },
+ {
+  "sku": "FA-128",
+  "name": "Fabrikam OfficeBook 4 L",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1170,
+  "cost": 913,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 4, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 286,
+    "reserved": 0,
+    "available": 286
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 151,
+    "reserved": 0,
+    "available": 151
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 20,
+    "reserved": 0,
+    "available": 20
+   }
+  ]
+ },
+ {
+  "sku": "FA-129",
+  "name": "Fabrikam OfficeBook 5 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1429,
+  "cost": 1064,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 191,
+    "reserved": 0,
+    "available": 191
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 183,
+    "reserved": 0,
+    "available": 183
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 100,
+    "reserved": 0,
+    "available": 100
+   }
+  ]
+ },
+ {
+  "sku": "FA-130",
+  "name": "Fabrikam OfficeBook 5 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1289,
+  "cost": 1010,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 212,
+    "reserved": 0,
+    "available": 212
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 138,
+    "reserved": 0,
+    "available": 138
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 183,
+    "reserved": 0,
+    "available": 183
+   }
+  ]
+ },
+ {
+  "sku": "FA-131",
+  "name": "Fabrikam OfficeBook 5 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1286,
+  "cost": 1011,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 2,
+    "reserved": 0,
+    "available": 2
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 34,
+    "reserved": 0,
+    "available": 34
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 82,
+    "reserved": 10,
+    "available": 72
+   }
+  ]
+ },
+ {
+  "sku": "FA-132",
+  "name": "Fabrikam OfficeBook 5 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 1367,
+  "cost": 996,
+  "status": "active",
+  "description": "A dependable notebook for everyday office work and video calls. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 181,
+    "reserved": 0,
+    "available": 181
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 243,
+    "reserved": 5,
+    "available": 238
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 97,
+    "reserved": 0,
+    "available": 97
+   }
+  ]
+ },
+ {
+  "sku": "FA-133",
+  "name": "Fabrikam EduBook 2 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 519,
+  "cost": 393,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 156,
+    "reserved": 0,
+    "available": 156
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 291,
+    "reserved": 0,
+    "available": 291
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 10,
+    "reserved": 5,
+    "available": 5
+   }
+  ]
+ },
+ {
+  "sku": "FA-134",
+  "name": "Fabrikam EduBook 2 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 515,
+  "cost": 430,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 248,
+    "reserved": 0,
+    "available": 248
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 258,
+    "reserved": 0,
+    "available": 258
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 294,
+    "reserved": 5,
+    "available": 289
+   }
+  ]
+ },
+ {
+  "sku": "FA-135",
+  "name": "Fabrikam EduBook 2 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 485,
+  "cost": 359,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 50,
+    "reserved": 0,
+    "available": 50
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 273,
+    "reserved": 10,
+    "available": 263
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 67,
+    "reserved": 10,
+    "available": 57
+   }
+  ]
+ },
+ {
+  "sku": "FA-136",
+  "name": "Fabrikam EduBook 2 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 477,
+  "cost": 398,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 81,
+    "reserved": 0,
+    "available": 81
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 148,
+    "reserved": 0,
+    "available": 148
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 128,
+    "reserved": 5,
+    "available": 123
+   }
+  ]
+ },
+ {
+  "sku": "FA-137",
+  "name": "Fabrikam EduBook 3 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 585,
+  "cost": 474,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 211,
+    "reserved": 0,
+    "available": 211
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 278,
+    "reserved": 0,
+    "available": 278
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 65,
+    "reserved": 0,
+    "available": 65
+   }
+  ]
+ },
+ {
+  "sku": "FA-138",
+  "name": "Fabrikam EduBook 3 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 602,
+  "cost": 438,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 209,
+    "reserved": 5,
+    "available": 204
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 117,
+    "reserved": 0,
+    "available": 117
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 34,
+    "reserved": 0,
+    "available": 34
+   }
+  ]
+ },
+ {
+  "sku": "FA-139",
+  "name": "Fabrikam EduBook 3 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 524,
+  "cost": 387,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 217,
+    "reserved": 0,
+    "available": 217
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 297,
+    "reserved": 0,
+    "available": 297
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 47,
+    "reserved": 5,
+    "available": 42
+   }
+  ]
+ },
+ {
+  "sku": "FA-140",
+  "name": "Fabrikam EduBook 3 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 578,
+  "cost": 453,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 64,
+    "reserved": 10,
+    "available": 54
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 86,
+    "reserved": 0,
+    "available": 86
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 217,
+    "reserved": 0,
+    "available": 217
+   }
+  ]
+ },
+ {
+  "sku": "FA-141",
+  "name": "Fabrikam EduBook 4 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 681,
+  "cost": 500,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 46,
+    "reserved": 0,
+    "available": 46
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 262,
+    "reserved": 0,
+    "available": 262
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 138,
+    "reserved": 0,
+    "available": 138
+   }
+  ]
+ },
+ {
+  "sku": "FA-142",
+  "name": "Fabrikam EduBook 4 L",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 625,
+  "cost": 482,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 4, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 224,
+    "reserved": 0,
+    "available": 224
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 25,
+    "reserved": 10,
+    "available": 15
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 285,
+    "reserved": 10,
+    "available": 275
+   }
+  ]
+ },
+ {
+  "sku": "FA-143",
+  "name": "Fabrikam EduBook 4 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 636,
+  "cost": 526,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 222,
+    "reserved": 0,
+    "available": 222
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 55,
+    "reserved": 10,
+    "available": 45
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 196,
+    "reserved": 10,
+    "available": 186
+   }
+  ]
+ },
+ {
+  "sku": "FA-144",
+  "name": "Fabrikam EduBook 4 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 667,
+  "cost": 547,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 172,
+    "reserved": 0,
+    "available": 172
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 54,
+    "reserved": 0,
+    "available": 54
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 83,
+    "reserved": 0,
+    "available": 83
+   }
+  ]
+ },
+ {
+  "sku": "FA-145",
+  "name": "Fabrikam EduBook 5 S",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 733,
+  "cost": 566,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 283,
+    "reserved": 0,
+    "available": 283
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 213,
+    "reserved": 0,
+    "available": 213
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 263,
+    "reserved": 0,
+    "available": 263
+   }
+  ]
+ },
+ {
+  "sku": "FA-146",
+  "name": "Fabrikam EduBook 5 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 731,
+  "cost": 603,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 79,
+    "reserved": 0,
+    "available": 79
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 267,
+    "reserved": 5,
+    "available": 262
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 249,
+    "reserved": 5,
+    "available": 244
+   }
+  ]
+ },
+ {
+  "sku": "FA-147",
+  "name": "Fabrikam EduBook 5 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 706,
+  "cost": 513,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 233,
+    "reserved": 5,
+    "available": 228
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 238,
+    "reserved": 0,
+    "available": 238
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 259,
+    "reserved": 5,
+    "available": 254
+   }
+  ]
+ },
+ {
+  "sku": "FA-148",
+  "name": "Fabrikam EduBook 5 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 660,
+  "cost": 482,
+  "status": "active",
+  "description": "A low-cost classroom notebook with a spill-resistant keyboard for students. Generation 5, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 255,
+    "reserved": 10,
+    "available": 245
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 39,
+    "reserved": 0,
+    "available": 39
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 52,
+    "reserved": 10,
+    "available": 42
+   }
+  ]
+ },
+ {
+  "sku": "FA-149",
+  "name": "Fabrikam CreatorPro 2 M",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2602,
+  "cost": 1972,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 152,
+    "reserved": 0,
+    "available": 152
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 141,
+    "reserved": 0,
+    "available": 141
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 288,
+    "reserved": 10,
+    "available": 278
+   }
+  ]
+ },
+ {
+  "sku": "FA-150",
+  "name": "Fabrikam CreatorPro 2 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2689,
+  "cost": 2155,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 2, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 272,
+    "reserved": 0,
+    "available": 272
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 256,
+    "reserved": 0,
+    "available": 256
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 180,
+    "reserved": 5,
+    "available": 175
+   }
+  ]
+ },
+ {
+  "sku": "FA-151",
+  "name": "Fabrikam CreatorPro 2 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2848,
+  "cost": 2171,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 23,
+    "reserved": 5,
+    "available": 18
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 129,
+    "reserved": 5,
+    "available": 124
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 152,
+    "reserved": 0,
+    "available": 152
+   }
+  ]
+ },
+ {
+  "sku": "FA-152",
+  "name": "Fabrikam CreatorPro 2 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2924,
+  "cost": 2347,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 48,
+    "reserved": 0,
+    "available": 48
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 62,
+    "reserved": 0,
+    "available": 62
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 34,
+    "reserved": 0,
+    "available": 34
+   }
+  ]
+ },
+ {
+  "sku": "FA-153",
+  "name": "Fabrikam CreatorPro 3 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3139,
+  "cost": 2409,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 3, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 47,
+    "reserved": 0,
+    "available": 47
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 128,
+    "reserved": 0,
+    "available": 128
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 165,
+    "reserved": 0,
+    "available": 165
+   }
+  ]
+ },
+ {
+  "sku": "FA-154",
+  "name": "Fabrikam CreatorPro 3 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3010,
+  "cost": 2278,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 42,
+    "reserved": 0,
+    "available": 42
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 271,
+    "reserved": 0,
+    "available": 271
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 257,
+    "reserved": 5,
+    "available": 252
+   }
+  ]
+ },
+ {
+  "sku": "FA-155",
+  "name": "Fabrikam CreatorPro 3 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 2835,
+  "cost": 2115,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 115,
+    "reserved": 5,
+    "available": 110
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 109,
+    "reserved": 10,
+    "available": 99
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 31,
+    "reserved": 10,
+    "available": 21
+   }
+  ]
+ },
+ {
+  "sku": "FA-156",
+  "name": "Fabrikam CreatorPro 3 L",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3338,
+  "cost": 2786,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 199,
+    "reserved": 0,
+    "available": 199
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 105,
+    "reserved": 5,
+    "available": 100
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 300,
+    "reserved": 0,
+    "available": 300
+   }
+  ]
+ },
+ {
+  "sku": "FA-157",
+  "name": "Fabrikam CreatorPro 4 Pro",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3662,
+  "cost": 2969,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 22,
+    "reserved": 5,
+    "available": 17
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 263,
+    "reserved": 0,
+    "available": 263
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 49,
+    "reserved": 0,
+    "available": 49
+   }
+  ]
+ },
+ {
+  "sku": "FA-158",
+  "name": "Fabrikam CreatorPro 4 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3625,
+  "cost": 2728,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 4, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 253,
+    "reserved": 10,
+    "available": 243
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 282,
+    "reserved": 10,
+    "available": 272
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 41,
+    "reserved": 0,
+    "available": 41
+   }
+  ]
+ },
+ {
+  "sku": "FA-159",
+  "name": "Fabrikam CreatorPro 4 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3320,
+  "cost": 2666,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 155,
+    "reserved": 0,
+    "available": 155
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 66,
+    "reserved": 5,
+    "available": 61
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 59,
+    "reserved": 0,
+    "available": 59
+   }
+  ]
+ },
+ {
+  "sku": "FA-160",
+  "name": "Fabrikam CreatorPro 4 Air",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3381,
+  "cost": 2534,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 293,
+    "reserved": 0,
+    "available": 293
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 115,
+    "reserved": 5,
+    "available": 110
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 281,
+    "reserved": 0,
+    "available": 281
+   }
+  ]
+ },
+ {
+  "sku": "FA-161",
+  "name": "Fabrikam CreatorPro 5 Max",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3585,
+  "cost": 2682,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 47,
+    "reserved": 0,
+    "available": 47
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 167,
+    "reserved": 0,
+    "available": 167
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 102,
+    "reserved": 5,
+    "available": 97
+   }
+  ]
+ },
+ {
+  "sku": "FA-162",
+  "name": "Fabrikam CreatorPro 5 L",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3538,
+  "cost": 2703,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 44,
+    "reserved": 0,
+    "available": 44
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 50,
+    "reserved": 0,
+    "available": 50
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 129,
+    "reserved": 0,
+    "available": 129
+   }
+  ]
+ },
+ {
+  "sku": "FA-163",
+  "name": "Fabrikam CreatorPro 5 Plus",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3927,
+  "cost": 3062,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 105,
+    "reserved": 0,
+    "available": 105
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 184,
+    "reserved": 0,
+    "available": 184
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 85,
+    "reserved": 0,
+    "available": 85
+   }
+  ]
+ },
+ {
+  "sku": "FA-164",
+  "name": "Fabrikam CreatorPro 5 X",
+  "vendor": "Fabrikam",
+  "category": "Laptops",
+  "list_price": 3863,
+  "cost": 3151,
+  "status": "active",
+  "description": "A workstation notebook with a discrete graphics card for engineers and video editors. Generation 5, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 221,
+    "reserved": 0,
+    "available": 221
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 123,
+    "reserved": 10,
+    "available": 113
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 247,
+    "reserved": 0,
+    "available": 247
+   }
+  ]
+ },
+ {
+  "sku": "FA-165",
+  "name": "Fabrikam TowerPro 2 Pro",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1087,
+  "cost": 910,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 238,
+    "reserved": 10,
+    "available": 228
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 59,
+    "reserved": 0,
+    "available": 59
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 277,
+    "reserved": 10,
+    "available": 267
+   }
+  ]
+ },
+ {
+  "sku": "FA-166",
+  "name": "Fabrikam TowerPro 2 Air",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1120,
+  "cost": 935,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 110,
+    "reserved": 0,
+    "available": 110
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 49,
+    "reserved": 0,
+    "available": 49
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 81,
+    "reserved": 5,
+    "available": 76
+   }
+  ]
+ },
+ {
+  "sku": "FA-167",
+  "name": "Fabrikam TowerPro 2 S",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1216,
+  "cost": 1008,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 175,
+    "reserved": 10,
+    "available": 165
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 173,
+    "reserved": 0,
+    "available": 173
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 182,
+    "reserved": 5,
+    "available": 177
+   }
+  ]
+ },
+ {
+  "sku": "FA-168",
+  "name": "Fabrikam TowerPro 2 X",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1088,
+  "cost": 861,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 219,
+    "reserved": 0,
+    "available": 219
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 183,
+    "reserved": 10,
+    "available": 173
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 248,
+    "reserved": 0,
+    "available": 248
+   }
+  ]
+ },
+ {
+  "sku": "FA-169",
+  "name": "Fabrikam TowerPro 3 X",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1217,
+  "cost": 947,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 50,
+    "reserved": 0,
+    "available": 50
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 190,
+    "reserved": 0,
+    "available": 190
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 42,
+    "reserved": 0,
+    "available": 42
+   }
+  ]
+ },
+ {
+  "sku": "FA-170",
+  "name": "Fabrikam TowerPro 3 S",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1279,
+  "cost": 1057,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 40,
+    "reserved": 0,
+    "available": 40
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 269,
+    "reserved": 0,
+    "available": 269
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 230,
+    "reserved": 5,
+    "available": 225
+   }
+  ]
+ },
+ {
+  "sku": "FA-171",
+  "name": "Fabrikam TowerPro 3 Plus",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1299,
+  "cost": 1086,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 150,
+    "reserved": 0,
+    "available": 150
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 64,
+    "reserved": 0,
+    "available": 64
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 216,
+    "reserved": 10,
+    "available": 206
+   }
+  ]
+ },
+ {
+  "sku": "FA-172",
+  "name": "Fabrikam TowerPro 3 Max",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1168,
+  "cost": 979,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 3, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 280,
+    "reserved": 5,
+    "available": 275
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 247,
+    "reserved": 0,
+    "available": 247
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 290,
+    "reserved": 10,
+    "available": 280
+   }
+  ]
+ },
+ {
+  "sku": "FA-173",
+  "name": "Fabrikam TowerPro 4 M",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1371,
+  "cost": 1041,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 244,
+    "reserved": 0,
+    "available": 244
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 127,
+    "reserved": 5,
+    "available": 122
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 148,
+    "reserved": 10,
+    "available": 138
+   }
+  ]
+ },
+ {
+  "sku": "FA-174",
+  "name": "Fabrikam TowerPro 4 X",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1496,
+  "cost": 1134,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 289,
+    "reserved": 0,
+    "available": 289
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 300,
+    "reserved": 5,
+    "available": 295
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 292,
+    "reserved": 5,
+    "available": 287
+   }
+  ]
+ },
+ {
+  "sku": "FA-175",
+  "name": "Fabrikam TowerPro 4 Plus",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1256,
+  "cost": 997,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 210,
+    "reserved": 0,
+    "available": 210
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 115,
+    "reserved": 0,
+    "available": 115
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 259,
+    "reserved": 5,
+    "available": 254
+   }
+  ]
+ },
+ {
+  "sku": "FA-176",
+  "name": "Fabrikam TowerPro 4 Pro",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1469,
+  "cost": 1065,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 255,
+    "reserved": 5,
+    "available": 250
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 51,
+    "reserved": 10,
+    "available": 41
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 187,
+    "reserved": 0,
+    "available": 187
+   }
+  ]
+ },
+ {
+  "sku": "FA-177",
+  "name": "Fabrikam TowerPro 5 S",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1390,
+  "cost": 1030,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 5,
+    "reserved": 0,
+    "available": 5
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 101,
+    "reserved": 5,
+    "available": 96
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 100,
+    "reserved": 10,
+    "available": 90
+   }
+  ]
+ },
+ {
+  "sku": "FA-178",
+  "name": "Fabrikam TowerPro 5 Air",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1574,
+  "cost": 1154,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 80,
+    "reserved": 5,
+    "available": 75
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 29,
+    "reserved": 5,
+    "available": 24
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 204,
+    "reserved": 0,
+    "available": 204
+   }
+  ]
+ },
+ {
+  "sku": "FA-179",
+  "name": "Fabrikam TowerPro 5 Plus",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1557,
+  "cost": 1121,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 2,
+    "reserved": 2,
+    "available": 0
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 218,
+    "reserved": 0,
+    "available": 218
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 250,
+    "reserved": 0,
+    "available": 250
+   }
+  ]
+ },
+ {
+  "sku": "FA-180",
+  "name": "Fabrikam TowerPro 5 L",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1607,
+  "cost": 1298,
+  "status": "active",
+  "description": "A business tower with room for expansion cards and extra drives. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 15,
+    "reserved": 0,
+    "available": 15
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 20,
+    "reserved": 10,
+    "available": 10
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 112,
+    "reserved": 5,
+    "available": 107
+   }
+  ]
+ },
+ {
+  "sku": "FA-181",
+  "name": "Fabrikam MiniDesk 2 Air",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 826,
+  "cost": 649,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 58,
+    "reserved": 0,
+    "available": 58
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 5,
+    "reserved": 5,
+    "available": 0
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 120,
+    "reserved": 0,
+    "available": 120
+   }
+  ]
+ },
+ {
+  "sku": "FA-182",
+  "name": "Fabrikam MiniDesk 2 Plus",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 746,
+  "cost": 597,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 2, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 169,
+    "reserved": 0,
+    "available": 169
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 152,
+    "reserved": 10,
+    "available": 142
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 190,
+    "reserved": 0,
+    "available": 190
+   }
+  ]
+ },
+ {
+  "sku": "FA-183",
+  "name": "Fabrikam MiniDesk 2 M",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 807,
+  "cost": 592,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 67,
+    "reserved": 5,
+    "available": 62
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 173,
+    "reserved": 5,
+    "available": 168
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 76,
+    "reserved": 0,
+    "available": 76
+   }
+  ]
+ },
+ {
+  "sku": "FA-184",
+  "name": "Fabrikam MiniDesk 2 L",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 793,
+  "cost": 610,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 2, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 118,
+    "reserved": 5,
+    "available": 113
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 300,
+    "reserved": 10,
+    "available": 290
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 98,
+    "reserved": 0,
+    "available": 98
+   }
+  ]
+ },
+ {
+  "sku": "FA-185",
+  "name": "Fabrikam MiniDesk 3 X",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 830,
+  "cost": 602,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 289,
+    "reserved": 5,
+    "available": 284
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 33,
+    "reserved": 0,
+    "available": 33
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 140,
+    "reserved": 0,
+    "available": 140
+   }
+  ]
+ },
+ {
+  "sku": "FA-186",
+  "name": "Fabrikam MiniDesk 3 L",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 796,
+  "cost": 636,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 224,
+    "reserved": 0,
+    "available": 224
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 172,
+    "reserved": 10,
+    "available": 162
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 144,
+    "reserved": 10,
+    "available": 134
+   }
+  ]
+ },
+ {
+  "sku": "FA-187",
+  "name": "Fabrikam MiniDesk 3 Pro",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 820,
+  "cost": 665,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 181,
+    "reserved": 0,
+    "available": 181
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 55,
+    "reserved": 0,
+    "available": 55
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 212,
+    "reserved": 0,
+    "available": 212
+   }
+  ]
+ },
+ {
+  "sku": "FA-188",
+  "name": "Fabrikam MiniDesk 3 Max",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 916,
+  "cost": 696,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 3, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 161,
+    "reserved": 0,
+    "available": 161
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 90,
+    "reserved": 5,
+    "available": 85
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 153,
+    "reserved": 0,
+    "available": 153
+   }
+  ]
+ },
+ {
+  "sku": "FA-189",
+  "name": "Fabrikam MiniDesk 4 Pro",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 955,
+  "cost": 772,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 235,
+    "reserved": 5,
+    "available": 230
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 271,
+    "reserved": 0,
+    "available": 271
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 276,
+    "reserved": 0,
+    "available": 276
+   }
+  ]
+ },
+ {
+  "sku": "FA-190",
+  "name": "Fabrikam MiniDesk 4 Air",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 993,
+  "cost": 716,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 65,
+    "reserved": 5,
+    "available": 60
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 160,
+    "reserved": 0,
+    "available": 160
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 215,
+    "reserved": 0,
+    "available": 215
+   }
+  ]
+ },
+ {
+  "sku": "FA-191",
+  "name": "Fabrikam MiniDesk 4 Plus",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 978,
+  "cost": 729,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 144,
+    "reserved": 0,
+    "available": 144
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 36,
+    "reserved": 0,
+    "available": 36
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 145,
+    "reserved": 0,
+    "available": 145
+   }
+  ]
+ },
+ {
+  "sku": "FA-192",
+  "name": "Fabrikam MiniDesk 4 X",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 852,
+  "cost": 636,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 163,
+    "reserved": 0,
+    "available": 163
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 50,
+    "reserved": 0,
+    "available": 50
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 155,
+    "reserved": 0,
+    "available": 155
+   }
+  ]
+ },
+ {
+  "sku": "FA-193",
+  "name": "Fabrikam MiniDesk 5 Max",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 938,
+  "cost": 741,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 76,
+    "reserved": 0,
+    "available": 76
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 188,
+    "reserved": 0,
+    "available": 188
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 75,
+    "reserved": 5,
+    "available": 70
+   }
+  ]
+ },
+ {
+  "sku": "FA-194",
+  "name": "Fabrikam MiniDesk 5 Air",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1110,
+  "cost": 922,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 152,
+    "reserved": 0,
+    "available": 152
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 138,
+    "reserved": 0,
+    "available": 138
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 32,
+    "reserved": 10,
+    "available": 22
+   }
+  ]
+ },
+ {
+  "sku": "FA-195",
+  "name": "Fabrikam MiniDesk 5 L",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 980,
+  "cost": 745,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 252,
+    "reserved": 5,
+    "available": 247
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 287,
+    "reserved": 0,
+    "available": 287
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 143,
+    "reserved": 0,
+    "available": 143
+   }
+  ]
+ },
+ {
+  "sku": "FA-196",
+  "name": "Fabrikam MiniDesk 5 Pro",
+  "vendor": "Fabrikam",
+  "category": "Desktops",
+  "list_price": 1016,
+  "cost": 750,
+  "status": "active",
+  "description": "A palm-sized desktop that mounts behind a monitor to save desk space. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 157,
+    "reserved": 10,
+    "available": 147
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 277,
+    "reserved": 10,
+    "available": 267
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 173,
+    "reserved": 10,
+    "available": 163
+   }
+  ]
+ },
+ {
+  "sku": "WI-197",
+  "name": "Wingtip ClearView 2 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 362,
+  "cost": 269,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 258,
+    "reserved": 5,
+    "available": 253
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 226,
+    "reserved": 5,
+    "available": 221
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 83,
+    "reserved": 0,
+    "available": 83
+   }
+  ]
+ },
+ {
+  "sku": "WI-198",
+  "name": "Wingtip ClearView 2 Max",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 349,
+  "cost": 256,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 263,
+    "reserved": 5,
+    "available": 258
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 201,
+    "reserved": 10,
+    "available": 191
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 193,
+    "reserved": 0,
+    "available": 193
+   }
+  ]
+ },
+ {
+  "sku": "WI-199",
+  "name": "Wingtip ClearView 2 X",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 370,
+  "cost": 288,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 259,
+    "reserved": 0,
+    "available": 259
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 151,
+    "reserved": 0,
+    "available": 151
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 128,
+    "reserved": 0,
+    "available": 128
+   }
+  ]
+ },
+ {
+  "sku": "WI-200",
+  "name": "Wingtip ClearView 2 Pro",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 353,
+  "cost": 286,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 130,
+    "reserved": 0,
+    "available": 130
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 141,
+    "reserved": 0,
+    "available": 141
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 23,
+    "reserved": 0,
+    "available": 23
+   }
+  ]
+ },
+ {
+  "sku": "WI-201",
+  "name": "Wingtip ClearView 3 M",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 429,
+  "cost": 335,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 215,
+    "reserved": 0,
+    "available": 215
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 189,
+    "reserved": 0,
+    "available": 189
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 58,
+    "reserved": 0,
+    "available": 58
+   }
+  ]
+ },
+ {
+  "sku": "WI-202",
+  "name": "Wingtip ClearView 3 X",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 388,
+  "cost": 282,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 285,
+    "reserved": 5,
+    "available": 280
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 82,
+    "reserved": 10,
+    "available": 72
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 220,
+    "reserved": 5,
+    "available": 215
+   }
+  ]
+ },
+ {
+  "sku": "WI-203",
+  "name": "Wingtip ClearView 3 L",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 366,
+  "cost": 272,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 198,
+    "reserved": 5,
+    "available": 193
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 113,
+    "reserved": 0,
+    "available": 113
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 252,
+    "reserved": 0,
+    "available": 252
+   }
+  ]
+ },
+ {
+  "sku": "WI-204",
+  "name": "Wingtip ClearView 3 Pro",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 395,
+  "cost": 318,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 83,
+    "reserved": 0,
+    "available": 83
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 169,
+    "reserved": 5,
+    "available": 164
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 228,
+    "reserved": 0,
+    "available": 228
+   }
+  ]
+ },
+ {
+  "sku": "WI-205",
+  "name": "Wingtip ClearView 4 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 468,
+  "cost": 341,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 55,
+    "reserved": 0,
+    "available": 55
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 204,
+    "reserved": 0,
+    "available": 204
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 13,
+    "reserved": 10,
+    "available": 3
+   }
+  ]
+ },
+ {
+  "sku": "WI-206",
+  "name": "Wingtip ClearView 4 M",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 443,
+  "cost": 361,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 137,
+    "reserved": 0,
+    "available": 137
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 164,
+    "reserved": 0,
+    "available": 164
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 202,
+    "reserved": 0,
+    "available": 202
+   }
+  ]
+ },
+ {
+  "sku": "WI-207",
+  "name": "Wingtip ClearView 4 Pro",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 482,
+  "cost": 399,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 40,
+    "reserved": 10,
+    "available": 30
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 159,
+    "reserved": 0,
+    "available": 159
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 53,
+    "reserved": 10,
+    "available": 43
+   }
+  ]
+ },
+ {
+  "sku": "WI-208",
+  "name": "Wingtip ClearView 4 L",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 460,
+  "cost": 348,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 4, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 163,
+    "reserved": 0,
+    "available": 163
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 286,
+    "reserved": 10,
+    "available": 276
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 59,
+    "reserved": 0,
+    "available": 59
+   }
+  ]
+ },
+ {
+  "sku": "WI-209",
+  "name": "Wingtip ClearView 5 M",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 465,
+  "cost": 343,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 41,
+    "reserved": 0,
+    "available": 41
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 217,
+    "reserved": 0,
+    "available": 217
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 157,
+    "reserved": 10,
+    "available": 147
+   }
+  ]
+ },
+ {
+  "sku": "WI-210",
+  "name": "Wingtip ClearView 5 S",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 449,
+  "cost": 344,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 269,
+    "reserved": 10,
+    "available": 259
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 69,
+    "reserved": 5,
+    "available": 64
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 298,
+    "reserved": 0,
+    "available": 298
+   }
+  ]
+ },
+ {
+  "sku": "WI-211",
+  "name": "Wingtip ClearView 5 Plus",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 463,
+  "cost": 353,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 49,
+    "reserved": 0,
+    "available": 49
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 233,
+    "reserved": 0,
+    "available": 233
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 253,
+    "reserved": 0,
+    "available": 253
+   }
+  ]
+ },
+ {
+  "sku": "WI-212",
+  "name": "Wingtip ClearView 5 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 530,
+  "cost": 385,
+  "status": "active",
+  "description": "A flicker-free office monitor with a height-adjustable stand. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 176,
+    "reserved": 10,
+    "available": 166
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 59,
+    "reserved": 0,
+    "available": 59
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 84,
+    "reserved": 0,
+    "available": 84
+   }
+  ]
+ },
+ {
+  "sku": "WI-213",
+  "name": "Wingtip UltraWide 2 M",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 754,
+  "cost": 585,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 274,
+    "reserved": 5,
+    "available": 269
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 82,
+    "reserved": 0,
+    "available": 82
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 234,
+    "reserved": 10,
+    "available": 224
+   }
+  ]
+ },
+ {
+  "sku": "WI-214",
+  "name": "Wingtip UltraWide 2 Pro",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 896,
+  "cost": 728,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 208,
+    "reserved": 5,
+    "available": 203
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 91,
+    "reserved": 0,
+    "available": 91
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 52,
+    "reserved": 0,
+    "available": 52
+   }
+  ]
+ },
+ {
+  "sku": "WI-215",
+  "name": "Wingtip UltraWide 2 S",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 886,
+  "cost": 655,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 186,
+    "reserved": 10,
+    "available": 176
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 270,
+    "reserved": 0,
+    "available": 270
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 10,
+    "reserved": 0,
+    "available": 10
+   }
+  ]
+ },
+ {
+  "sku": "WI-216",
+  "name": "Wingtip UltraWide 2 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 875,
+  "cost": 687,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 205,
+    "reserved": 5,
+    "available": 200
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 55,
+    "reserved": 5,
+    "available": 50
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 55,
+    "reserved": 5,
+    "available": 50
+   }
+  ]
+ },
+ {
+  "sku": "WI-217",
+  "name": "Wingtip UltraWide 3 M",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 951,
+  "cost": 793,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 208,
+    "reserved": 0,
+    "available": 208
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 156,
+    "reserved": 0,
+    "available": 156
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 127,
+    "reserved": 0,
+    "available": 127
+   }
+  ]
+ },
+ {
+  "sku": "WI-218",
+  "name": "Wingtip UltraWide 3 S",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 912,
+  "cost": 662,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 227,
+    "reserved": 0,
+    "available": 227
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 279,
+    "reserved": 0,
+    "available": 279
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 115,
+    "reserved": 0,
+    "available": 115
+   }
+  ]
+ },
+ {
+  "sku": "WI-219",
+  "name": "Wingtip UltraWide 3 L",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 837,
+  "cost": 693,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 182,
+    "reserved": 10,
+    "available": 172
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 258,
+    "reserved": 0,
+    "available": 258
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 169,
+    "reserved": 5,
+    "available": 164
+   }
+  ]
+ },
+ {
+  "sku": "WI-220",
+  "name": "Wingtip UltraWide 3 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 888,
+  "cost": 667,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 154,
+    "reserved": 10,
+    "available": 144
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 63,
+    "reserved": 5,
+    "available": 58
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 263,
+    "reserved": 0,
+    "available": 263
+   }
+  ]
+ },
+ {
+  "sku": "WI-221",
+  "name": "Wingtip UltraWide 4 Plus",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 972,
+  "cost": 703,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 280,
+    "reserved": 0,
+    "available": 280
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 199,
+    "reserved": 10,
+    "available": 189
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 14,
+    "reserved": 0,
+    "available": 14
+   }
+  ]
+ },
+ {
+  "sku": "WI-222",
+  "name": "Wingtip UltraWide 4 S",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 921,
+  "cost": 748,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 274,
+    "reserved": 0,
+    "available": 274
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 287,
+    "reserved": 0,
+    "available": 287
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 297,
+    "reserved": 0,
+    "available": 297
+   }
+  ]
+ },
+ {
+  "sku": "WI-223",
+  "name": "Wingtip UltraWide 4 Max",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 1115,
+  "cost": 820,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 4, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 59,
+    "reserved": 5,
+    "available": 54
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 243,
+    "reserved": 5,
+    "available": 238
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 101,
+    "reserved": 0,
+    "available": 101
+   }
+  ]
+ },
+ {
+  "sku": "WI-224",
+  "name": "Wingtip UltraWide 4 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 922,
+  "cost": 682,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 170,
+    "reserved": 0,
+    "available": 170
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 286,
+    "reserved": 0,
+    "available": 286
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 31,
+    "reserved": 0,
+    "available": 31
+   }
+  ]
+ },
+ {
+  "sku": "WI-225",
+  "name": "Wingtip UltraWide 5 Air",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 1144,
+  "cost": 876,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 165,
+    "reserved": 0,
+    "available": 165
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 8,
+    "reserved": 0,
+    "available": 8
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 173,
+    "reserved": 0,
+    "available": 173
+   }
+  ]
+ },
+ {
+  "sku": "WI-226",
+  "name": "Wingtip UltraWide 5 M",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 1048,
+  "cost": 807,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 201,
+    "reserved": 10,
+    "available": 191
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 280,
+    "reserved": 10,
+    "available": 270
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 162,
+    "reserved": 5,
+    "available": 157
+   }
+  ]
+ },
+ {
+  "sku": "WI-227",
+  "name": "Wingtip UltraWide 5 Pro",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 1027,
+  "cost": 769,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 44,
+    "reserved": 0,
+    "available": 44
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 109,
+    "reserved": 10,
+    "available": 99
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 14,
+    "reserved": 0,
+    "available": 14
+   }
+  ]
+ },
+ {
+  "sku": "WI-228",
+  "name": "Wingtip UltraWide 5 L",
+  "vendor": "Wingtip",
+  "category": "Monitors",
+  "list_price": 1156,
+  "cost": 940,
+  "status": "active",
+  "description": "A curved ultrawide display for traders and analysts who watch many windows. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 258,
+    "reserved": 0,
+    "available": 258
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 142,
+    "reserved": 0,
+    "available": 142
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 90,
+    "reserved": 0,
+    "available": 90
+   }
+  ]
+ },
+ {
+  "sku": "WI-229",
+  "name": "Wingtip DeskDock 2 M",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 204,
+  "cost": 155,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 37,
+    "reserved": 0,
+    "available": 37
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 282,
+    "reserved": 0,
+    "available": 282
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 32,
+    "reserved": 0,
+    "available": 32
+   }
+  ]
+ },
+ {
+  "sku": "WI-230",
+  "name": "Wingtip DeskDock 2 S",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 214,
+  "cost": 178,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 68,
+    "reserved": 5,
+    "available": 63
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 180,
+    "reserved": 0,
+    "available": 180
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 143,
+    "reserved": 0,
+    "available": 143
+   }
+  ]
+ },
+ {
+  "sku": "WI-231",
+  "name": "Wingtip DeskDock 2 Pro",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 200,
+  "cost": 163,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 212,
+    "reserved": 0,
+    "available": 212
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 172,
+    "reserved": 0,
+    "available": 172
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 127,
+    "reserved": 0,
+    "available": 127
+   }
+  ]
+ },
+ {
+  "sku": "WI-232",
+  "name": "Wingtip DeskDock 2 L",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 197,
+  "cost": 148,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 2, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 86,
+    "reserved": 0,
+    "available": 86
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 50,
+    "reserved": 10,
+    "available": 40
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 289,
+    "reserved": 10,
+    "available": 279
+   }
+  ]
+ },
+ {
+  "sku": "WI-233",
+  "name": "Wingtip DeskDock 3 Pro",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 229,
+  "cost": 190,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 273,
+    "reserved": 0,
+    "available": 273
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 264,
+    "reserved": 0,
+    "available": 264
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 99,
+    "reserved": 5,
+    "available": 94
+   }
+  ]
+ },
+ {
+  "sku": "WI-234",
+  "name": "Wingtip DeskDock 3 S",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 206,
+  "cost": 153,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 287,
+    "reserved": 5,
+    "available": 282
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 161,
+    "reserved": 0,
+    "available": 161
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 237,
+    "reserved": 0,
+    "available": 237
+   }
+  ]
+ },
+ {
+  "sku": "WI-235",
+  "name": "Wingtip DeskDock 3 L",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 204,
+  "cost": 157,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Dallas",
+    "on_hand": 152,
+    "reserved": 0,
+    "available": 152
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 2,
+    "reserved": 2,
+    "available": 0
+   }
+  ]
+ },
+ {
+  "sku": "WI-236",
+  "name": "Wingtip DeskDock 3 Plus",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 212,
+  "cost": 175,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 149,
+    "reserved": 10,
+    "available": 139
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 218,
+    "reserved": 10,
+    "available": 208
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 178,
+    "reserved": 5,
+    "available": 173
+   }
+  ]
+ },
+ {
+  "sku": "WI-237",
+  "name": "Wingtip DeskDock 4 X",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 233,
+  "cost": 180,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 292,
+    "reserved": 0,
+    "available": 292
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 39,
+    "reserved": 10,
+    "available": 29
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 42,
+    "reserved": 10,
+    "available": 32
+   }
+  ]
+ },
+ {
+  "sku": "WI-238",
+  "name": "Wingtip DeskDock 4 L",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 258,
+  "cost": 191,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 4, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 232,
+    "reserved": 0,
+    "available": 232
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 95,
+    "reserved": 5,
+    "available": 90
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 45,
+    "reserved": 0,
+    "available": 45
+   }
+  ]
+ },
+ {
+  "sku": "WI-239",
+  "name": "Wingtip DeskDock 4 S",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 231,
+  "cost": 177,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 218,
+    "reserved": 10,
+    "available": 208
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 298,
+    "reserved": 5,
+    "available": 293
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 125,
+    "reserved": 0,
+    "available": 125
+   }
+  ]
+ },
+ {
+  "sku": "WI-240",
+  "name": "Wingtip DeskDock 4 Plus",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 236,
+  "cost": 194,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 93,
+    "reserved": 10,
+    "available": 83
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 119,
+    "reserved": 0,
+    "available": 119
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 140,
+    "reserved": 0,
+    "available": 140
+   }
+  ]
+ },
+ {
+  "sku": "WI-241",
+  "name": "Wingtip DeskDock 5 S",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 249,
+  "cost": 184,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 183,
+    "reserved": 0,
+    "available": 183
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 258,
+    "reserved": 5,
+    "available": 253
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 95,
+    "reserved": 0,
+    "available": 95
+   }
+  ]
+ },
+ {
+  "sku": "WI-242",
+  "name": "Wingtip DeskDock 5 Pro",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 251,
+  "cost": 190,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 113,
+    "reserved": 5,
+    "available": 108
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 181,
+    "reserved": 0,
+    "available": 181
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 197,
+    "reserved": 0,
+    "available": 197
+   }
+  ]
+ },
+ {
+  "sku": "WI-243",
+  "name": "Wingtip DeskDock 5 L",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 258,
+  "cost": 206,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 27,
+    "reserved": 0,
+    "available": 27
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 25,
+    "reserved": 0,
+    "available": 25
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 232,
+    "reserved": 0,
+    "available": 232
+   }
+  ]
+ },
+ {
+  "sku": "WI-244",
+  "name": "Wingtip DeskDock 5 Air",
+  "vendor": "Wingtip",
+  "category": "Docks",
+  "list_price": 291,
+  "cost": 241,
+  "status": "active",
+  "description": "A desktop docking station that powers a notebook and two monitors from one cable. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 162,
+    "reserved": 0,
+    "available": 162
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 285,
+    "reserved": 0,
+    "available": 285
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 35,
+    "reserved": 0,
+    "available": 35
+   }
+  ]
+ },
+ {
+  "sku": "WI-245",
+  "name": "Wingtip QuietKeys 2 X",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 80,
+  "cost": 62,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 41,
+    "reserved": 0,
+    "available": 41
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 203,
+    "reserved": 0,
+    "available": 203
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 277,
+    "reserved": 0,
+    "available": 277
+   }
+  ]
+ },
+ {
+  "sku": "WI-246",
+  "name": "Wingtip QuietKeys 2 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 68,
+  "cost": 56,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 2, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 270,
+    "reserved": 0,
+    "available": 270
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 35,
+    "reserved": 5,
+    "available": 30
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 143,
+    "reserved": 0,
+    "available": 143
+   }
+  ]
+ },
+ {
+  "sku": "WI-247",
+  "name": "Wingtip QuietKeys 2 L",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 72,
+  "cost": 60,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 2, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 166,
+    "reserved": 0,
+    "available": 166
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 203,
+    "reserved": 5,
+    "available": 198
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 117,
+    "reserved": 0,
+    "available": 117
+   }
+  ]
+ },
+ {
+  "sku": "WI-248",
+  "name": "Wingtip QuietKeys 2 Max",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 74,
+  "cost": 58,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 182,
+    "reserved": 0,
+    "available": 182
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 281,
+    "reserved": 0,
+    "available": 281
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 202,
+    "reserved": 10,
+    "available": 192
+   }
+  ]
+ },
+ {
+  "sku": "WI-249",
+  "name": "Wingtip QuietKeys 3 Air",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 80,
+  "cost": 67,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 273,
+    "reserved": 10,
+    "available": 263
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 150,
+    "reserved": 10,
+    "available": 140
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 181,
+    "reserved": 0,
+    "available": 181
+   }
+  ]
+ },
+ {
+  "sku": "WI-250",
+  "name": "Wingtip QuietKeys 3 X",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 75,
+  "cost": 60,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 173,
+    "reserved": 0,
+    "available": 173
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 241,
+    "reserved": 0,
+    "available": 241
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 198,
+    "reserved": 0,
+    "available": 198
+   }
+  ]
+ },
+ {
+  "sku": "WI-251",
+  "name": "Wingtip QuietKeys 3 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 82,
+  "cost": 67,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 272,
+    "reserved": 5,
+    "available": 267
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 208,
+    "reserved": 0,
+    "available": 208
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 172,
+    "reserved": 5,
+    "available": 167
+   }
+  ]
+ },
+ {
+  "sku": "WI-252",
+  "name": "Wingtip QuietKeys 3 Pro",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 82,
+  "cost": 67,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 17,
+    "reserved": 0,
+    "available": 17
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 15,
+    "reserved": 0,
+    "available": 15
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 196,
+    "reserved": 10,
+    "available": 186
+   }
+  ]
+ },
+ {
+  "sku": "WI-253",
+  "name": "Wingtip QuietKeys 4 M",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 85,
+  "cost": 64,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 9,
+    "reserved": 5,
+    "available": 4
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 249,
+    "reserved": 0,
+    "available": 249
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 221,
+    "reserved": 0,
+    "available": 221
+   }
+  ]
+ },
+ {
+  "sku": "WI-254",
+  "name": "Wingtip QuietKeys 4 X",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 92,
+  "cost": 67,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 243,
+    "reserved": 0,
+    "available": 243
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 10,
+    "reserved": 0,
+    "available": 10
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 23,
+    "reserved": 0,
+    "available": 23
+   }
+  ]
+ },
+ {
+  "sku": "WI-255",
+  "name": "Wingtip QuietKeys 4 Max",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 92,
+  "cost": 69,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 4, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 260,
+    "reserved": 0,
+    "available": 260
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 232,
+    "reserved": 0,
+    "available": 232
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 161,
+    "reserved": 0,
+    "available": 161
+   }
+  ]
+ },
+ {
+  "sku": "WI-256",
+  "name": "Wingtip QuietKeys 4 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 86,
+  "cost": 67,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 75,
+    "reserved": 5,
+    "available": 70
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 103,
+    "reserved": 0,
+    "available": 103
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 49,
+    "reserved": 0,
+    "available": 49
+   }
+  ]
+ },
+ {
+  "sku": "WI-257",
+  "name": "Wingtip QuietKeys 5 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 95,
+  "cost": 71,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 66,
+    "reserved": 10,
+    "available": 56
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 72,
+    "reserved": 0,
+    "available": 72
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 21,
+    "reserved": 5,
+    "available": 16
+   }
+  ]
+ },
+ {
+  "sku": "WI-258",
+  "name": "Wingtip QuietKeys 5 M",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 100,
+  "cost": 84,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 35,
+    "reserved": 0,
+    "available": 35
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 270,
+    "reserved": 0,
+    "available": 270
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 217,
+    "reserved": 0,
+    "available": 217
+   }
+  ]
+ },
+ {
+  "sku": "WI-259",
+  "name": "Wingtip QuietKeys 5 L",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 102,
+  "cost": 78,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 12,
+    "reserved": 10,
+    "available": 2
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 154,
+    "reserved": 0,
+    "available": 154
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 264,
+    "reserved": 0,
+    "available": 264
+   }
+  ]
+ },
+ {
+  "sku": "WI-260",
+  "name": "Wingtip QuietKeys 5 Pro",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 102,
+  "cost": 75,
+  "status": "active",
+  "description": "A low-noise wireless keyboard and mouse set for open offices. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 34,
+    "reserved": 0,
+    "available": 34
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 247,
+    "reserved": 10,
+    "available": 237
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 75,
+    "reserved": 0,
+    "available": 75
+   }
+  ]
+ },
+ {
+  "sku": "WI-261",
+  "name": "Wingtip HuddleCam 2 S",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 734,
+  "cost": 568,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 232,
+    "reserved": 10,
+    "available": 222
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 117,
+    "reserved": 10,
+    "available": 107
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 138,
+    "reserved": 0,
+    "available": 138
+   }
+  ]
+ },
+ {
+  "sku": "WI-262",
+  "name": "Wingtip HuddleCam 2 L",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 686,
+  "cost": 546,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 2, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 275,
+    "reserved": 5,
+    "available": 270
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 45,
+    "reserved": 0,
+    "available": 45
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 102,
+    "reserved": 5,
+    "available": 97
+   }
+  ]
+ },
+ {
+  "sku": "WI-263",
+  "name": "Wingtip HuddleCam 2 M",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 622,
+  "cost": 452,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 55,
+    "reserved": 0,
+    "available": 55
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 80,
+    "reserved": 10,
+    "available": 70
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 154,
+    "reserved": 10,
+    "available": 144
+   }
+  ]
+ },
+ {
+  "sku": "WI-264",
+  "name": "Wingtip HuddleCam 2 Max",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 708,
+  "cost": 543,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 133,
+    "reserved": 10,
+    "available": 123
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 45,
+    "reserved": 5,
+    "available": 40
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 46,
+    "reserved": 0,
+    "available": 46
+   }
+  ]
+ },
+ {
+  "sku": "WI-265",
+  "name": "Wingtip HuddleCam 3 M",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 687,
+  "cost": 507,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 214,
+    "reserved": 0,
+    "available": 214
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 26,
+    "reserved": 0,
+    "available": 26
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 93,
+    "reserved": 0,
+    "available": 93
+   }
+  ]
+ },
+ {
+  "sku": "WI-266",
+  "name": "Wingtip HuddleCam 3 Pro",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 803,
+  "cost": 664,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 291,
+    "reserved": 5,
+    "available": 286
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 288,
+    "reserved": 0,
+    "available": 288
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 132,
+    "reserved": 0,
+    "available": 132
+   }
+  ]
+ },
+ {
+  "sku": "WI-267",
+  "name": "Wingtip HuddleCam 3 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 803,
+  "cost": 616,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 292,
+    "reserved": 0,
+    "available": 292
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 16,
+    "reserved": 10,
+    "available": 6
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 52,
+    "reserved": 10,
+    "available": 42
+   }
+  ]
+ },
+ {
+  "sku": "WI-268",
+  "name": "Wingtip HuddleCam 3 Air",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 790,
+  "cost": 588,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 93,
+    "reserved": 10,
+    "available": 83
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 267,
+    "reserved": 0,
+    "available": 267
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 194,
+    "reserved": 0,
+    "available": 194
+   }
+  ]
+ },
+ {
+  "sku": "WI-269",
+  "name": "Wingtip HuddleCam 4 M",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 843,
+  "cost": 675,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 42,
+    "reserved": 0,
+    "available": 42
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 194,
+    "reserved": 0,
+    "available": 194
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 31,
+    "reserved": 0,
+    "available": 31
+   }
+  ]
+ },
+ {
+  "sku": "WI-270",
+  "name": "Wingtip HuddleCam 4 S",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 825,
+  "cost": 617,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 189,
+    "reserved": 0,
+    "available": 189
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 260,
+    "reserved": 10,
+    "available": 250
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 280,
+    "reserved": 0,
+    "available": 280
+   }
+  ]
+ },
+ {
+  "sku": "WI-271",
+  "name": "Wingtip HuddleCam 4 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 807,
+  "cost": 621,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 42,
+    "reserved": 5,
+    "available": 37
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 117,
+    "reserved": 0,
+    "available": 117
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 228,
+    "reserved": 0,
+    "available": 228
+   }
+  ]
+ },
+ {
+  "sku": "WI-272",
+  "name": "Wingtip HuddleCam 4 Pro",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 816,
+  "cost": 627,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 197,
+    "reserved": 0,
+    "available": 197
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 283,
+    "reserved": 5,
+    "available": 278
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 155,
+    "reserved": 5,
+    "available": 150
+   }
+  ]
+ },
+ {
+  "sku": "WI-273",
+  "name": "Wingtip HuddleCam 5 Plus",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 974,
+  "cost": 704,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 2,
+    "reserved": 0,
+    "available": 2
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 243,
+    "reserved": 5,
+    "available": 238
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 256,
+    "reserved": 0,
+    "available": 256
+   }
+  ]
+ },
+ {
+  "sku": "WI-274",
+  "name": "Wingtip HuddleCam 5 X",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 960,
+  "cost": 788,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 5, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 127,
+    "reserved": 10,
+    "available": 117
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 238,
+    "reserved": 5,
+    "available": 233
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 127,
+    "reserved": 0,
+    "available": 127
+   }
+  ]
+ },
+ {
+  "sku": "WI-275",
+  "name": "Wingtip HuddleCam 5 Max",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 968,
+  "cost": 771,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 282,
+    "reserved": 0,
+    "available": 282
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 237,
+    "reserved": 10,
+    "available": 227
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 21,
+    "reserved": 0,
+    "available": 21
+   }
+  ]
+ },
+ {
+  "sku": "WI-276",
+  "name": "Wingtip HuddleCam 5 L",
+  "vendor": "Wingtip",
+  "category": "Peripherals",
+  "list_price": 965,
+  "cost": 790,
+  "status": "active",
+  "description": "A wide-angle conference room camera with a built-in speaker bar. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 293,
+    "reserved": 0,
+    "available": 293
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 251,
+    "reserved": 10,
+    "available": 241
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 162,
+    "reserved": 10,
+    "available": 152
+   }
+  ]
+ },
+ {
+  "sku": "LI-277",
+  "name": "Litware AirPoint 2 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 416,
+  "cost": 324,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 149,
+    "reserved": 5,
+    "available": 144
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 75,
+    "reserved": 0,
+    "available": 75
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 206,
+    "reserved": 0,
+    "available": 206
+   }
+  ]
+ },
+ {
+  "sku": "LI-278",
+  "name": "Litware AirPoint 2 Max",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 447,
+  "cost": 329,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 2, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 157,
+    "reserved": 0,
+    "available": 157
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 211,
+    "reserved": 0,
+    "available": 211
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 196,
+    "reserved": 5,
+    "available": 191
+   }
+  ]
+ },
+ {
+  "sku": "LI-279",
+  "name": "Litware AirPoint 2 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 419,
+  "cost": 314,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 158,
+    "reserved": 5,
+    "available": 153
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 267,
+    "reserved": 0,
+    "available": 267
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 90,
+    "reserved": 0,
+    "available": 90
+   }
+  ]
+ },
+ {
+  "sku": "LI-280",
+  "name": "Litware AirPoint 2 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 451,
+  "cost": 337,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 240,
+    "reserved": 0,
+    "available": 240
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 54,
+    "reserved": 10,
+    "available": 44
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 44,
+    "reserved": 0,
+    "available": 44
+   }
+  ]
+ },
+ {
+  "sku": "LI-281",
+  "name": "Litware AirPoint 3 M",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 475,
+  "cost": 374,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 150,
+    "reserved": 0,
+    "available": 150
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 252,
+    "reserved": 5,
+    "available": 247
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 120,
+    "reserved": 0,
+    "available": 120
+   }
+  ]
+ },
+ {
+  "sku": "LI-282",
+  "name": "Litware AirPoint 3 Plus",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 495,
+  "cost": 401,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 72,
+    "reserved": 0,
+    "available": 72
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 91,
+    "reserved": 0,
+    "available": 91
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 169,
+    "reserved": 0,
+    "available": 169
+   }
+  ]
+ },
+ {
+  "sku": "LI-283",
+  "name": "Litware AirPoint 3 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 484,
+  "cost": 383,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 59,
+    "reserved": 0,
+    "available": 59
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 19,
+    "reserved": 0,
+    "available": 19
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 270,
+    "reserved": 0,
+    "available": 270
+   }
+  ]
+ },
+ {
+  "sku": "LI-284",
+  "name": "Litware AirPoint 3 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 539,
+  "cost": 400,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 215,
+    "reserved": 10,
+    "available": 205
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 6,
+    "reserved": 6,
+    "available": 0
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 90,
+    "reserved": 0,
+    "available": 90
+   }
+  ]
+ },
+ {
+  "sku": "LI-285",
+  "name": "Litware AirPoint 4 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 524,
+  "cost": 432,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 7,
+    "reserved": 0,
+    "available": 7
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 156,
+    "reserved": 5,
+    "available": 151
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 96,
+    "reserved": 10,
+    "available": 86
+   }
+  ]
+ },
+ {
+  "sku": "LI-286",
+  "name": "Litware AirPoint 4 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 597,
+  "cost": 466,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 244,
+    "reserved": 0,
+    "available": 244
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 206,
+    "reserved": 0,
+    "available": 206
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 298,
+    "reserved": 0,
+    "available": 298
+   }
+  ]
+ },
+ {
+  "sku": "LI-287",
+  "name": "Litware AirPoint 4 L",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 597,
+  "cost": 483,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 4, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 291,
+    "reserved": 0,
+    "available": 291
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 17,
+    "reserved": 5,
+    "available": 12
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 203,
+    "reserved": 0,
+    "available": 203
+   }
+  ]
+ },
+ {
+  "sku": "LI-288",
+  "name": "Litware AirPoint 4 Plus",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 569,
+  "cost": 461,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 103,
+    "reserved": 5,
+    "available": 98
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 257,
+    "reserved": 5,
+    "available": 252
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 277,
+    "reserved": 10,
+    "available": 267
+   }
+  ]
+ },
+ {
+  "sku": "LI-289",
+  "name": "Litware AirPoint 5 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 557,
+  "cost": 408,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 85,
+    "reserved": 5,
+    "available": 80
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 174,
+    "reserved": 0,
+    "available": 174
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 130,
+    "reserved": 5,
+    "available": 125
+   }
+  ]
+ },
+ {
+  "sku": "LI-290",
+  "name": "Litware AirPoint 5 Plus",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 543,
+  "cost": 419,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 36,
+    "reserved": 10,
+    "available": 26
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 63,
+    "reserved": 0,
+    "available": 63
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 136,
+    "reserved": 0,
+    "available": 136
+   }
+  ]
+ },
+ {
+  "sku": "LI-291",
+  "name": "Litware AirPoint 5 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 591,
+  "cost": 438,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 236,
+    "reserved": 0,
+    "available": 236
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 28,
+    "reserved": 0,
+    "available": 28
+   }
+  ]
+ },
+ {
+  "sku": "LI-292",
+  "name": "Litware AirPoint 5 L",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 556,
+  "cost": 441,
+  "status": "active",
+  "description": "A ceiling-mounted Wi-Fi access point for offices and schools. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 216,
+    "reserved": 10,
+    "available": 206
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 167,
+    "reserved": 0,
+    "available": 167
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 277,
+    "reserved": 5,
+    "available": 272
+   }
+  ]
+ },
+ {
+  "sku": "LI-293",
+  "name": "Litware CoreSwitch 2 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3189,
+  "cost": 2455,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 182,
+    "reserved": 0,
+    "available": 182
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 131,
+    "reserved": 0,
+    "available": 131
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 142,
+    "reserved": 0,
+    "available": 142
+   }
+  ]
+ },
+ {
+  "sku": "LI-294",
+  "name": "Litware CoreSwitch 2 M",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3165,
+  "cost": 2317,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 2,
+    "reserved": 2,
+    "available": 0
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 148,
+    "reserved": 10,
+    "available": 138
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 17,
+    "reserved": 0,
+    "available": 17
+   }
+  ]
+ },
+ {
+  "sku": "LI-295",
+  "name": "Litware CoreSwitch 2 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2922,
+  "cost": 2424,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 2, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 291,
+    "reserved": 0,
+    "available": 291
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 281,
+    "reserved": 5,
+    "available": 276
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 161,
+    "reserved": 0,
+    "available": 161
+   }
+  ]
+ },
+ {
+  "sku": "LI-296",
+  "name": "Litware CoreSwitch 2 L",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2962,
+  "cost": 2245,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 2, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 245,
+    "reserved": 10,
+    "available": 235
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 135,
+    "reserved": 5,
+    "available": 130
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 88,
+    "reserved": 0,
+    "available": 88
+   }
+  ]
+ },
+ {
+  "sku": "LI-297",
+  "name": "Litware CoreSwitch 3 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3229,
+  "cost": 2708,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 276,
+    "reserved": 10,
+    "available": 266
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 225,
+    "reserved": 0,
+    "available": 225
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 1,
+    "reserved": 0,
+    "available": 1
+   }
+  ]
+ },
+ {
+  "sku": "LI-298",
+  "name": "Litware CoreSwitch 3 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3584,
+  "cost": 2660,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 195,
+    "reserved": 5,
+    "available": 190
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 257,
+    "reserved": 0,
+    "available": 257
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 149,
+    "reserved": 0,
+    "available": 149
+   }
+  ]
+ },
+ {
+  "sku": "LI-299",
+  "name": "Litware CoreSwitch 3 M",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3225,
+  "cost": 2626,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 51,
+    "reserved": 10,
+    "available": 41
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 77,
+    "reserved": 0,
+    "available": 77
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 52,
+    "reserved": 0,
+    "available": 52
+   }
+  ]
+ },
+ {
+  "sku": "LI-300",
+  "name": "Litware CoreSwitch 3 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3536,
+  "cost": 2662,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 290,
+    "reserved": 0,
+    "available": 290
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 198,
+    "reserved": 0,
+    "available": 198
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 10,
+    "reserved": 0,
+    "available": 10
+   }
+  ]
+ },
+ {
+  "sku": "LI-301",
+  "name": "Litware CoreSwitch 4 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3750,
+  "cost": 3108,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 278,
+    "reserved": 10,
+    "available": 268
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 238,
+    "reserved": 0,
+    "available": 238
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 73,
+    "reserved": 10,
+    "available": 63
+   }
+  ]
+ },
+ {
+  "sku": "LI-302",
+  "name": "Litware CoreSwitch 4 L",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3790,
+  "cost": 3152,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 4, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 249,
+    "reserved": 5,
+    "available": 244
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 74,
+    "reserved": 5,
+    "available": 69
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 293,
+    "reserved": 10,
+    "available": 283
+   }
+  ]
+ },
+ {
+  "sku": "LI-303",
+  "name": "Litware CoreSwitch 4 Max",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3727,
+  "cost": 2765,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 4, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 207,
+    "reserved": 0,
+    "available": 207
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 109,
+    "reserved": 0,
+    "available": 109
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 100,
+    "reserved": 0,
+    "available": 100
+   }
+  ]
+ },
+ {
+  "sku": "LI-304",
+  "name": "Litware CoreSwitch 4 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3845,
+  "cost": 3175,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 78,
+    "reserved": 0,
+    "available": 78
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 290,
+    "reserved": 0,
+    "available": 290
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 75,
+    "reserved": 0,
+    "available": 75
+   }
+  ]
+ },
+ {
+  "sku": "LI-305",
+  "name": "Litware CoreSwitch 5 Max",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 4151,
+  "cost": 3061,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 167,
+    "reserved": 10,
+    "available": 157
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 47,
+    "reserved": 5,
+    "available": 42
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 241,
+    "reserved": 0,
+    "available": 241
+   }
+  ]
+ },
+ {
+  "sku": "LI-306",
+  "name": "Litware CoreSwitch 5 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 4456,
+  "cost": 3422,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 5, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 245,
+    "reserved": 0,
+    "available": 245
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 188,
+    "reserved": 10,
+    "available": 178
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 2,
+    "reserved": 0,
+    "available": 2
+   }
+  ]
+ },
+ {
+  "sku": "LI-307",
+  "name": "Litware CoreSwitch 5 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3902,
+  "cost": 2892,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 5, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 68,
+    "reserved": 10,
+    "available": 58
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 277,
+    "reserved": 0,
+    "available": 277
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 65,
+    "reserved": 0,
+    "available": 65
+   }
+  ]
+ },
+ {
+  "sku": "LI-308",
+  "name": "Litware CoreSwitch 5 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 3896,
+  "cost": 2905,
+  "status": "active",
+  "description": "A stackable network switch for wiring closets and branch offices. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 156,
+    "reserved": 0,
+    "available": 156
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 28,
+    "reserved": 0,
+    "available": 28
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 284,
+    "reserved": 0,
+    "available": 284
+   }
+  ]
+ },
+ {
+  "sku": "LI-309",
+  "name": "Litware EdgeGate 2 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 1884,
+  "cost": 1440,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 148,
+    "reserved": 5,
+    "available": 143
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 199,
+    "reserved": 0,
+    "available": 199
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 247,
+    "reserved": 5,
+    "available": 242
+   }
+  ]
+ },
+ {
+  "sku": "LI-310",
+  "name": "Litware EdgeGate 2 M",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 1959,
+  "cost": 1526,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 270,
+    "reserved": 0,
+    "available": 270
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 156,
+    "reserved": 0,
+    "available": 156
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 248,
+    "reserved": 0,
+    "available": 248
+   }
+  ]
+ },
+ {
+  "sku": "LI-311",
+  "name": "Litware EdgeGate 2 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 1826,
+  "cost": 1357,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 241,
+    "reserved": 0,
+    "available": 241
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 296,
+    "reserved": 0,
+    "available": 296
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 23,
+    "reserved": 10,
+    "available": 13
+   }
+  ]
+ },
+ {
+  "sku": "LI-312",
+  "name": "Litware EdgeGate 2 Plus",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2011,
+  "cost": 1624,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 2, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 260,
+    "reserved": 0,
+    "available": 260
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 30,
+    "reserved": 0,
+    "available": 30
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 271,
+    "reserved": 5,
+    "available": 266
+   }
+  ]
+ },
+ {
+  "sku": "LI-313",
+  "name": "Litware EdgeGate 3 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2249,
+  "cost": 1669,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 100,
+    "reserved": 0,
+    "available": 100
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 55,
+    "reserved": 0,
+    "available": 55
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 47,
+    "reserved": 10,
+    "available": 37
+   }
+  ]
+ },
+ {
+  "sku": "LI-314",
+  "name": "Litware EdgeGate 3 Max",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2016,
+  "cost": 1664,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 3, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 212,
+    "reserved": 0,
+    "available": 212
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 262,
+    "reserved": 0,
+    "available": 262
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 37,
+    "reserved": 0,
+    "available": 37
+   }
+  ]
+ },
+ {
+  "sku": "LI-315",
+  "name": "Litware EdgeGate 3 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2158,
+  "cost": 1583,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 133,
+    "reserved": 10,
+    "available": 123
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 187,
+    "reserved": 0,
+    "available": 187
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 77,
+    "reserved": 5,
+    "available": 72
+   }
+  ]
+ },
+ {
+  "sku": "LI-316",
+  "name": "Litware EdgeGate 3 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 1998,
+  "cost": 1646,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 53,
+    "reserved": 0,
+    "available": 53
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 7,
+    "reserved": 0,
+    "available": 7
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 111,
+    "reserved": 10,
+    "available": 101
+   }
+  ]
+ },
+ {
+  "sku": "LI-317",
+  "name": "Litware EdgeGate 4 S",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2187,
+  "cost": 1621,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 4, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 128,
+    "reserved": 0,
+    "available": 128
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 39,
+    "reserved": 5,
+    "available": 34
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 80,
+    "reserved": 0,
+    "available": 80
+   }
+  ]
+ },
+ {
+  "sku": "LI-318",
+  "name": "Litware EdgeGate 4 M",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2354,
+  "cost": 1760,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 4, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 103,
+    "reserved": 0,
+    "available": 103
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 170,
+    "reserved": 5,
+    "available": 165
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 58,
+    "reserved": 5,
+    "available": 53
+   }
+  ]
+ },
+ {
+  "sku": "LI-319",
+  "name": "Litware EdgeGate 4 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2344,
+  "cost": 1802,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 39,
+    "reserved": 0,
+    "available": 39
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 85,
+    "reserved": 0,
+    "available": 85
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 171,
+    "reserved": 0,
+    "available": 171
+   }
+  ]
+ },
+ {
+  "sku": "LI-320",
+  "name": "Litware EdgeGate 4 Air",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2533,
+  "cost": 2068,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 156,
+    "reserved": 0,
+    "available": 156
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 32,
+    "reserved": 5,
+    "available": 27
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 111,
+    "reserved": 0,
+    "available": 111
+   }
+  ]
+ },
+ {
+  "sku": "LI-321",
+  "name": "Litware EdgeGate 5 Pro",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2474,
+  "cost": 1861,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 127,
+    "reserved": 10,
+    "available": 117
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 260,
+    "reserved": 0,
+    "available": 260
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 29,
+    "reserved": 5,
+    "available": 24
+   }
+  ]
+ },
+ {
+  "sku": "LI-322",
+  "name": "Litware EdgeGate 5 X",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2509,
+  "cost": 2107,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 5, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 64,
+    "reserved": 0,
+    "available": 64
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 38,
+    "reserved": 0,
+    "available": 38
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 223,
+    "reserved": 10,
+    "available": 213
+   }
+  ]
+ },
+ {
+  "sku": "LI-323",
+  "name": "Litware EdgeGate 5 Plus",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2584,
+  "cost": 2028,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 229,
+    "reserved": 10,
+    "available": 219
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 267,
+    "reserved": 10,
+    "available": 257
+   }
+  ]
+ },
+ {
+  "sku": "LI-324",
+  "name": "Litware EdgeGate 5 Max",
+  "vendor": "Litware",
+  "category": "Networking",
+  "list_price": 2811,
+  "cost": 2155,
+  "status": "active",
+  "description": "A branch firewall and router that connects remote sites back to headquarters. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 32,
+    "reserved": 10,
+    "available": 22
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 287,
+    "reserved": 0,
+    "available": 287
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 132,
+    "reserved": 0,
+    "available": 132
+   }
+  ]
+ },
+ {
+  "sku": "AD-325",
+  "name": "Adatum RackServe 2 M",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 7577,
+  "cost": 5999,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 2, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 251,
+    "reserved": 0,
+    "available": 251
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 188,
+    "reserved": 0,
+    "available": 188
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 120,
+    "reserved": 0,
+    "available": 120
+   }
+  ]
+ },
+ {
+  "sku": "AD-326",
+  "name": "Adatum RackServe 2 X",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 6646,
+  "cost": 5226,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 149,
+    "reserved": 0,
+    "available": 149
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 49,
+    "reserved": 5,
+    "available": 44
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 182,
+    "reserved": 10,
+    "available": 172
+   }
+  ]
+ },
+ {
+  "sku": "AD-327",
+  "name": "Adatum RackServe 2 Air",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 6944,
+  "cost": 5501,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 49,
+    "reserved": 5,
+    "available": 44
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 287,
+    "reserved": 10,
+    "available": 277
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 183,
+    "reserved": 0,
+    "available": 183
+   }
+  ]
+ },
+ {
+  "sku": "AD-328",
+  "name": "Adatum RackServe 2 S",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 6518,
+  "cost": 5279,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 100,
+    "reserved": 0,
+    "available": 100
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 193,
+    "reserved": 0,
+    "available": 193
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 164,
+    "reserved": 0,
+    "available": 164
+   }
+  ]
+ },
+ {
+  "sku": "AD-329",
+  "name": "Adatum RackServe 3 X",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 8230,
+  "cost": 6701,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 3, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 10,
+    "reserved": 0,
+    "available": 10
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 225,
+    "reserved": 0,
+    "available": 225
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 27,
+    "reserved": 5,
+    "available": 22
+   }
+  ]
+ },
+ {
+  "sku": "AD-330",
+  "name": "Adatum RackServe 3 L",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 7904,
+  "cost": 6598,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 3, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 83,
+    "reserved": 0,
+    "available": 83
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 151,
+    "reserved": 10,
+    "available": 141
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 149,
+    "reserved": 0,
+    "available": 149
+   }
+  ]
+ },
+ {
+  "sku": "AD-331",
+  "name": "Adatum RackServe 3 Plus",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 7791,
+  "cost": 5961,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 201,
+    "reserved": 10,
+    "available": 191
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 277,
+    "reserved": 0,
+    "available": 277
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 291,
+    "reserved": 10,
+    "available": 281
+   }
+  ]
+ },
+ {
+  "sku": "AD-332",
+  "name": "Adatum RackServe 3 S",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 8651,
+  "cost": 6901,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 3, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 9,
+    "reserved": 9,
+    "available": 0
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 50,
+    "reserved": 0,
+    "available": 50
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 281,
+    "reserved": 0,
+    "available": 281
+   }
+  ]
+ },
+ {
+  "sku": "AD-333",
+  "name": "Adatum RackServe 4 Air",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 9723,
+  "cost": 8014,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 158,
+    "reserved": 10,
+    "available": 148
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 96,
+    "reserved": 10,
+    "available": 86
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 74,
+    "reserved": 10,
+    "available": 64
+   }
+  ]
+ },
+ {
+  "sku": "AD-334",
+  "name": "Adatum RackServe 4 Pro",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 9345,
+  "cost": 7746,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 295,
+    "reserved": 10,
+    "available": 285
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 200,
+    "reserved": 10,
+    "available": 190
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 201,
+    "reserved": 0,
+    "available": 201
+   }
+  ]
+ },
+ {
+  "sku": "AD-335",
+  "name": "Adatum RackServe 4 Plus",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 8472,
+  "cost": 6557,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 4, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 91,
+    "reserved": 0,
+    "available": 91
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 180,
+    "reserved": 5,
+    "available": 175
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 233,
+    "reserved": 0,
+    "available": 233
+   }
+  ]
+ },
+ {
+  "sku": "AD-336",
+  "name": "Adatum RackServe 4 X",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 9490,
+  "cost": 7640,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 96,
+    "reserved": 5,
+    "available": 91
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 143,
+    "reserved": 0,
+    "available": 143
+   }
+  ]
+ },
+ {
+  "sku": "AD-337",
+  "name": "Adatum RackServe 5 Pro",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 9870,
+  "cost": 7856,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 5, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 16,
+    "reserved": 10,
+    "available": 6
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 180,
+    "reserved": 0,
+    "available": 180
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 87,
+    "reserved": 5,
+    "available": 82
+   }
+  ]
+ },
+ {
+  "sku": "AD-338",
+  "name": "Adatum RackServe 5 Plus",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 9216,
+  "cost": 7667,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 248,
+    "reserved": 0,
+    "available": 248
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 281,
+    "reserved": 0,
+    "available": 281
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 98,
+    "reserved": 10,
+    "available": 88
+   }
+  ]
+ },
+ {
+  "sku": "AD-339",
+  "name": "Adatum RackServe 5 L",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 9388,
+  "cost": 7336,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 5, L configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 119,
+    "reserved": 0,
+    "available": 119
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 126,
+    "reserved": 5,
+    "available": 121
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 72,
+    "reserved": 0,
+    "available": 72
+   }
+  ]
+ },
+ {
+  "sku": "AD-340",
+  "name": "Adatum RackServe 5 M",
+  "vendor": "Adatum",
+  "category": "Servers",
+  "list_price": 10554,
+  "cost": 7956,
+  "status": "active",
+  "description": "A two-socket rack server for virtualization and databases. Generation 5, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 83,
+    "reserved": 5,
+    "available": 78
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 199,
+    "reserved": 0,
+    "available": 199
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 126,
+    "reserved": 0,
+    "available": 126
+   }
+  ]
+ },
+ {
+  "sku": "AD-341",
+  "name": "Adatum VaultArray 2 Plus",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 15546,
+  "cost": 11816,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 2, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 62,
+    "reserved": 0,
+    "available": 62
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 250,
+    "reserved": 5,
+    "available": 245
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 44,
+    "reserved": 5,
+    "available": 39
+   }
+  ]
+ },
+ {
+  "sku": "AD-342",
+  "name": "Adatum VaultArray 2 X",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 15870,
+  "cost": 11831,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 2, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 246,
+    "reserved": 5,
+    "available": 241
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 85,
+    "reserved": 0,
+    "available": 85
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 115,
+    "reserved": 10,
+    "available": 105
+   }
+  ]
+ },
+ {
+  "sku": "AD-343",
+  "name": "Adatum VaultArray 2 Air",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 16778,
+  "cost": 12145,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 2, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 85,
+    "reserved": 0,
+    "available": 85
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 93,
+    "reserved": 0,
+    "available": 93
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 249,
+    "reserved": 0,
+    "available": 249
+   }
+  ]
+ },
+ {
+  "sku": "AD-344",
+  "name": "Adatum VaultArray 2 S",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 16605,
+  "cost": 12594,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 2, S configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 286,
+    "reserved": 0,
+    "available": 286
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 272,
+    "reserved": 0,
+    "available": 272
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 76,
+    "reserved": 10,
+    "available": 66
+   }
+  ]
+ },
+ {
+  "sku": "AD-345",
+  "name": "Adatum VaultArray 3 Air",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 17753,
+  "cost": 13427,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 3, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 79,
+    "reserved": 0,
+    "available": 79
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 76,
+    "reserved": 5,
+    "available": 71
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 234,
+    "reserved": 10,
+    "available": 224
+   }
+  ]
+ },
+ {
+  "sku": "AD-346",
+  "name": "Adatum VaultArray 3 Pro",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 18327,
+  "cost": 14723,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 3, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 247,
+    "reserved": 0,
+    "available": 247
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 129,
+    "reserved": 0,
+    "available": 129
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 77,
+    "reserved": 0,
+    "available": 77
+   }
+  ]
+ },
+ {
+  "sku": "AD-347",
+  "name": "Adatum VaultArray 3 Plus",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 16888,
+  "cost": 12508,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 3, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 190,
+    "reserved": 0,
+    "available": 190
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 153,
+    "reserved": 5,
+    "available": 148
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 174,
+    "reserved": 0,
+    "available": 174
+   }
+  ]
+ },
+ {
+  "sku": "AD-348",
+  "name": "Adatum VaultArray 3 M",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 18651,
+  "cost": 15411,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 3, M configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 16,
+    "reserved": 0,
+    "available": 16
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 137,
+    "reserved": 10,
+    "available": 127
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 293,
+    "reserved": 0,
+    "available": 293
+   }
+  ]
+ },
+ {
+  "sku": "AD-349",
+  "name": "Adatum VaultArray 4 Pro",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 18364,
+  "cost": 15283,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 4, Pro configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 209,
+    "reserved": 0,
+    "available": 209
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 229,
+    "reserved": 5,
+    "available": 224
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 69,
+    "reserved": 0,
+    "available": 69
+   }
+  ]
+ },
+ {
+  "sku": "AD-350",
+  "name": "Adatum VaultArray 4 Max",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 18107,
+  "cost": 14988,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 4, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 92,
+    "reserved": 10,
+    "available": 82
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 180,
+    "reserved": 0,
+    "available": 180
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 128,
+    "reserved": 0,
+    "available": 128
+   }
+  ]
+ },
+ {
+  "sku": "AD-351",
+  "name": "Adatum VaultArray 4 Air",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 17615,
+  "cost": 12770,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 4, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 254,
+    "reserved": 0,
+    "available": 254
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 172,
+    "reserved": 0,
+    "available": 172
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 295,
+    "reserved": 0,
+    "available": 295
+   }
+  ]
+ },
+ {
+  "sku": "AD-352",
+  "name": "Adatum VaultArray 4 X",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 19342,
+  "cost": 14432,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 4, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 119,
+    "reserved": 0,
+    "available": 119
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 248,
+    "reserved": 10,
+    "available": 238
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 116,
+    "reserved": 10,
+    "available": 106
+   }
+  ]
+ },
+ {
+  "sku": "AD-353",
+  "name": "Adatum VaultArray 5 Air",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 20006,
+  "cost": 15174,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 5, Air configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 242,
+    "reserved": 0,
+    "available": 242
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 234,
+    "reserved": 5,
+    "available": 229
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 9,
+    "reserved": 0,
+    "available": 9
+   }
+  ]
+ },
+ {
+  "sku": "AD-354",
+  "name": "Adatum VaultArray 5 Max",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 20711,
+  "cost": 15769,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 5, Max configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 218,
+    "reserved": 0,
+    "available": 218
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 264,
+    "reserved": 10,
+    "available": 254
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 69,
+    "reserved": 0,
+    "available": 69
+   }
+  ]
+ },
+ {
+  "sku": "AD-355",
+  "name": "Adatum VaultArray 5 X",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 20556,
+  "cost": 17159,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 5, X configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 167,
+    "reserved": 0,
+    "available": 167
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 216,
+    "reserved": 10,
+    "available": 206
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 27,
+    "reserved": 10,
+    "available": 17
+   }
+  ]
+ },
+ {
+  "sku": "AD-356",
+  "name": "Adatum VaultArray 5 Plus",
+  "vendor": "Adatum",
+  "category": "Storage",
+  "list_price": 20396,
+  "cost": 16196,
+  "status": "active",
+  "description": "An all-flash storage array with snapshots and replication for backups. Generation 5, Plus configuration.",
+  "stock": [
+   {
+    "warehouse": "Chicago",
+    "on_hand": 64,
+    "reserved": 0,
+    "available": 64
+   },
+   {
+    "warehouse": "Dallas",
+    "on_hand": 215,
+    "reserved": 0,
+    "available": 215
+   },
+   {
+    "warehouse": "Reno",
+    "on_hand": 148,
+    "reserved": 5,
+    "available": 143
+   }
+  ]
+ },
+ {
+  "sku": "PR-357",
+  "name": "Proseware ShieldEndpoint 2 Plus",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 58,
+  "cost": 43,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 2, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-358",
+  "name": "Proseware ShieldEndpoint 2 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 58,
+  "cost": 45,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 2, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-359",
+  "name": "Proseware ShieldEndpoint 2 X",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 57,
+  "cost": 44,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 2, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-360",
+  "name": "Proseware ShieldEndpoint 2 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 58,
+  "cost": 46,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 2, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-361",
+  "name": "Proseware ShieldEndpoint 3 L",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 66,
+  "cost": 48,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 3, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-362",
+  "name": "Proseware ShieldEndpoint 3 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 63,
+  "cost": 51,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 3, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-363",
+  "name": "Proseware ShieldEndpoint 3 Plus",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 67,
+  "cost": 55,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 3, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-364",
+  "name": "Proseware ShieldEndpoint 3 S",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 64,
+  "cost": 50,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 3, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-365",
+  "name": "Proseware ShieldEndpoint 4 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 75,
+  "cost": 62,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 4, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-366",
+  "name": "Proseware ShieldEndpoint 4 S",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 74,
+  "cost": 60,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 4, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-367",
+  "name": "Proseware ShieldEndpoint 4 X",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 80,
+  "cost": 67,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 4, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-368",
+  "name": "Proseware ShieldEndpoint 4 Plus",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 79,
+  "cost": 61,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 4, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-369",
+  "name": "Proseware ShieldEndpoint 5 X",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 85,
+  "cost": 68,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 5, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-370",
+  "name": "Proseware ShieldEndpoint 5 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 85,
+  "cost": 67,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 5, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-371",
+  "name": "Proseware ShieldEndpoint 5 Pro",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 83,
+  "cost": 63,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 5, Pro configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-372",
+  "name": "Proseware ShieldEndpoint 5 L",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 78,
+  "cost": 65,
+  "status": "active",
+  "description": "Endpoint protection software that stops ransomware on laptops and desktops. Priced per device per year. Generation 5, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-373",
+  "name": "Proseware ShieldMail 2 Pro",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 33,
+  "cost": 27,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 2, Pro configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-374",
+  "name": "Proseware ShieldMail 2 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 37,
+  "cost": 30,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 2, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-375",
+  "name": "Proseware ShieldMail 2 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 34,
+  "cost": 25,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 2, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-376",
+  "name": "Proseware ShieldMail 2 Max",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 34,
+  "cost": 28,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 2, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-377",
+  "name": "Proseware ShieldMail 3 S",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 43,
+  "cost": 34,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 3, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-378",
+  "name": "Proseware ShieldMail 3 X",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 41,
+  "cost": 33,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 3, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-379",
+  "name": "Proseware ShieldMail 3 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 38,
+  "cost": 31,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 3, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-380",
+  "name": "Proseware ShieldMail 3 Plus",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 42,
+  "cost": 32,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 3, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-381",
+  "name": "Proseware ShieldMail 4 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 41,
+  "cost": 30,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 4, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-382",
+  "name": "Proseware ShieldMail 4 X",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 49,
+  "cost": 39,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 4, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-383",
+  "name": "Proseware ShieldMail 4 S",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 42,
+  "cost": 33,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 4, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-384",
+  "name": "Proseware ShieldMail 4 L",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 47,
+  "cost": 38,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 4, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-385",
+  "name": "Proseware ShieldMail 5 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 52,
+  "cost": 42,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 5, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-386",
+  "name": "Proseware ShieldMail 5 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 45,
+  "cost": 35,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 5, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-387",
+  "name": "Proseware ShieldMail 5 X",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 44,
+  "cost": 33,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 5, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-388",
+  "name": "Proseware ShieldMail 5 L",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 48,
+  "cost": 36,
+  "status": "active",
+  "description": "Email security that blocks phishing before it reaches an inbox. Priced per user per year. Generation 5, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-389",
+  "name": "Proseware ShieldID 2 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 53,
+  "cost": 38,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 2, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-390",
+  "name": "Proseware ShieldID 2 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 46,
+  "cost": 34,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 2, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-391",
+  "name": "Proseware ShieldID 2 Pro",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 45,
+  "cost": 35,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 2, Pro configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-392",
+  "name": "Proseware ShieldID 2 Max",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 45,
+  "cost": 36,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 2, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-393",
+  "name": "Proseware ShieldID 3 Max",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 59,
+  "cost": 49,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 3, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-394",
+  "name": "Proseware ShieldID 3 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 53,
+  "cost": 42,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 3, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-395",
+  "name": "Proseware ShieldID 3 S",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 53,
+  "cost": 39,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 3, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-396",
+  "name": "Proseware ShieldID 3 L",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 50,
+  "cost": 41,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 3, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-397",
+  "name": "Proseware ShieldID 4 Air",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 57,
+  "cost": 45,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 4, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-398",
+  "name": "Proseware ShieldID 4 Max",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 54,
+  "cost": 45,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 4, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-399",
+  "name": "Proseware ShieldID 4 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 57,
+  "cost": 42,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 4, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-400",
+  "name": "Proseware ShieldID 4 S",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 54,
+  "cost": 42,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 4, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-401",
+  "name": "Proseware ShieldID 5 L",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 71,
+  "cost": 58,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 5, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-402",
+  "name": "Proseware ShieldID 5 Max",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 71,
+  "cost": 58,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 5, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-403",
+  "name": "Proseware ShieldID 5 M",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 65,
+  "cost": 53,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 5, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "PR-404",
+  "name": "Proseware ShieldID 5 Plus",
+  "vendor": "Proseware",
+  "category": "Security",
+  "list_price": 61,
+  "cost": 47,
+  "status": "active",
+  "description": "Multi-factor sign-in and password protection for staff accounts. Priced per user per year. Generation 5, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-405",
+  "name": "Leafy Tech Install 2 S",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1224,
+  "cost": 1015,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 2, S configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-406",
+  "name": "Leafy Tech Install 2 L",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1245,
+  "cost": 980,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 2, L configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-407",
+  "name": "Leafy Tech Install 2 X",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1360,
+  "cost": 988,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 2, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-408",
+  "name": "Leafy Tech Install 2 Max",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1232,
+  "cost": 901,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 2, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-409",
+  "name": "Leafy Tech Install 3 Plus",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1386,
+  "cost": 1075,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 3, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-410",
+  "name": "Leafy Tech Install 3 Pro",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1319,
+  "cost": 1002,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 3, Pro configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-411",
+  "name": "Leafy Tech Install 3 Air",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1312,
+  "cost": 1060,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 3, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-412",
+  "name": "Leafy Tech Install 3 X",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1482,
+  "cost": 1118,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 3, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-413",
+  "name": "Leafy Tech Install 4 X",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1564,
+  "cost": 1299,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 4, X configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-414",
+  "name": "Leafy Tech Install 4 Plus",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1416,
+  "cost": 1153,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 4, Plus configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-415",
+  "name": "Leafy Tech Install 4 Air",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1465,
+  "cost": 1116,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 4, Air configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-416",
+  "name": "Leafy Tech Install 4 Max",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1719,
+  "cost": 1267,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 4, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-417",
+  "name": "Leafy Tech Install 5 M",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1625,
+  "cost": 1341,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 5, M configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-418",
+  "name": "Leafy Tech Install 5 Pro",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1636,
+  "cost": 1336,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 5, Pro configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-419",
+  "name": "Leafy Tech Install 5 Max",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1671,
+  "cost": 1273,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 5, Max configuration.",
+  "stock": []
+ },
+ {
+  "sku": "LE-420",
+  "name": "Leafy Tech Install 5 Air",
+  "vendor": "Leafy Tech",
+  "category": "Services",
+  "list_price": 1567,
+  "cost": 1213,
+  "status": "active",
+  "description": "Onsite installation by a Leafy Tech engineer. Priced per day. Generation 5, Air configuration.",
+  "stock": []
+ }
+]

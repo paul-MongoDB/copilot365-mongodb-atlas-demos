@@ -1,0 +1,451 @@
+"""Build the Word documents that go in OneDrive for the demo.
+
+    python scripts/build_documents.py   ->  onedrive/*.docx
+
+All wording is original and fictional. Contoso Mutual is not a real insurer.
+"""
+
+from __future__ import annotations
+
+from datetime import datetime
+from pathlib import Path
+
+from docx import Document
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.shared import Inches, Pt, RGBColor
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "onedrive"
+FOOTER = "Contoso Mutual Insurance Company. Fictional document created for a product demonstration."
+
+
+def new_doc(title: str, subtitle: str) -> Document:
+    doc = Document()
+    style = doc.styles["Normal"]
+    style.font.name = "Calibri"
+    style.font.size = Pt(10.5)
+    p = doc.add_paragraph()
+    r = p.add_run("CONTOSO MUTUAL INSURANCE COMPANY")
+    r.bold = True
+    r.font.size = Pt(9)
+    r.font.color.rgb = RGBColor(0x1F, 0x4E, 0x79)
+    doc.add_heading(title, level=0)
+    s = doc.add_paragraph(subtitle)
+    s.runs[0].italic = True
+    cp = doc.core_properties  # python-docx defaults to 2013 and 'python-docx'; Copilot shows these
+    cp.author = cp.last_modified_by = "Contoso Claims Operations"
+    cp.title = title
+    cp.created = datetime(2026, 1, 5, 9, 0)
+    cp.modified = datetime(2026, 10, 1, 9, 0)
+    footer = doc.sections[0].footer.paragraphs[0]
+    footer.text = FOOTER
+    footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    footer.runs[0].font.size = Pt(8)
+    return doc
+
+
+def paras(doc: Document, *texts: str) -> None:
+    for t in texts:
+        doc.add_paragraph(t)
+
+
+def bullets(doc: Document, *items: str) -> None:
+    for t in items:
+        doc.add_paragraph(t, style="List Bullet")
+
+
+def numbered(doc: Document, *items: str) -> None:
+    # Literal numbers, so every list restarts at 1 and "item 2" in a cross
+    # reference means the same thing in Word, PDF and Copilot's text extract.
+    for i, t in enumerate(items, 1):
+        p = doc.add_paragraph(f"{i}.\t{t}")
+        p.paragraph_format.left_indent = Inches(0.35)
+        p.paragraph_format.first_line_indent = Inches(-0.25)
+        p.paragraph_format.tab_stops.add_tab_stop(Inches(0.35))
+
+
+def table(doc: Document, header: list[str], rows: list[list[str]],
+          widths: list[float] | None = None) -> None:
+    t = doc.add_table(rows=1, cols=len(header))
+    t.style = "Light Grid Accent 1"
+    t.autofit = widths is None
+    for cell, h in zip(t.rows[0].cells, header):
+        cell.text = h
+        cell.paragraphs[0].runs[0].bold = True
+    for row in rows:
+        cells = t.add_row().cells
+        for cell, v in zip(cells, row):
+            cell.text = v
+    if widths:
+        for col, w in zip(t.columns, widths):
+            col.width = Inches(w)
+        for row in t.rows:
+            for cell, w in zip(row.cells, widths):
+                cell.width = Inches(w)
+    doc.add_paragraph()
+
+
+# --------------------------------------------------------------------------
+# 1. Homeowners policy form HO-3
+# --------------------------------------------------------------------------
+
+def policy_form() -> None:
+    doc = new_doc("Homeowners Policy, Form HO-3",
+                  "Special Form. Edition 05-2026. Texas. Read together with your Declarations page "
+                  "and any endorsements listed on it.")
+
+    doc.add_heading("Agreement", level=1)
+    paras(doc, "We will provide the insurance described in this policy in return for the premium and "
+               "your compliance with all applicable provisions of this policy. The coverage limits, "
+               "deductibles and endorsements that apply to you are shown on your Declarations page.")
+
+    doc.add_heading("Definitions", level=1)
+    bullets(doc,
+            "\"You\" and \"your\" mean the named insured shown on the Declarations and a resident spouse.",
+            "\"We\", \"us\" and \"our\" mean Contoso Mutual Insurance Company.",
+            "\"Residence premises\" means the dwelling where you reside, shown on the Declarations.",
+            "\"Fungi\" means any type or form of fungus, including mold or mildew, and any spores, "
+            "mycotoxins or by-products produced by fungi.",
+            "\"Occurrence\" means an accident, including continuous or repeated exposure to the same "
+            "general harmful conditions.")
+
+    doc.add_heading("Section I: Property Coverages", level=1)
+    doc.add_heading("Coverage A: Dwelling", level=2)
+    paras(doc, "We cover the dwelling on the residence premises, including structures attached to it, "
+               "and materials and supplies on the premises used to construct, alter or repair it.")
+    doc.add_heading("Coverage B: Other Structures", level=2)
+    paras(doc, "We cover other structures on the residence premises set apart from the dwelling by "
+               "clear space, such as detached garages, fences and sheds.")
+    doc.add_heading("Coverage C: Personal Property", level=2)
+    paras(doc, "We cover personal property owned or used by an insured while it is anywhere in the world.")
+    doc.add_heading("Coverage D: Loss of Use", level=2)
+    paras(doc, "If a loss covered under Section I makes any part of the residence premises where you "
+               "reside not fit to live in, we cover Additional Living Expense: any necessary increase "
+               "in living expenses you incur so that your household can maintain its normal standard "
+               "of living. This includes increased food costs when a covered loss makes the kitchen "
+               "unusable. Payment is for the shortest time required to repair or replace the damage.")
+
+    doc.add_heading("Section I: Additional Coverages", level=1)
+    doc.add_heading("Reasonable Repairs", level=2)
+    paras(doc, "We pay the reasonable cost you incur for necessary measures taken solely to protect "
+               "covered property from further damage, such as water extraction and drying.")
+    doc.add_heading("Tear Out", level=2)
+    paras(doc, "When a loss is caused by water or steam escaping from a plumbing, heating, air "
+               "conditioning or fire protective sprinkler system or household appliance, we pay the "
+               "cost to tear out and replace only that part of the building necessary to repair the "
+               "system or appliance from which the water escaped. We do not pay for tear out that is "
+               "not necessary to make that repair or to repair covered damage.")
+    doc.add_heading("Fungi, Wet or Dry Rot, or Bacteria (Limited Coverage)", level=2)
+    paras(doc, "We pay up to $5,000 in total during the policy period for direct physical loss to "
+               "covered property caused by fungi, wet or dry rot, or bacteria, including the cost to "
+               "remove them and to tear out and replace property to gain access to them. This limited "
+               "coverage applies only when the fungi, wet or dry rot, or bacteria result from a Peril "
+               "Insured Against that occurs during the policy period. The $5,000 limit is the most we "
+               "pay regardless of the number of locations or claims, and does not increase the "
+               "Coverage A or C limit.")
+
+    doc.add_heading("Section I: Perils Insured Against", level=1)
+    paras(doc, "Coverages A and B: We insure against direct physical loss to property described in "
+               "Coverages A and B, except for the losses listed below and those excluded in Section I "
+               "Exclusions.")
+    paras(doc, "We do not insure loss:")
+    numbered(doc,
+             "Caused by continuous or repeated seepage or leakage of water or steam over a period of "
+             "14 or more days from within a plumbing, heating, air conditioning or fire protective "
+             "sprinkler system, household appliance, or from around a shower stall, tub, toilet or "
+             "sink, which results in deterioration, rot, fungi or damage to the floors, subfloors, "
+             "walls or ceilings. This exclusion applies whether the seepage or leakage was hidden or "
+             "known to you.",
+             "Caused by wear and tear, marring, deterioration, mechanical breakdown, latent defect, "
+             "or rust or other corrosion.",
+             "Caused by fungi, wet or dry rot, or bacteria, except as provided under the Fungi, Wet "
+             "or Dry Rot, or Bacteria (Limited Coverage) Additional Coverage.",
+             "Caused by settling, shrinking, bulging or expansion of foundations, walls, floors, "
+             "roofs or ceilings.")
+    paras(doc, "Sudden and accidental discharge of water from a plumbing system or household "
+               "appliance on the residence premises is covered, including the cost of tear out "
+               "described above, subject to the exclusions in this section.")
+
+    doc.add_heading("Section I: Exclusions", level=1)
+    doc.add_heading("Water", level=2)
+    paras(doc, "We do not cover loss caused by any of the following, regardless of any other cause "
+               "or event contributing to the loss:")
+    numbered(doc,
+             "Flood, surface water, waves, tidal water or overflow of a body of water.",
+             "Water or water-borne material which backs up through sewers or drains, or which "
+             "overflows or is discharged from a sump, sump pump or related equipment. This exclusion "
+             "does not apply if Endorsement HO-WB (Water Backup and Sump Discharge or Overflow) is "
+             "shown on your Declarations, and then only up to the limit of that endorsement.",
+             "Water below the surface of the ground that seeps or leaks through a building, "
+             "foundation, driveway or pool.")
+    doc.add_heading("Other Exclusions", level=2)
+    paras(doc, "We also do not cover loss caused by ordinance or law (unless Endorsement HO-OL is "
+               "shown), earth movement, power failure off the residence premises, neglect, war, "
+               "nuclear hazard, or intentional loss.")
+
+    doc.add_heading("Section I: Deductibles", level=1)
+    paras(doc, "All Other Perils Deductible: For each covered loss, we pay only the part of the loss "
+               "that exceeds the All Other Perils deductible shown on the Declarations.",
+          "Windstorm or Hail Deductible: For loss caused by windstorm or hail, the deductible is the "
+               "percentage of the Coverage A limit shown on the Declarations (for example, 1% of a "
+               "$400,000 Coverage A limit is a $4,000 deductible). This deductible replaces the All "
+               "Other Perils deductible for windstorm or hail losses.")
+
+    doc.add_heading("Section I: Conditions", level=1)
+    doc.add_heading("Duties After Loss", level=2)
+    paras(doc, "In case of a loss to covered property, you must see that the following are done:")
+    numbered(doc,
+             "Give prompt notice to us or our agent.",
+             "Protect the property from further damage and make reasonable repairs.",
+             "Keep an accurate record of repair expenses.",
+             "Show the damaged property to us as often as we reasonably require, and allow us to "
+             "inspect it before it is removed or demolished.",
+             "Send us, within 91 days after our request, a signed proof of loss.")
+    doc.add_heading("Loss Settlement", level=2)
+    paras(doc, "Buildings under Coverage A or B are settled at replacement cost without deduction "
+               "for depreciation, up to the limit of liability, for the reasonable cost to repair or "
+               "replace with material of like kind and quality.")
+    doc.add_heading("Assignment of Post-Loss Benefits", level=2)
+    paras(doc, "You may assign post-loss benefits under Section I to a contractor or other person. An "
+               "assignee has no greater rights than you have under this policy. Payment to an "
+               "assignee is limited to the reasonable cost of covered repairs, as determined by our "
+               "inspection, and remains subject to all terms, exclusions and deductibles of this "
+               "policy.")
+    doc.add_heading("Appraisal", level=2)
+    paras(doc, "If you and we fail to agree on the amount of loss, either may demand an appraisal "
+               "of the loss as described in this condition.")
+
+    doc.save(OUT / "Contoso Homeowners Policy Form HO-3 (2026).docx")
+
+
+# --------------------------------------------------------------------------
+# 2. Water backup endorsement
+# --------------------------------------------------------------------------
+
+def water_backup_endorsement() -> None:
+    doc = new_doc("Endorsement HO-WB: Water Backup and Sump Discharge or Overflow",
+                  "Edition 05-2026. This endorsement changes the policy. Coverage applies only "
+                  "when HO-WB-10 or HO-WB-25 is shown on the Declarations page.")
+    doc.add_heading("Coverage", level=1)
+    paras(doc, "We cover direct physical loss to covered property caused by water or water-borne "
+               "material which:")
+    numbered(doc,
+             "Originates from within the dwelling and backs up through sewers or drains; or",
+             "Overflows or is discharged from a sump, sump pump or related equipment, even if the "
+             "overflow results from mechanical breakdown or power failure.")
+    paras(doc, "This coverage does not apply to loss caused by your negligent failure to maintain "
+               "the sump pump or drain system, or to flood or surface water.")
+    doc.add_heading("Limits", level=1)
+    table(doc, ["Endorsement code", "Most we pay per occurrence", "Annual premium (typical)"], [
+        ["HO-WB-10", "$10,000", "$45 to $70"],
+        ["HO-WB-25", "$25,000", "$90 to $140"],
+    ])
+    paras(doc, "This limit is part of, and does not increase, the Coverage A or Coverage C limit.")
+    doc.add_heading("Deductible", level=1)
+    paras(doc, "The All Other Perils deductible shown on the Declarations applies.")
+    doc.add_heading("Without this endorsement", level=1)
+    paras(doc, "Without HO-WB on the Declarations, loss from water that backs up through sewers or "
+               "drains is excluded under Section I, Exclusions, Water, item 2 of the HO-3 policy form.")
+    doc.save(OUT / "Contoso Endorsement HO-WB Water Backup.docx")
+
+
+# --------------------------------------------------------------------------
+# 3. Claims handling guidelines
+# --------------------------------------------------------------------------
+
+def guidelines() -> None:
+    doc = new_doc("Property Claims Handling Guidelines",
+                  "Personal Lines, Texas. Revision 2026-07. Owner: Claims Operations. Applies to "
+                  "every adjuster, team lead and claims manager handling homeowners claims.")
+
+    doc.add_heading("1. Service standards", level=1)
+    bullets(doc,
+            "Make first contact with the insured within 24 hours of the claim being reported.",
+            "Inspect within 5 business days (within 72 hours for losses where the home is not "
+            "habitable).",
+            "Update the insured on status at least every 7 days until the claim is closed.",
+            "Hardship claims: flag the claim when the household is displaced or has lost use of the "
+            "kitchen or a bathroom, or includes children under 6, a person over 75, or a person "
+            "with a medical need. Contact hardship households at least every 48 hours, and the "
+            "Team Lead must review the file within 2 business days of the flag.")
+
+    doc.add_heading("2. Payment authority", level=1)
+    paras(doc, "Authority is measured on the total indemnity payment the adjuster intends to make on "
+               "the claim, not on the amount claimed or the contractor's estimate.")
+    table(doc, ["Role", "Payment authority per claim"], [
+        ["Desk Adjuster", "$25,000"],
+        ["Field Adjuster", "$25,000"],
+        ["Senior Adjuster", "$50,000"],
+        ["Team Lead", "$75,000"],
+        ["Claims Manager", "$250,000"],
+        ["VP Claims", "Above $250,000"],
+    ])
+    paras(doc, "Exception: on any claim referred to SIU, every payment, of any amount, requires "
+               "Team Lead approval (see section 6).")
+
+    doc.add_heading("3. Reserves", level=1)
+    bullets(doc,
+            "Set the initial reserve within 48 hours of first contact.",
+            "Revise the reserve whenever the expected total payment changes by 20% or more. A "
+            "reserve set from a contractor's estimate must be revised once the field scope is "
+            "written at the Contoso Pricing Guide.")
+
+    doc.add_heading("4. Estimates and the Contoso Pricing Guide", level=1)
+    bullets(doc,
+            "Compare every contractor estimate with a scope written at the Contoso Pricing Guide.",
+            "Variance over 10%: line-item review required before payment.",
+            "Variance over 25%: this is an SIU red flag (see section 6).",
+            "Pay on the Pricing Guide scope agreed by the field adjuster. Do not pay an estimate "
+            "line that is not in the agreed scope.")
+
+    doc.add_heading("5. Water losses", level=1)
+    bullets(doc,
+            "Establish the source and the duration. Use moisture mapping and photographs.",
+            "Sudden and accidental discharge is covered. Continuous or repeated seepage or leakage "
+            "over 14 or more days is excluded (HO-3, Section I, Perils Insured Against, item 1). "
+            "Where both are present, segregate the damage and pay only the sudden portion.",
+            "Mold, fungi and rot resulting from a covered water loss are limited to $5,000 per "
+            "policy period (HO-3 Additional Coverage). Rot caused by long-term seepage is excluded "
+            "entirely.",
+            "Tear out is covered only where necessary to repair the failed system or covered damage.",
+            "Sewer or drain backup is excluded unless the policy carries Endorsement HO-WB. Always "
+            "check the endorsements on the policy record before discussing coverage with the insured.",
+            "Kitchen unusable after a covered loss: offer an Additional Living Expense (Coverage D) "
+            "advance for increased food costs of $150 per day for households of four or more, or "
+            "$100 per day for smaller households, for the expected repair period.")
+
+    doc.add_heading("6. Special Investigations Unit (SIU) referral", level=1)
+    paras(doc, "Refer a claim to SIU when two or more of the following red flags are present. "
+               "Referral is mandatory and must be made within 2 business days of the second flag. "
+               "SIU contact for North Texas: Dana Brooks.")
+    numbered(doc,
+             "The contractor is on the Vendor Watch List (see the Preferred Vendor Program list).",
+             "The contractor's estimate is more than 25% above the Contoso Pricing Guide scope.",
+             "Three or more claims involving the same contractor within 90 days with similar loss "
+             "descriptions.",
+             "The loss occurred within 60 days of policy inception or of an increase in coverage.",
+             "An assignment of benefits was signed on the date of loss, before the loss was "
+             "reported to Contoso.",
+             "Two or more water losses at the same property within 24 months.")
+    paras(doc, "After a referral:")
+    bullets(doc,
+            "Pay the undisputed amount within 5 business days. Do not hold the undisputed amount "
+            "while SIU investigates. Texas prompt payment rules still apply.",
+            "Every payment on the claim requires Team Lead approval, whatever the amount.",
+            "Do not discuss the referral with the insured, the contractor or any assignee.",
+            "Send SIU the assignment of benefits, the contractor estimate, the field scope and "
+            "photographs.")
+
+    doc.add_heading("7. Catastrophe (CAT) events", level=1)
+    bullets(doc,
+            "Tag every claim from a declared event with its CAT code (for example CAT-2026-17, "
+            "North Texas Hailstorm, Oct 14-15 2026).",
+            "Apply the Windstorm or Hail percentage deductible from the Declarations. Confirm the "
+            "dollar amount with the insured on first contact.",
+            "Claims under $10,000 may be desk adjusted from photographs.")
+
+    doc.add_heading("8. Assignment of benefits (AOB)", level=1)
+    bullets(doc,
+            "Obtain a copy of the signed AOB and record the date it was signed.",
+            "An assignee has no greater rights than the insured. Pay the assignee only for the "
+            "covered scope at the Contoso Pricing Guide.",
+            "Send the AOB to SIU whenever any red flag in section 6 is present.")
+
+    doc.save(OUT / "Contoso Property Claims Handling Guidelines (Rev 2026-07).docx")
+
+
+# --------------------------------------------------------------------------
+# 4. Preferred vendor program
+# --------------------------------------------------------------------------
+
+def vendors() -> None:
+    doc = new_doc("Preferred Vendor Program: Texas Vendor List, Q4 2026",
+                  "Issued 2026-10-01 by Vendor Management. Replaces the Q3 2026 list.")
+    doc.add_heading("How to use this list", level=1)
+    paras(doc, "Offer insureds a preferred vendor when they ask for a recommendation. Preferred "
+               "vendors bill at the Contoso Pricing Guide and do not take assignments of benefits. "
+               "Insureds may choose any contractor; if they choose one on the Watch List, follow the "
+               "Watch List actions below.")
+    doc.add_heading("Preferred vendors", level=1)
+    table(doc, ["Vendor", "Service", "Service area", "Rating"], [
+        ["Lone Star Restoration", "Water mitigation and drying", "DFW, Austin", "A"],
+        ["Bluebonnet Water Mitigation", "Water mitigation and drying", "DFW", "A"],
+        ["Trinity Dry-Out Co.", "Water mitigation and drying", "Dallas, Tarrant", "A-"],
+        ["Prairie Home Restoration", "Water mitigation, rebuild", "Collin, Denton", "A"],
+        ["Metroplex Mitigation Services", "Water and sewage cleanup", "Dallas, Collin", "A-"],
+        ["Red River Roofing", "Roofing", "DFW", "A"],
+        ["Cedar Creek Roofing & Exteriors", "Roofing, siding, gutters", "DFW", "A"],
+        ["North Texas Roof Works", "Roofing", "Collin, Denton, Dallas", "B+"],
+        ["Pecan Valley Construction", "General contractor", "DFW", "A-"],
+        ["Ashford Fire & Smoke Restoration", "Fire and smoke cleanup", "Texas statewide", "A"],
+    ], widths=[2.2, 1.9, 1.3, 0.6])
+    doc.add_heading("Vendor Watch List", level=1)
+    paras(doc, "Vendors on the Watch List are not in the program. Their presence on a claim is an "
+               "SIU red flag under section 6 of the Property Claims Handling Guidelines.")
+    table(doc, ["Vendor", "Added", "Reason", "Required action"], [
+        ["LeafyDry Restoration LLC, Plano TX (water mitigation)", "2026-10-01",
+         "Q3 2026 audit: estimates averaged more than 30% above the Contoso Pricing Guide; "
+         "assignments of benefits signed on the date of loss; repeated loss narratives across "
+         "Collin County water claims. SIU review open (Dana Brooks).",
+         "Do not refer insureds. Line-item review of every estimate. Notify SIU of every new claim "
+         "involving this vendor."],
+    ], widths=[1.4, 0.85, 2.3, 1.45])
+    doc.save(OUT / "Contoso Preferred Vendor Program - Q4 2026.docx")
+
+
+def channel_export() -> None:
+    """Fallback only: the five Teams posts as a Word file, in case Teams is not indexed yet.
+    Written to fallback/, not onedrive/, so it is never uploaded by accident."""
+    import re
+    text = (ROOT / "teams" / "TEAMS_MESSAGES.md").read_text()
+    meta = [  # (subject, sender, date) in the order of the posts in TEAMS_MESSAGES.md
+        ("CLM-2026-10482 Brennan: field inspection results", "Jordan Reyes (Field Adjuster)", "Thu Oct 22"),
+        ("CLM-2026-10482 Brennan: needs your review", "Maya Chen (Desk Adjuster)", "Wed Oct 28"),
+        ("LeafyDry on the Vendor Watch List", "Dana Brooks (SIU Investigator)", "Thu Oct 29"),
+        ("Sewer backups on Shady Elm Ct", "Priya Nair (Desk Adjuster)", "Tue Oct 27"),
+        ("CAT-2026-17 update", "Marcus Bell (Senior Adjuster)", "Tue Oct 27"),
+    ]
+    sections = re.split(r"^## Post \d+:.*$", text, flags=re.M)[1:]
+    doc = new_doc("DFW Property Claims: channel export",
+                  "Team: Contoso Claims (DEMO). Channel: DFW Property Claims. Posts in the order they were made.")
+    for (subject, sender, date), sec in zip(meta, sections):
+        quotes = [ln[2:] if ln.startswith("> ") else "" for ln in sec.splitlines() if ln.startswith(">")]
+        # first quote block is the post; a second block (after "Reply from Paul") is the reply
+        blocks, cur = [], []
+        for ln in sec.splitlines():
+            if ln.startswith(">"):
+                cur.append(ln[2:] if ln.startswith("> ") else "")
+            elif cur:
+                blocks.append(cur); cur = []
+        if cur:
+            blocks.append(cur)
+        doc.add_heading(subject, level=2)
+        meta_p = doc.add_paragraph(f"Posted by {sender}, {date}")
+        meta_p.runs[0].italic = True
+        for ln in blocks[0]:
+            if ln.startswith("- "):
+                doc.add_paragraph(ln[2:], style="List Bullet")
+            elif ln.strip():
+                doc.add_paragraph(ln)
+        for reply in blocks[1:]:
+            r = doc.add_paragraph("Reply from Paul, " + date.split()[0] + " " + date.split()[1] + " " + date.split()[2] + ":")
+            r.runs[0].italic = True
+            doc.add_paragraph(" ".join(reply))
+    out = ROOT / "fallback"
+    out.mkdir(exist_ok=True)
+    doc.save(out / "DFW Property Claims channel export.docx")
+
+
+def main() -> None:
+    OUT.mkdir(exist_ok=True)
+    policy_form()
+    water_backup_endorsement()
+    guidelines()
+    vendors()
+    channel_export()
+    for p in sorted(OUT.glob("*.docx")):
+        print(p.name)
+
+
+if __name__ == "__main__":
+    main()

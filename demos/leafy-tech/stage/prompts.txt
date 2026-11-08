@@ -1,0 +1,74 @@
+LEAFY TECH DEMO: NATURAL PROMPTS (use these on stage)
+No project, cluster or database names. Prompt 5 names Atlas on purpose, for the Source column. This is what a real user would type.
+Set the Copilot model picker to "Opus 5.5", NOT Auto. Backup: "6.1 sol". Open ONE new chat and run every prompt in it.
+STATUS: the Atlas side of every prompt was checked on 2026-11-04 with scripts/demo_queries.py --check.
+Prompts 1a to 4 passed on 6.1 sol on 2026-11-06. Prompts 4 and 5 also passed on Opus 5.5. Prompts 1a to 3 have not been run on Opus 5.5.
+
+PROMPT 1a  (Atlas: simple lookup, BEFORE the truck)
+How many MedBook 14 Clinical laptops can we ship right now? Show each warehouse with on hand, reserved and available, then the total available.
+
+  Expect: Chicago 150, Dallas 240 on hand with 100 reserved so 140, Reno 30. Total available 320.
+  We need 500, so this is 180 short.
+
+-- terminal, project root:  .venv/bin/python demos/leafy-tech/scripts/live_insert.py
+
+PROMPT 1b  (same chat, AFTER the truck)
+Check again. How many can we ship right now?
+
+  Expect: Chicago 330, total 500.
+  If Copilot repeats the old number: Query the catalog again right now.
+
+PROMPT 2  (Atlas: filter and sort. Cross-sell. OPTIONAL)
+Which healthcare customers spent the most with us in the last 12 months but bought no security products? Show the top five: customer, account manager and spend.
+
+  Expect: Copper Crossing Family Clinics $1,235,175, Hollow Heights Family Clinics $1,172,221,
+  Hollow Crossing Health $1,023,571, Lakeshore Park Family Clinics $967,707,
+  Clover Heights Regional Hospital $919,405.
+
+PROMPT 3  (Atlas: aggregation pipeline. The sales opportunity)
+Which customers have the most device warranties running out between November 1, 2026 and January 31, 2027? Show the top 10: customer, industry, account manager, devices expiring and spend in the last 12 months.
+
+  Expect first: Willow Bend Health 640, Ironwood Heights Law Group 254, Lakeshore Park Family Clinics 231,
+  Redwood Crossing Water Authority 227, Sable Creek County 179. Tenth is Fox Heights Plastics 153.
+  Technical room follow-up, not yet run in Copilot: Show me the exact query you ran for that answer.
+
+PROMPT 4  (Teams + Atlas: vector search)
+Nina has a hospital customer who described what their nurses need in their own words. Find out what they said, then match that description to the product descriptions in our catalog by meaning. Show the three closest products with a one-line reason each. Keep it under 80 words.
+
+  Expect: Fabrikam MedBook 14 Clinical, then MedTab 11, then CareView 22.
+  The chat already names the MedBook by now. If Copilot answers from the chat with no search, use the line below.
+  The words "cart", "chemicals" and "12-hour shift" do not appear in its description. That is the point.
+  If Copilot searches by keyword and gets it wrong, use:
+  "Using semantic search on the product descriptions, which product is closest in meaning to what the nurses said?"
+
+PROMPT 5  (Atlas + Teams + OneDrive: the decision. Run it AFTER the truck.)
+Nina needs my sign-off on the Willow Bend quote. Show one table with Line, Product, Problem and Source columns. For Source, say Atlas, Teams or OneDrive, and name the document. Then give the draft and corrected totals with margin, the rebate at stake, and who approves it. Keep it short.
+
+  If the answer skips a source or the table comes back messy, use this longer version:
+  Nina asked me to sign off the Willow Bend quote before it goes out Friday. Using the quote, our product catalog, the discount policy, the Fabrikam rebate rules, Willow Bend's contract and what the team has said: what's wrong with it? Show one table with Line, Product, Problem and Source columns. Source means quote, catalog, policy, rebate rules, contract or team notes. Then give the draft and corrected quote totals with gross margin, the rebate at stake, and who approves it. Keep it short.
+
+  Expect these problems:
+    Discount: 14% against the 10% contract price (contract)
+    Margin: 14.1%, under the 15% floor (policy, catalog)
+    Line 2: CartDock G1 is end of life and does not fit the G2 carts. Use CartDock G2 (catalog, team notes)
+    Line 3: 3-year warranty, contract requires 4-year. Use FB-W4 (contract)
+    Line 4: imaging discounted, services stay at list (policy)
+    No deal registration on the quote: $27,000 rebate at risk (quote, rebate rules, team notes)
+  Draft: $930,950 at 14.1%. Corrected: $1,003,500 at 18.3%. Rebate: 4% of $675,000 cost = $27,000.
+  Approver: Sales Director, because it is over $500,000. That is you.
+  Stock is NOT a problem after the truck. If Copilot flags 320, the truck did not run.
+
+OPTIONAL CLOSER
+Draft my Teams reply to Nina with the corrected quote and what she needs to do before Friday.
+
+-----------------------------------------------------------------
+FALLBACKS
+
+Copilot says it needs a connection: check the model picker first (not Auto). Then check Settings > Sources
+shows the Atlas connection is still signed in. Atlas ends the connection after 7 days of inactivity or 30 days.
+Then add this to the front of the prompt:
+"In the Atlas project '<your-project>', cluster <your-cluster>, database leafy_tech, ..."
+
+Teams posts not found: Copilot reads the channel export in OneDrive and says so. Say "the team's notes".
+
+After the demo, in the terminal:  .venv/bin/python demos/leafy-tech/scripts/live_insert.py --undo

@@ -1,0 +1,70 @@
+LEAFY DBA DEMO: one new Copilot chat, Atlas source connected.
+Replace <PROJECT_ID> and <CLUSTER_NAME> with the sandbox values from rehearsal.
+Paste one numbered prompt at a time. Notes and optional prompts are not part of the core run.
+Before presenting: load_atlas.py, then run_workload.py (60 seconds), so index usage and the
+profiler hold real traffic. Counts below are from a 60-second run and vary a little per run.
+
+1  PROJECTS
+Use the MongoDB Atlas source to list the projects my signed-in account can access. Show each project's name and ID. Retrieve remaining pages if supported; otherwise say the list is partial. Use returned inventory, not examples. Do not make changes or show connection strings. Keep all operations read-only throughout this conversation.
+
+2  CLUSTERS
+For Atlas project <PROJECT_ID>, list the clusters, then inspect <CLUSTER_NAME>. Show the cloud provider, region, tier, MongoDB version, paused status and configuration state where the tools return them. Mark unavailable fields as unknown. Keep connection strings out of the answer. Distinguish configuration from runtime health and say which tool supplied each fact.
+
+3  DATABASE AND INDEX INVENTORY
+Connect to <CLUSTER_NAME> in project <PROJECT_ID>. Inspect database leafy_dba. List its collections. For work_items, show the document count, sampled schema, storage information if available, and every B-tree index with its key order and options. Clearly label sampled or estimated information. Do not infer that no Search indexes exist merely from a B-tree index listing. The _demo_state collection is a setup marker.
+
+  Expect: 30,000 documents. Indexes _id_, service_1, service_1_attempts_1, description_1.
+
+4  WHICH INDEXES CAN I REMOVE?
+For leafy_dba.work_items, are there any indexes I should remove? Use the index definitions and the $indexStats usage counters, including accesses.ops and accesses.since. Look for indexes that are never used and indexes made redundant by another index with the same leading keys. For each index say keep, remove or review, with the evidence. Then explain how to remove one safely. Do not change anything.
+
+  Expect:
+    description_1: remove. 0 uses. Every document has the same description, so it narrows nothing.
+    service_1: remove. 0 uses, and redundant: service_1_attempts_1 starts with service.
+    service_1_attempts_1: keep. Thousands of uses (about 3,000 per workload run).
+    _id_: keep. Required.
+  A strong answer also says: hide the index first (hideIndex), watch, then drop. And: the
+  counters are per node and reset on restart, so check every node over a full business cycle.
+
+5  WHAT IS SLOW? (the database profiler)
+The database profiler has been recording inefficient operations in leafy_dba. Read the system.profile collection and group the operations on work_items by query shape. For each shape show the filter fields, sort, number of runs, average milliseconds, average documents examined, average documents returned, plan summary and whether it sorted in memory. Then recommend the indexes that would fix them, with exact key order, following the equality, sort, range guideline. Do not create anything.
+
+  Expect two shapes:
+    tenant_id + status, sorted by created_at desc: about 4,100 runs, COLLSCAN, 30,000 read
+      for 20 returned, in-memory sort. Fix: {tenant_id: 1, status: 1, created_at: -1}
+    created_at range (daily report): about 490 runs, COLLSCAN, 30,000 read for 1,440 returned.
+      Fix: {created_at: 1}
+  If Copilot says it cannot read system.profile, skip to prompt 6. The terminal fallback
+  prints the same table: run_workload.py output, or demo_queries.py --explain for the plan.
+
+6  EXPLAIN THE WORST QUERY
+In leafy_dba.work_items on that same cluster, run explain with executionStats for find({tenant_id: "tenant-042", status: "open"}).sort({created_at: -1}).limit(20). Return complete documents, with no projection and no hint. Show the exact query, winning plan stages, index used if any, nReturned, totalDocsExamined, totalKeysExamined and executionTimeMillis. Preserve these figures as our baseline. Then show the createIndex command, named tenant_status_created, that would fix it, for review only. Do not execute it or any other write.
+
+  Expect: COLLSCAN, blocking SORT, 30,000 examined, 20 returned.
+  Index: {tenant_id: 1, status: 1, created_at: -1}, name tenant_status_created.
+
+PRESENTER: in the terminal, run
+  .venv/bin/python demos/leafy-dba/scripts/manage_index.py --create
+Wait for success, then paste prompt 7.
+
+7  VERIFY THE CHANGE
+I created the index through a separate presenter script. Fetch the current indexes again, and run a fresh explain with executionStats for exactly the same find query, sort, limit, no projection and no hint from prompt 6. Compare the actual before and after winning plan, index used, nReturned, totalDocsExamined and totalKeysExamined in a table. Is the blocking sort gone? Use actual returned figures and mark any missing baseline values as unknown. Treat elapsed time as variable, not a production performance guarantee.
+
+  Expect: IXSCAN on tenant_status_created, no SORT, 20 examined for 20 returned.
+
+OPTIONAL  SLOW QUERY LOG
+Check the server's recent log for slow query entries on leafy_dba.work_items. Summarize the query shapes, durations and plan summaries you find. Does the log tell the same story as the profiler? Keep this read-only.
+
+  The workload's profiler filter also writes these operations to the log as "Slow query" lines.
+  Not run in Copilot yet: the connector may not expose the log tool.
+
+OPTIONAL  ALERTS AND ADVISOR
+In project <PROJECT_ID>, inspect triggered alerts and any available Performance Advisor recommendations for <CLUSTER_NAME>. Separate actual findings from unavailable data. If recommendations are empty, say so. Do not infer that the cluster is healthy or fabricate slow queries. Keep this read-only.
+
+OPTIONAL  ACCESS BOUNDARY
+Explain the difference between my delegated Atlas access through this source and the database user's permissions used by a separate Python script. Separate facts you can inspect here from settings I must confirm in Atlas. Do not request or display credentials.
+
+-----------------------------------------------------------------
+AFTER THE DEMO, in the terminal:
+  .venv/bin/python demos/leafy-dba/scripts/manage_index.py --undo
+  .venv/bin/python demos/leafy-dba/scripts/demo_queries.py --check --phase baseline

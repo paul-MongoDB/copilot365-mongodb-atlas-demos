@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets: never commit real connection strings
+.env
+.env.*
+!.env.example
+
+# Local tools and OS files
+.claude/
+.DS_Store
+
+# Presentation decks stay out of the repo
+*.pptx
+*.key
+
+# Private stage copies and test logs
+*.local.txt
+demos/insurance-claims/stage/timing_results.md

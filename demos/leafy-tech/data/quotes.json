@@ -1,0 +1,2610 @@
+[
+ {
+  "quote_number": "Q-2026-4471",
+  "customer_id": "C-1400",
+  "customer": "Willow Bend Health",
+  "account_manager": "Nina Patel",
+  "status": "draft",
+  "created": {
+   "$date": "2026-11-02T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-12-02T00:00:00Z"
+  },
+  "title": "Clinical laptop refresh",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FB-MB14C",
+    "product": "Fabrikam MedBook 14 Clinical",
+    "qty": 500,
+    "list_price": 1800,
+    "discount_pct": 14,
+    "unit_price": 1548.0,
+    "extended": 774000.0
+   },
+   {
+    "line": 2,
+    "sku": "WT-CD1",
+    "product": "Wingtip CartDock G1",
+    "qty": 500,
+    "list_price": 200,
+    "discount_pct": 14,
+    "unit_price": 172.0,
+    "extended": 86000.0
+   },
+   {
+    "line": 3,
+    "sku": "FB-W3",
+    "product": "Fabrikam 3-Year Onsite Warranty",
+    "qty": 500,
+    "list_price": 120,
+    "discount_pct": 14,
+    "unit_price": 103.2,
+    "extended": 51600.0
+   },
+   {
+    "line": 4,
+    "sku": "LT-IMG",
+    "product": "Leafy Tech Imaging and Asset Tagging",
+    "qty": 500,
+    "list_price": 45,
+    "discount_pct": 14,
+    "unit_price": 38.7,
+    "extended": 19350.0
+   }
+  ],
+  "total": 930950.0
+ },
+ {
+  "quote_number": "Q-2026-4000",
+  "customer_id": "C-1002",
+  "customer": "Birch Heights Regional Hospital",
+  "account_manager": "Elena Ruiz",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-17T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-16T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-266",
+    "product": "Wingtip HuddleCam 3 Pro",
+    "qty": 15,
+    "list_price": 803,
+    "discount_pct": 5,
+    "unit_price": 762.85,
+    "extended": 11442.75
+   },
+   {
+    "line": 2,
+    "sku": "PR-392",
+    "product": "Proseware ShieldID 2 Max",
+    "qty": 42,
+    "list_price": 45,
+    "discount_pct": 5,
+    "unit_price": 42.75,
+    "extended": 1795.5
+   }
+  ],
+  "total": 13238.25
+ },
+ {
+  "quote_number": "Q-2026-4001",
+  "customer_id": "C-1296",
+  "customer": "Redwood Park Markets",
+  "account_manager": "Aisha Grant",
+  "status": "sent",
+  "created": {
+   "$date": "2026-10-11T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-10T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70001",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-108",
+    "product": "Fabrikam EliteLine 3 Air",
+    "qty": 73,
+    "list_price": 1567,
+    "discount_pct": 0,
+    "unit_price": 1567.0,
+    "extended": 114391.0
+   },
+   {
+    "line": 2,
+    "sku": "FA-154",
+    "product": "Fabrikam CreatorPro 3 X",
+    "qty": 29,
+    "list_price": 3010,
+    "discount_pct": 0,
+    "unit_price": 3010.0,
+    "extended": 87290.0
+   },
+   {
+    "line": 3,
+    "sku": "WI-237",
+    "product": "Wingtip DeskDock 4 X",
+    "qty": 61,
+    "list_price": 233,
+    "discount_pct": 0,
+    "unit_price": 233.0,
+    "extended": 14213.0
+   }
+  ],
+  "total": 215894.0
+ },
+ {
+  "quote_number": "Q-2026-4002",
+  "customer_id": "C-1039",
+  "customer": "Harbor Falls Community College",
+  "account_manager": "Elena Ruiz",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-14T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-14T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70002",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-151",
+    "product": "Fabrikam CreatorPro 2 Air",
+    "qty": 18,
+    "list_price": 2848,
+    "discount_pct": 0,
+    "unit_price": 2848.0,
+    "extended": 51264.0
+   },
+   {
+    "line": 2,
+    "sku": "WI-253",
+    "product": "Wingtip QuietKeys 4 M",
+    "qty": 58,
+    "list_price": 85,
+    "discount_pct": 0,
+    "unit_price": 85.0,
+    "extended": 4930.0
+   },
+   {
+    "line": 3,
+    "sku": "PR-360",
+    "product": "Proseware ShieldEndpoint 2 M",
+    "qty": 70,
+    "list_price": 58,
+    "discount_pct": 0,
+    "unit_price": 58.0,
+    "extended": 4060.0
+   },
+   {
+    "line": 4,
+    "sku": "WI-210",
+    "product": "Wingtip ClearView 5 S",
+    "qty": 61,
+    "list_price": 449,
+    "discount_pct": 0,
+    "unit_price": 449.0,
+    "extended": 27389.0
+   }
+  ],
+  "total": 87643.0
+ },
+ {
+  "quote_number": "Q-2026-4003",
+  "customer_id": "C-1066",
+  "customer": "Hollow Crossing Legal Partners",
+  "account_manager": "Nina Patel",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-07T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-06T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70003",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-394",
+    "product": "Proseware ShieldID 3 Air",
+    "qty": 42,
+    "list_price": 53,
+    "discount_pct": 8,
+    "unit_price": 48.76,
+    "extended": 2047.92
+   },
+   {
+    "line": 2,
+    "sku": "PR-400",
+    "product": "Proseware ShieldID 4 S",
+    "qty": 51,
+    "list_price": 54,
+    "discount_pct": 8,
+    "unit_price": 49.68,
+    "extended": 2533.68
+   }
+  ],
+  "total": 4581.6
+ },
+ {
+  "quote_number": "Q-2026-4004",
+  "customer_id": "C-1281",
+  "customer": "Silver Grove City Services",
+  "account_manager": "Elena Ruiz",
+  "status": "won",
+  "created": {
+   "$date": "2026-08-14T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-13T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70004",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-393",
+    "product": "Proseware ShieldID 3 Max",
+    "qty": 49,
+    "list_price": 59,
+    "discount_pct": 5,
+    "unit_price": 56.05,
+    "extended": 2746.45
+   },
+   {
+    "line": 2,
+    "sku": "AD-341",
+    "product": "Adatum VaultArray 2 Plus",
+    "qty": 46,
+    "list_price": 15546,
+    "discount_pct": 5,
+    "unit_price": 14768.7,
+    "extended": 679360.2
+   },
+   {
+    "line": 3,
+    "sku": "WI-212",
+    "product": "Wingtip ClearView 5 Air",
+    "qty": 50,
+    "list_price": 530,
+    "discount_pct": 5,
+    "unit_price": 503.5,
+    "extended": 25175.0
+   },
+   {
+    "line": 4,
+    "sku": "PR-363",
+    "product": "Proseware ShieldEndpoint 3 Plus",
+    "qty": 21,
+    "list_price": 67,
+    "discount_pct": 5,
+    "unit_price": 63.65,
+    "extended": 1336.65
+   }
+  ],
+  "total": 708618.3
+ },
+ {
+  "quote_number": "Q-2026-4005",
+  "customer_id": "C-1224",
+  "customer": "Prairie Crossing Regional Hospital",
+  "account_manager": "Tom Becker",
+  "status": "sent",
+  "created": {
+   "$date": "2026-10-16T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-15T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-181",
+    "product": "Fabrikam MiniDesk 2 Air",
+    "qty": 36,
+    "list_price": 826,
+    "discount_pct": 8,
+    "unit_price": 759.92,
+    "extended": 27357.12
+   }
+  ],
+  "total": 27357.12
+ },
+ {
+  "quote_number": "Q-2026-4006",
+  "customer_id": "C-1137",
+  "customer": "Juniper Falls Markets",
+  "account_manager": "Elena Ruiz",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-26T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-26T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70006",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-198",
+    "product": "Wingtip ClearView 2 Max",
+    "qty": 22,
+    "list_price": 349,
+    "discount_pct": 0,
+    "unit_price": 349.0,
+    "extended": 7678.0
+   },
+   {
+    "line": 2,
+    "sku": "WI-215",
+    "product": "Wingtip UltraWide 2 S",
+    "qty": 58,
+    "list_price": 886,
+    "discount_pct": 0,
+    "unit_price": 886.0,
+    "extended": 51388.0
+   },
+   {
+    "line": 3,
+    "sku": "AD-352",
+    "product": "Adatum VaultArray 4 X",
+    "qty": 6,
+    "list_price": 19342,
+    "discount_pct": 0,
+    "unit_price": 19342.0,
+    "extended": 116052.0
+   }
+  ],
+  "total": 175118.0
+ },
+ {
+  "quote_number": "Q-2026-4007",
+  "customer_id": "C-1263",
+  "customer": "Meadow Creek Medical Center",
+  "account_manager": "Aisha Grant",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-21T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-21T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70007",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "AD-352",
+    "product": "Adatum VaultArray 4 X",
+    "qty": 42,
+    "list_price": 19342,
+    "discount_pct": 5,
+    "unit_price": 18374.9,
+    "extended": 771745.8
+   },
+   {
+    "line": 2,
+    "sku": "FA-164",
+    "product": "Fabrikam CreatorPro 5 X",
+    "qty": 17,
+    "list_price": 3863,
+    "discount_pct": 5,
+    "unit_price": 3669.85,
+    "extended": 62387.45
+   }
+  ],
+  "total": 834133.25
+ },
+ {
+  "quote_number": "Q-2026-4008",
+  "customer_id": "C-1054",
+  "customer": "Clover Creek Tool and Die",
+  "account_manager": "Marcus Webb",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-22T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-22T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FB-MB14C",
+    "product": "Fabrikam MedBook 14 Clinical",
+    "qty": 23,
+    "list_price": 1800,
+    "discount_pct": 10,
+    "unit_price": 1620.0,
+    "extended": 37260.0
+   },
+   {
+    "line": 2,
+    "sku": "FA-113",
+    "product": "Fabrikam EliteLine 5 M",
+    "qty": 14,
+    "list_price": 2029,
+    "discount_pct": 10,
+    "unit_price": 1826.1,
+    "extended": 25565.4
+   },
+   {
+    "line": 3,
+    "sku": "LI-319",
+    "product": "Litware EdgeGate 4 Pro",
+    "qty": 20,
+    "list_price": 2344,
+    "discount_pct": 10,
+    "unit_price": 2109.6,
+    "extended": 42192.0
+   }
+  ],
+  "total": 105017.4
+ },
+ {
+  "quote_number": "Q-2026-4009",
+  "customer_id": "C-1051",
+  "customer": "Lakeshore Park Regional Hospital",
+  "account_manager": "Aisha Grant",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-19T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-19T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-145",
+    "product": "Fabrikam EduBook 5 S",
+    "qty": 32,
+    "list_price": 733,
+    "discount_pct": 0,
+    "unit_price": 733.0,
+    "extended": 23456.0
+   },
+   {
+    "line": 2,
+    "sku": "FB-MB14C",
+    "product": "Fabrikam MedBook 14 Clinical",
+    "qty": 17,
+    "list_price": 1800,
+    "discount_pct": 0,
+    "unit_price": 1800.0,
+    "extended": 30600.0
+   },
+   {
+    "line": 3,
+    "sku": "WI-207",
+    "product": "Wingtip ClearView 4 Pro",
+    "qty": 45,
+    "list_price": 482,
+    "discount_pct": 0,
+    "unit_price": 482.0,
+    "extended": 21690.0
+   },
+   {
+    "line": 4,
+    "sku": "FA-184",
+    "product": "Fabrikam MiniDesk 2 L",
+    "qty": 8,
+    "list_price": 793,
+    "discount_pct": 0,
+    "unit_price": 793.0,
+    "extended": 6344.0
+   }
+  ],
+  "total": 82090.0
+ },
+ {
+  "quote_number": "Q-2026-4010",
+  "customer_id": "C-1198",
+  "customer": "Clover Heights Family Clinics",
+  "account_manager": "Elena Ruiz",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-24T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-23T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "AD-351",
+    "product": "Adatum VaultArray 4 Air",
+    "qty": 69,
+    "list_price": 17615,
+    "discount_pct": 5,
+    "unit_price": 16734.25,
+    "extended": 1154663.25
+   },
+   {
+    "line": 2,
+    "sku": "FA-168",
+    "product": "Fabrikam TowerPro 2 X",
+    "qty": 49,
+    "list_price": 1088,
+    "discount_pct": 5,
+    "unit_price": 1033.6,
+    "extended": 50646.4
+   },
+   {
+    "line": 3,
+    "sku": "WI-227",
+    "product": "Wingtip UltraWide 5 Pro",
+    "qty": 55,
+    "list_price": 1027,
+    "discount_pct": 5,
+    "unit_price": 975.65,
+    "extended": 53660.75
+   },
+   {
+    "line": 4,
+    "sku": "PR-360",
+    "product": "Proseware ShieldEndpoint 2 M",
+    "qty": 33,
+    "list_price": 58,
+    "discount_pct": 5,
+    "unit_price": 55.1,
+    "extended": 1818.3
+   }
+  ],
+  "total": 1260788.7
+ },
+ {
+  "quote_number": "Q-2026-4011",
+  "customer_id": "C-1206",
+  "customer": "Meadow Heights Plastics",
+  "account_manager": "Marcus Webb",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-05T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-05T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70011",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-137",
+    "product": "Fabrikam EduBook 3 Air",
+    "qty": 79,
+    "list_price": 585,
+    "discount_pct": 5,
+    "unit_price": 555.75,
+    "extended": 43904.25
+   },
+   {
+    "line": 2,
+    "sku": "WI-237",
+    "product": "Wingtip DeskDock 4 X",
+    "qty": 48,
+    "list_price": 233,
+    "discount_pct": 5,
+    "unit_price": 221.35,
+    "extended": 10624.8
+   }
+  ],
+  "total": 54529.05
+ },
+ {
+  "quote_number": "Q-2026-4012",
+  "customer_id": "C-1003",
+  "customer": "Harbor Grove Academy",
+  "account_manager": "Marcus Webb",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-11T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-10T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-269",
+    "product": "Wingtip HuddleCam 4 M",
+    "qty": 20,
+    "list_price": 843,
+    "discount_pct": 10,
+    "unit_price": 758.7,
+    "extended": 15174.0
+   },
+   {
+    "line": 2,
+    "sku": "LI-279",
+    "product": "Litware AirPoint 2 Pro",
+    "qty": 32,
+    "list_price": 419,
+    "discount_pct": 10,
+    "unit_price": 377.1,
+    "extended": 12067.2
+   }
+  ],
+  "total": 27241.2
+ },
+ {
+  "quote_number": "Q-2026-4013",
+  "customer_id": "C-1032",
+  "customer": "Prairie Creek Outfitters",
+  "account_manager": "Elena Ruiz",
+  "status": "lost",
+  "created": {
+   "$date": "2026-08-13T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-12T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-133",
+    "product": "Fabrikam EduBook 2 Pro",
+    "qty": 29,
+    "list_price": 519,
+    "discount_pct": 5,
+    "unit_price": 493.05,
+    "extended": 14298.45
+   },
+   {
+    "line": 2,
+    "sku": "LI-305",
+    "product": "Litware CoreSwitch 5 Max",
+    "qty": 41,
+    "list_price": 4151,
+    "discount_pct": 5,
+    "unit_price": 3943.45,
+    "extended": 161681.45
+   },
+   {
+    "line": 3,
+    "sku": "WI-248",
+    "product": "Wingtip QuietKeys 2 Max",
+    "qty": 62,
+    "list_price": 74,
+    "discount_pct": 5,
+    "unit_price": 70.3,
+    "extended": 4358.6
+   }
+  ],
+  "total": 180338.5
+ },
+ {
+  "quote_number": "Q-2026-4014",
+  "customer_id": "C-1159",
+  "customer": "Hollow Grove School District",
+  "account_manager": "Nina Patel",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-28T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-27T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70014",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-383",
+    "product": "Proseware ShieldMail 4 S",
+    "qty": 59,
+    "list_price": 42,
+    "discount_pct": 5,
+    "unit_price": 39.9,
+    "extended": 2354.1
+   },
+   {
+    "line": 2,
+    "sku": "LI-293",
+    "product": "Litware CoreSwitch 2 S",
+    "qty": 11,
+    "list_price": 3189,
+    "discount_pct": 5,
+    "unit_price": 3029.55,
+    "extended": 33325.05
+   },
+   {
+    "line": 3,
+    "sku": "FA-145",
+    "product": "Fabrikam EduBook 5 S",
+    "qty": 68,
+    "list_price": 733,
+    "discount_pct": 5,
+    "unit_price": 696.35,
+    "extended": 47351.8
+   },
+   {
+    "line": 4,
+    "sku": "LI-304",
+    "product": "Litware CoreSwitch 4 Air",
+    "qty": 36,
+    "list_price": 3845,
+    "discount_pct": 5,
+    "unit_price": 3652.75,
+    "extended": 131499.0
+   }
+  ],
+  "total": 214529.95
+ },
+ {
+  "quote_number": "Q-2026-4015",
+  "customer_id": "C-1286",
+  "customer": "Meadow Heights Advisors",
+  "account_manager": "Elena Ruiz",
+  "status": "sent",
+  "created": {
+   "$date": "2026-10-24T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-23T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70015",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-275",
+    "product": "Wingtip HuddleCam 5 Max",
+    "qty": 5,
+    "list_price": 968,
+    "discount_pct": 8,
+    "unit_price": 890.56,
+    "extended": 4452.8
+   },
+   {
+    "line": 2,
+    "sku": "LI-304",
+    "product": "Litware CoreSwitch 4 Air",
+    "qty": 18,
+    "list_price": 3845,
+    "discount_pct": 8,
+    "unit_price": 3537.4,
+    "extended": 63673.2
+   },
+   {
+    "line": 3,
+    "sku": "FA-191",
+    "product": "Fabrikam MiniDesk 4 Plus",
+    "qty": 67,
+    "list_price": 978,
+    "discount_pct": 8,
+    "unit_price": 899.76,
+    "extended": 60283.92
+   },
+   {
+    "line": 4,
+    "sku": "LI-314",
+    "product": "Litware EdgeGate 3 Max",
+    "qty": 62,
+    "list_price": 2016,
+    "discount_pct": 8,
+    "unit_price": 1854.72,
+    "extended": 114992.64
+   }
+  ],
+  "total": 243402.56
+ },
+ {
+  "quote_number": "Q-2026-4016",
+  "customer_id": "C-1193",
+  "customer": "Cedar Ridge School District",
+  "account_manager": "Priya Raman",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-14T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-14T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-207",
+    "product": "Wingtip ClearView 4 Pro",
+    "qty": 7,
+    "list_price": 482,
+    "discount_pct": 5,
+    "unit_price": 457.9,
+    "extended": 3205.3
+   },
+   {
+    "line": 2,
+    "sku": "PR-377",
+    "product": "Proseware ShieldMail 3 S",
+    "qty": 12,
+    "list_price": 43,
+    "discount_pct": 5,
+    "unit_price": 40.85,
+    "extended": 490.2
+   },
+   {
+    "line": 3,
+    "sku": "WI-256",
+    "product": "Wingtip QuietKeys 4 Plus",
+    "qty": 15,
+    "list_price": 86,
+    "discount_pct": 5,
+    "unit_price": 81.7,
+    "extended": 1225.5
+   }
+  ],
+  "total": 4921.0
+ },
+ {
+  "quote_number": "Q-2026-4017",
+  "customer_id": "C-1127",
+  "customer": "Fox Creek Law Group",
+  "account_manager": "Jake Sorensen",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-02T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-01T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-176",
+    "product": "Fabrikam TowerPro 4 Pro",
+    "qty": 44,
+    "list_price": 1469,
+    "discount_pct": 5,
+    "unit_price": 1395.55,
+    "extended": 61404.2
+   },
+   {
+    "line": 2,
+    "sku": "LI-277",
+    "product": "Litware AirPoint 2 Air",
+    "qty": 29,
+    "list_price": 416,
+    "discount_pct": 5,
+    "unit_price": 395.2,
+    "extended": 11460.8
+   },
+   {
+    "line": 3,
+    "sku": "PR-362",
+    "product": "Proseware ShieldEndpoint 3 M",
+    "qty": 29,
+    "list_price": 63,
+    "discount_pct": 5,
+    "unit_price": 59.85,
+    "extended": 1735.65
+   }
+  ],
+  "total": 74600.65
+ },
+ {
+  "quote_number": "Q-2026-4018",
+  "customer_id": "C-1197",
+  "customer": "Bluff Falls Legal Partners",
+  "account_manager": "Priya Raman",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-27T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-26T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-218",
+    "product": "Wingtip UltraWide 3 S",
+    "qty": 6,
+    "list_price": 912,
+    "discount_pct": 8,
+    "unit_price": 839.04,
+    "extended": 5034.24
+   },
+   {
+    "line": 2,
+    "sku": "FA-174",
+    "product": "Fabrikam TowerPro 4 X",
+    "qty": 75,
+    "list_price": 1496,
+    "discount_pct": 8,
+    "unit_price": 1376.32,
+    "extended": 103224.0
+   },
+   {
+    "line": 3,
+    "sku": "FA-140",
+    "product": "Fabrikam EduBook 3 M",
+    "qty": 52,
+    "list_price": 578,
+    "discount_pct": 8,
+    "unit_price": 531.76,
+    "extended": 27651.52
+   }
+  ],
+  "total": 135909.76
+ },
+ {
+  "quote_number": "Q-2026-4019",
+  "customer_id": "C-1282",
+  "customer": "Aspen Park Law Group",
+  "account_manager": "Elena Ruiz",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-28T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-27T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-117",
+    "product": "Fabrikam OfficeBook 2 M",
+    "qty": 9,
+    "list_price": 979,
+    "discount_pct": 8,
+    "unit_price": 900.68,
+    "extended": 8106.12
+   }
+  ],
+  "total": 8106.12
+ },
+ {
+  "quote_number": "Q-2026-4020",
+  "customer_id": "C-1283",
+  "customer": "Harbor Heights County",
+  "account_manager": "Elena Ruiz",
+  "status": "lost",
+  "created": {
+   "$date": "2026-08-13T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-12T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70020",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-227",
+    "product": "Wingtip UltraWide 5 Pro",
+    "qty": 15,
+    "list_price": 1027,
+    "discount_pct": 10,
+    "unit_price": 924.3,
+    "extended": 13864.5
+   },
+   {
+    "line": 2,
+    "sku": "PR-389",
+    "product": "Proseware ShieldID 2 M",
+    "qty": 29,
+    "list_price": 53,
+    "discount_pct": 10,
+    "unit_price": 47.7,
+    "extended": 1383.3
+   }
+  ],
+  "total": 15247.8
+ },
+ {
+  "quote_number": "Q-2026-4021",
+  "customer_id": "C-1096",
+  "customer": "Summit Point Outfitters",
+  "account_manager": "Jake Sorensen",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-05T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-04T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-185",
+    "product": "Fabrikam MiniDesk 3 X",
+    "qty": 56,
+    "list_price": 830,
+    "discount_pct": 0,
+    "unit_price": 830.0,
+    "extended": 46480.0
+   }
+  ],
+  "total": 46480.0
+ },
+ {
+  "quote_number": "Q-2026-4022",
+  "customer_id": "C-1088",
+  "customer": "Copper Heights Tool and Die",
+  "account_manager": "Luis Ortega",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-27T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-27T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-122",
+    "product": "Fabrikam OfficeBook 3 Plus",
+    "qty": 79,
+    "list_price": 1225,
+    "discount_pct": 0,
+    "unit_price": 1225.0,
+    "extended": 96775.0
+   }
+  ],
+  "total": 96775.0
+ },
+ {
+  "quote_number": "Q-2026-4023",
+  "customer_id": "C-1290",
+  "customer": "Clover Creek Family Clinics",
+  "account_manager": "Tom Becker",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-28T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-28T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70023",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FB-WH16",
+    "product": "Fabrikam WarehouseMate 16",
+    "qty": 31,
+    "list_price": 1650,
+    "discount_pct": 5,
+    "unit_price": 1567.5,
+    "extended": 48592.5
+   },
+   {
+    "line": 2,
+    "sku": "WI-260",
+    "product": "Wingtip QuietKeys 5 Pro",
+    "qty": 44,
+    "list_price": 102,
+    "discount_pct": 5,
+    "unit_price": 96.9,
+    "extended": 4263.6
+   },
+   {
+    "line": 3,
+    "sku": "WI-246",
+    "product": "Wingtip QuietKeys 2 Plus",
+    "qty": 20,
+    "list_price": 68,
+    "discount_pct": 5,
+    "unit_price": 64.6,
+    "extended": 1292.0
+   },
+   {
+    "line": 4,
+    "sku": "FA-188",
+    "product": "Fabrikam MiniDesk 3 Max",
+    "qty": 66,
+    "list_price": 916,
+    "discount_pct": 5,
+    "unit_price": 870.2,
+    "extended": 57433.2
+   }
+  ],
+  "total": 111581.3
+ },
+ {
+  "quote_number": "Q-2026-4024",
+  "customer_id": "C-1266",
+  "customer": "Fox Creek Legal Partners",
+  "account_manager": "Elena Ruiz",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-08T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-08T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70024",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-108",
+    "product": "Fabrikam EliteLine 3 Air",
+    "qty": 53,
+    "list_price": 1567,
+    "discount_pct": 8,
+    "unit_price": 1441.64,
+    "extended": 76406.92
+   }
+  ],
+  "total": 76406.92
+ },
+ {
+  "quote_number": "Q-2026-4025",
+  "customer_id": "C-1199",
+  "customer": "Prairie Valley Home Supply",
+  "account_manager": "Luis Ortega",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-09T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-09T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70025",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-188",
+    "product": "Fabrikam MiniDesk 3 Max",
+    "qty": 25,
+    "list_price": 916,
+    "discount_pct": 5,
+    "unit_price": 870.2,
+    "extended": 21755.0
+   },
+   {
+    "line": 2,
+    "sku": "WI-236",
+    "product": "Wingtip DeskDock 3 Plus",
+    "qty": 70,
+    "list_price": 212,
+    "discount_pct": 5,
+    "unit_price": 201.4,
+    "extended": 14098.0
+   }
+  ],
+  "total": 35853.0
+ },
+ {
+  "quote_number": "Q-2026-4026",
+  "customer_id": "C-1091",
+  "customer": "Meadow Falls Regional Hospital",
+  "account_manager": "Elena Ruiz",
+  "status": "sent",
+  "created": {
+   "$date": "2026-09-28T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-28T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70026",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-170",
+    "product": "Fabrikam TowerPro 3 S",
+    "qty": 59,
+    "list_price": 1279,
+    "discount_pct": 5,
+    "unit_price": 1215.05,
+    "extended": 71687.95
+   }
+  ],
+  "total": 71687.95
+ },
+ {
+  "quote_number": "Q-2026-4027",
+  "customer_id": "C-1030",
+  "customer": "Ironwood Falls Law Group",
+  "account_manager": "Marcus Webb",
+  "status": "sent",
+  "created": {
+   "$date": "2026-09-27T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-27T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-198",
+    "product": "Wingtip ClearView 2 Max",
+    "qty": 19,
+    "list_price": 349,
+    "discount_pct": 5,
+    "unit_price": 331.55,
+    "extended": 6299.45
+   },
+   {
+    "line": 2,
+    "sku": "FA-145",
+    "product": "Fabrikam EduBook 5 S",
+    "qty": 41,
+    "list_price": 733,
+    "discount_pct": 5,
+    "unit_price": 696.35,
+    "extended": 28550.35
+   },
+   {
+    "line": 3,
+    "sku": "WI-199",
+    "product": "Wingtip ClearView 2 X",
+    "qty": 53,
+    "list_price": 370,
+    "discount_pct": 5,
+    "unit_price": 351.5,
+    "extended": 18629.5
+   },
+   {
+    "line": 4,
+    "sku": "WI-268",
+    "product": "Wingtip HuddleCam 3 Air",
+    "qty": 40,
+    "list_price": 790,
+    "discount_pct": 5,
+    "unit_price": 750.5,
+    "extended": 30020.0
+   }
+  ],
+  "total": 83499.3
+ },
+ {
+  "quote_number": "Q-2026-4028",
+  "customer_id": "C-1170",
+  "customer": "Bluff Point Law Group",
+  "account_manager": "Luis Ortega",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-20T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-19T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70028",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "AD-326",
+    "product": "Adatum RackServe 2 X",
+    "qty": 18,
+    "list_price": 6646,
+    "discount_pct": 8,
+    "unit_price": 6114.32,
+    "extended": 110057.76
+   },
+   {
+    "line": 2,
+    "sku": "FA-174",
+    "product": "Fabrikam TowerPro 4 X",
+    "qty": 74,
+    "list_price": 1496,
+    "discount_pct": 8,
+    "unit_price": 1376.32,
+    "extended": 101847.68
+   },
+   {
+    "line": 3,
+    "sku": "FA-110",
+    "product": "Fabrikam EliteLine 4 X",
+    "qty": 53,
+    "list_price": 1755,
+    "discount_pct": 8,
+    "unit_price": 1614.6,
+    "extended": 85573.8
+   },
+   {
+    "line": 4,
+    "sku": "AD-335",
+    "product": "Adatum RackServe 4 Plus",
+    "qty": 15,
+    "list_price": 8472,
+    "discount_pct": 8,
+    "unit_price": 7794.24,
+    "extended": 116913.6
+   }
+  ],
+  "total": 414392.84
+ },
+ {
+  "quote_number": "Q-2026-4029",
+  "customer_id": "C-1173",
+  "customer": "Silver Crossing Markets",
+  "account_manager": "Tom Becker",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-11T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-10T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70029",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-148",
+    "product": "Fabrikam EduBook 5 X",
+    "qty": 33,
+    "list_price": 660,
+    "discount_pct": 0,
+    "unit_price": 660.0,
+    "extended": 21780.0
+   }
+  ],
+  "total": 21780.0
+ },
+ {
+  "quote_number": "Q-2026-4030",
+  "customer_id": "C-1091",
+  "customer": "Meadow Falls Regional Hospital",
+  "account_manager": "Elena Ruiz",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-25T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-24T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70030",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-203",
+    "product": "Wingtip ClearView 3 L",
+    "qty": 68,
+    "list_price": 366,
+    "discount_pct": 10,
+    "unit_price": 329.4,
+    "extended": 22399.2
+   },
+   {
+    "line": 2,
+    "sku": "AD-352",
+    "product": "Adatum VaultArray 4 X",
+    "qty": 67,
+    "list_price": 19342,
+    "discount_pct": 10,
+    "unit_price": 17407.8,
+    "extended": 1166322.6
+   },
+   {
+    "line": 3,
+    "sku": "AD-325",
+    "product": "Adatum RackServe 2 M",
+    "qty": 12,
+    "list_price": 7577,
+    "discount_pct": 10,
+    "unit_price": 6819.3,
+    "extended": 81831.6
+   }
+  ],
+  "total": 1270553.4
+ },
+ {
+  "quote_number": "Q-2026-4031",
+  "customer_id": "C-1193",
+  "customer": "Cedar Ridge School District",
+  "account_manager": "Priya Raman",
+  "status": "sent",
+  "created": {
+   "$date": "2026-10-03T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-02T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70031",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-163",
+    "product": "Fabrikam CreatorPro 5 Plus",
+    "qty": 58,
+    "list_price": 3927,
+    "discount_pct": 0,
+    "unit_price": 3927.0,
+    "extended": 227766.0
+   }
+  ],
+  "total": 227766.0
+ },
+ {
+  "quote_number": "Q-2026-4032",
+  "customer_id": "C-1236",
+  "customer": "Stone Valley County",
+  "account_manager": "Priya Raman",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-03T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-02T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-274",
+    "product": "Wingtip HuddleCam 5 X",
+    "qty": 59,
+    "list_price": 960,
+    "discount_pct": 10,
+    "unit_price": 864.0,
+    "extended": 50976.0
+   },
+   {
+    "line": 2,
+    "sku": "LI-319",
+    "product": "Litware EdgeGate 4 Pro",
+    "qty": 52,
+    "list_price": 2344,
+    "discount_pct": 10,
+    "unit_price": 2109.6,
+    "extended": 109699.2
+   }
+  ],
+  "total": 160675.2
+ },
+ {
+  "quote_number": "Q-2026-4033",
+  "customer_id": "C-1020",
+  "customer": "Ironwood Landing Credit Union",
+  "account_manager": "Nina Patel",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-27T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-26T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-197",
+    "product": "Wingtip ClearView 2 Air",
+    "qty": 69,
+    "list_price": 362,
+    "discount_pct": 5,
+    "unit_price": 343.9,
+    "extended": 23729.1
+   },
+   {
+    "line": 2,
+    "sku": "FA-155",
+    "product": "Fabrikam CreatorPro 3 Pro",
+    "qty": 24,
+    "list_price": 2835,
+    "discount_pct": 5,
+    "unit_price": 2693.25,
+    "extended": 64638.0
+   },
+   {
+    "line": 3,
+    "sku": "PR-362",
+    "product": "Proseware ShieldEndpoint 3 M",
+    "qty": 49,
+    "list_price": 63,
+    "discount_pct": 5,
+    "unit_price": 59.85,
+    "extended": 2932.65
+   },
+   {
+    "line": 4,
+    "sku": "WI-219",
+    "product": "Wingtip UltraWide 3 L",
+    "qty": 16,
+    "list_price": 837,
+    "discount_pct": 5,
+    "unit_price": 795.15,
+    "extended": 12722.4
+   }
+  ],
+  "total": 104022.15
+ },
+ {
+  "quote_number": "Q-2026-4034",
+  "customer_id": "C-1027",
+  "customer": "Bluff Grove Water Authority",
+  "account_manager": "Elena Ruiz",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-24T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-23T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-372",
+    "product": "Proseware ShieldEndpoint 5 L",
+    "qty": 50,
+    "list_price": 78,
+    "discount_pct": 8,
+    "unit_price": 71.76,
+    "extended": 3588.0
+   },
+   {
+    "line": 2,
+    "sku": "FA-173",
+    "product": "Fabrikam TowerPro 4 M",
+    "qty": 9,
+    "list_price": 1371,
+    "discount_pct": 8,
+    "unit_price": 1261.32,
+    "extended": 11351.88
+   },
+   {
+    "line": 3,
+    "sku": "FA-127",
+    "product": "Fabrikam OfficeBook 4 Pro",
+    "qty": 71,
+    "list_price": 1141,
+    "discount_pct": 8,
+    "unit_price": 1049.72,
+    "extended": 74530.12
+   },
+   {
+    "line": 4,
+    "sku": "FA-121",
+    "product": "Fabrikam OfficeBook 3 M",
+    "qty": 80,
+    "list_price": 1134,
+    "discount_pct": 8,
+    "unit_price": 1043.28,
+    "extended": 83462.4
+   }
+  ],
+  "total": 172932.4
+ },
+ {
+  "quote_number": "Q-2026-4035",
+  "customer_id": "C-1109",
+  "customer": "Birch Crossing Home Supply",
+  "account_manager": "Jake Sorensen",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-14T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-13T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-206",
+    "product": "Wingtip ClearView 4 M",
+    "qty": 77,
+    "list_price": 443,
+    "discount_pct": 0,
+    "unit_price": 443.0,
+    "extended": 34111.0
+   },
+   {
+    "line": 2,
+    "sku": "FA-125",
+    "product": "Fabrikam OfficeBook 4 M",
+    "qty": 18,
+    "list_price": 1226,
+    "discount_pct": 0,
+    "unit_price": 1226.0,
+    "extended": 22068.0
+   }
+  ],
+  "total": 56179.0
+ },
+ {
+  "quote_number": "Q-2026-4036",
+  "customer_id": "C-1184",
+  "customer": "Clover Heights Regional Hospital",
+  "account_manager": "Luis Ortega",
+  "status": "won",
+  "created": {
+   "$date": "2026-08-21T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-20T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70036",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-114",
+    "product": "Fabrikam EliteLine 5 S",
+    "qty": 29,
+    "list_price": 2138,
+    "discount_pct": 5,
+    "unit_price": 2031.1,
+    "extended": 58901.9
+   },
+   {
+    "line": 2,
+    "sku": "LI-305",
+    "product": "Litware CoreSwitch 5 Max",
+    "qty": 50,
+    "list_price": 4151,
+    "discount_pct": 5,
+    "unit_price": 3943.45,
+    "extended": 197172.5
+   }
+  ],
+  "total": 256074.4
+ },
+ {
+  "quote_number": "Q-2026-4037",
+  "customer_id": "C-1104",
+  "customer": "Birch Park Markets",
+  "account_manager": "Luis Ortega",
+  "status": "sent",
+  "created": {
+   "$date": "2026-09-23T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-23T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-152",
+    "product": "Fabrikam CreatorPro 2 Pro",
+    "qty": 78,
+    "list_price": 2924,
+    "discount_pct": 5,
+    "unit_price": 2777.8,
+    "extended": 216668.4
+   }
+  ],
+  "total": 216668.4
+ },
+ {
+  "quote_number": "Q-2026-4038",
+  "customer_id": "C-1003",
+  "customer": "Harbor Grove Academy",
+  "account_manager": "Marcus Webb",
+  "status": "won",
+  "created": {
+   "$date": "2026-09-09T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-09T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70038",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-143",
+    "product": "Fabrikam EduBook 4 Pro",
+    "qty": 26,
+    "list_price": 636,
+    "discount_pct": 8,
+    "unit_price": 585.12,
+    "extended": 15213.12
+   },
+   {
+    "line": 2,
+    "sku": "PR-403",
+    "product": "Proseware ShieldID 5 M",
+    "qty": 32,
+    "list_price": 65,
+    "discount_pct": 8,
+    "unit_price": 59.8,
+    "extended": 1913.6
+   },
+   {
+    "line": 3,
+    "sku": "FA-106",
+    "product": "Fabrikam EliteLine 3 X",
+    "qty": 55,
+    "list_price": 1774,
+    "discount_pct": 8,
+    "unit_price": 1632.08,
+    "extended": 89764.4
+   },
+   {
+    "line": 4,
+    "sku": "AD-331",
+    "product": "Adatum RackServe 3 Plus",
+    "qty": 20,
+    "list_price": 7791,
+    "discount_pct": 8,
+    "unit_price": 7167.72,
+    "extended": 143354.4
+   }
+  ],
+  "total": 250245.52
+ },
+ {
+  "quote_number": "Q-2026-4039",
+  "customer_id": "C-1202",
+  "customer": "Prairie Falls City Services",
+  "account_manager": "Nina Patel",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-05T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-04T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70039",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-402",
+    "product": "Proseware ShieldID 5 Max",
+    "qty": 36,
+    "list_price": 71,
+    "discount_pct": 5,
+    "unit_price": 67.45,
+    "extended": 2428.2
+   }
+  ],
+  "total": 2428.2
+ },
+ {
+  "quote_number": "Q-2026-4040",
+  "customer_id": "C-1005",
+  "customer": "Cedar Park Tool and Die",
+  "account_manager": "Nina Patel",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-27T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-26T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70040",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-123",
+    "product": "Fabrikam OfficeBook 3 S",
+    "qty": 7,
+    "list_price": 1193,
+    "discount_pct": 5,
+    "unit_price": 1133.35,
+    "extended": 7933.45
+   },
+   {
+    "line": 2,
+    "sku": "WI-275",
+    "product": "Wingtip HuddleCam 5 Max",
+    "qty": 78,
+    "list_price": 968,
+    "discount_pct": 5,
+    "unit_price": 919.6,
+    "extended": 71728.8
+   },
+   {
+    "line": 3,
+    "sku": "FA-168",
+    "product": "Fabrikam TowerPro 2 X",
+    "qty": 51,
+    "list_price": 1088,
+    "discount_pct": 5,
+    "unit_price": 1033.6,
+    "extended": 52713.6
+   },
+   {
+    "line": 4,
+    "sku": "WI-246",
+    "product": "Wingtip QuietKeys 2 Plus",
+    "qty": 47,
+    "list_price": 68,
+    "discount_pct": 5,
+    "unit_price": 64.6,
+    "extended": 3036.2
+   }
+  ],
+  "total": 135412.05
+ },
+ {
+  "quote_number": "Q-2026-4041",
+  "customer_id": "C-1147",
+  "customer": "Summit Grove Outfitters",
+  "account_manager": "Priya Raman",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-15T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-14T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70041",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-170",
+    "product": "Fabrikam TowerPro 3 S",
+    "qty": 59,
+    "list_price": 1279,
+    "discount_pct": 5,
+    "unit_price": 1215.05,
+    "extended": 71687.95
+   },
+   {
+    "line": 2,
+    "sku": "LI-291",
+    "product": "Litware AirPoint 5 Air",
+    "qty": 14,
+    "list_price": 591,
+    "discount_pct": 5,
+    "unit_price": 561.45,
+    "extended": 7860.3
+   }
+  ],
+  "total": 79548.25
+ },
+ {
+  "quote_number": "Q-2026-4042",
+  "customer_id": "C-1058",
+  "customer": "Granite Landing Advisors",
+  "account_manager": "Luis Ortega",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-09T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-08T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70042",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-243",
+    "product": "Wingtip DeskDock 5 L",
+    "qty": 33,
+    "list_price": 258,
+    "discount_pct": 5,
+    "unit_price": 245.1,
+    "extended": 8088.3
+   }
+  ],
+  "total": 8088.3
+ },
+ {
+  "quote_number": "Q-2026-4043",
+  "customer_id": "C-1242",
+  "customer": "Fox Point Medical Center",
+  "account_manager": "Tom Becker",
+  "status": "lost",
+  "created": {
+   "$date": "2026-10-22T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-21T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-108",
+    "product": "Fabrikam EliteLine 3 Air",
+    "qty": 27,
+    "list_price": 1567,
+    "discount_pct": 8,
+    "unit_price": 1441.64,
+    "extended": 38924.28
+   }
+  ],
+  "total": 38924.28
+ },
+ {
+  "quote_number": "Q-2026-4044",
+  "customer_id": "C-1298",
+  "customer": "Redwood Grove Markets",
+  "account_manager": "Aisha Grant",
+  "status": "sent",
+  "created": {
+   "$date": "2026-10-09T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-08T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "AD-341",
+    "product": "Adatum VaultArray 2 Plus",
+    "qty": 73,
+    "list_price": 15546,
+    "discount_pct": 8,
+    "unit_price": 14302.32,
+    "extended": 1044069.36
+   },
+   {
+    "line": 2,
+    "sku": "AD-353",
+    "product": "Adatum VaultArray 5 Air",
+    "qty": 68,
+    "list_price": 20006,
+    "discount_pct": 8,
+    "unit_price": 18405.52,
+    "extended": 1251575.36
+   },
+   {
+    "line": 3,
+    "sku": "LI-301",
+    "product": "Litware CoreSwitch 4 Pro",
+    "qty": 26,
+    "list_price": 3750,
+    "discount_pct": 8,
+    "unit_price": 3450.0,
+    "extended": 89700.0
+   },
+   {
+    "line": 4,
+    "sku": "WI-263",
+    "product": "Wingtip HuddleCam 2 M",
+    "qty": 13,
+    "list_price": 622,
+    "discount_pct": 8,
+    "unit_price": 572.24,
+    "extended": 7439.12
+   }
+  ],
+  "total": 2392783.84
+ },
+ {
+  "quote_number": "Q-2026-4045",
+  "customer_id": "C-1299",
+  "customer": "Redwood Heights Family Clinics",
+  "account_manager": "Luis Ortega",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-07T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-07T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-235",
+    "product": "Wingtip DeskDock 3 L",
+    "qty": 39,
+    "list_price": 204,
+    "discount_pct": 10,
+    "unit_price": 183.6,
+    "extended": 7160.4
+   },
+   {
+    "line": 2,
+    "sku": "AD-337",
+    "product": "Adatum RackServe 5 Pro",
+    "qty": 42,
+    "list_price": 9870,
+    "discount_pct": 10,
+    "unit_price": 8883.0,
+    "extended": 373086.0
+   }
+  ],
+  "total": 380246.4
+ },
+ {
+  "quote_number": "Q-2026-4046",
+  "customer_id": "C-1269",
+  "customer": "Hollow Valley Community College",
+  "account_manager": "Priya Raman",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-27T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-26T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70046",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FB-AIO22",
+    "product": "Fabrikam CareView 22 All-in-One",
+    "qty": 55,
+    "list_price": 1300,
+    "discount_pct": 8,
+    "unit_price": 1196.0,
+    "extended": 65780.0
+   },
+   {
+    "line": 2,
+    "sku": "FA-134",
+    "product": "Fabrikam EduBook 2 M",
+    "qty": 22,
+    "list_price": 515,
+    "discount_pct": 8,
+    "unit_price": 473.8,
+    "extended": 10423.6
+   },
+   {
+    "line": 3,
+    "sku": "LI-309",
+    "product": "Litware EdgeGate 2 Air",
+    "qty": 42,
+    "list_price": 1884,
+    "discount_pct": 8,
+    "unit_price": 1733.28,
+    "extended": 72797.76
+   }
+  ],
+  "total": 149001.36
+ },
+ {
+  "quote_number": "Q-2026-4047",
+  "customer_id": "C-1210",
+  "customer": "Aspen Park Family Clinics",
+  "account_manager": "Jake Sorensen",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-18T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-18T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70047",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "AD-356",
+    "product": "Adatum VaultArray 5 Plus",
+    "qty": 31,
+    "list_price": 20396,
+    "discount_pct": 5,
+    "unit_price": 19376.2,
+    "extended": 600662.2
+   }
+  ],
+  "total": 600662.2
+ },
+ {
+  "quote_number": "Q-2026-4048",
+  "customer_id": "C-1165",
+  "customer": "Copper Ridge Academy",
+  "account_manager": "Marcus Webb",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-28T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-27T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70048",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "LI-286",
+    "product": "Litware AirPoint 4 X",
+    "qty": 63,
+    "list_price": 597,
+    "discount_pct": 10,
+    "unit_price": 537.3,
+    "extended": 33849.9
+   },
+   {
+    "line": 2,
+    "sku": "WI-204",
+    "product": "Wingtip ClearView 3 Pro",
+    "qty": 31,
+    "list_price": 395,
+    "discount_pct": 10,
+    "unit_price": 355.5,
+    "extended": 11020.5
+   },
+   {
+    "line": 3,
+    "sku": "LI-292",
+    "product": "Litware AirPoint 5 L",
+    "qty": 17,
+    "list_price": 556,
+    "discount_pct": 10,
+    "unit_price": 500.4,
+    "extended": 8506.8
+   },
+   {
+    "line": 4,
+    "sku": "FA-144",
+    "product": "Fabrikam EduBook 4 S",
+    "qty": 72,
+    "list_price": 667,
+    "discount_pct": 10,
+    "unit_price": 600.3,
+    "extended": 43221.6
+   }
+  ],
+  "total": 96598.8
+ },
+ {
+  "quote_number": "Q-2026-4049",
+  "customer_id": "C-1278",
+  "customer": "Harbor Crossing Legal Partners",
+  "account_manager": "Priya Raman",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-02T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-02T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70049",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "AD-338",
+    "product": "Adatum RackServe 5 Plus",
+    "qty": 10,
+    "list_price": 9216,
+    "discount_pct": 5,
+    "unit_price": 8755.2,
+    "extended": 87552.0
+   }
+  ],
+  "total": 87552.0
+ },
+ {
+  "quote_number": "Q-2026-4050",
+  "customer_id": "C-1054",
+  "customer": "Clover Creek Tool and Die",
+  "account_manager": "Marcus Webb",
+  "status": "lost",
+  "created": {
+   "$date": "2026-08-14T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-13T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70050",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-361",
+    "product": "Proseware ShieldEndpoint 3 L",
+    "qty": 41,
+    "list_price": 66,
+    "discount_pct": 10,
+    "unit_price": 59.4,
+    "extended": 2435.4
+   },
+   {
+    "line": 2,
+    "sku": "FA-118",
+    "product": "Fabrikam OfficeBook 2 Air",
+    "qty": 31,
+    "list_price": 983,
+    "discount_pct": 10,
+    "unit_price": 884.7,
+    "extended": 27425.7
+   },
+   {
+    "line": 3,
+    "sku": "AD-340",
+    "product": "Adatum RackServe 5 M",
+    "qty": 22,
+    "list_price": 10554,
+    "discount_pct": 10,
+    "unit_price": 9498.6,
+    "extended": 208969.2
+   }
+  ],
+  "total": 238830.3
+ },
+ {
+  "quote_number": "Q-2026-4051",
+  "customer_id": "C-1236",
+  "customer": "Stone Valley County",
+  "account_manager": "Priya Raman",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-25T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-24T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-248",
+    "product": "Wingtip QuietKeys 2 Max",
+    "qty": 67,
+    "list_price": 74,
+    "discount_pct": 0,
+    "unit_price": 74.0,
+    "extended": 4958.0
+   }
+  ],
+  "total": 4958.0
+ },
+ {
+  "quote_number": "Q-2026-4052",
+  "customer_id": "C-1053",
+  "customer": "Copper Heights County",
+  "account_manager": "Luis Ortega",
+  "status": "lost",
+  "created": {
+   "$date": "2026-08-21T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-20T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "LI-282",
+    "product": "Litware AirPoint 3 Plus",
+    "qty": 5,
+    "list_price": 495,
+    "discount_pct": 10,
+    "unit_price": 445.5,
+    "extended": 2227.5
+   }
+  ],
+  "total": 2227.5
+ },
+ {
+  "quote_number": "Q-2026-4053",
+  "customer_id": "C-1197",
+  "customer": "Bluff Falls Legal Partners",
+  "account_manager": "Priya Raman",
+  "status": "won",
+  "created": {
+   "$date": "2026-10-12T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-11-11T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70053",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "FA-156",
+    "product": "Fabrikam CreatorPro 3 L",
+    "qty": 77,
+    "list_price": 3338,
+    "discount_pct": 10,
+    "unit_price": 3004.2,
+    "extended": 231323.4
+   },
+   {
+    "line": 2,
+    "sku": "FA-125",
+    "product": "Fabrikam OfficeBook 4 M",
+    "qty": 63,
+    "list_price": 1226,
+    "discount_pct": 10,
+    "unit_price": 1103.4,
+    "extended": 69514.2
+   },
+   {
+    "line": 3,
+    "sku": "PR-404",
+    "product": "Proseware ShieldID 5 Plus",
+    "qty": 66,
+    "list_price": 61,
+    "discount_pct": 10,
+    "unit_price": 54.9,
+    "extended": 3623.4
+   },
+   {
+    "line": 4,
+    "sku": "FA-115",
+    "product": "Fabrikam EliteLine 5 L",
+    "qty": 5,
+    "list_price": 1836,
+    "discount_pct": 10,
+    "unit_price": 1652.4,
+    "extended": 8262.0
+   }
+  ],
+  "total": 312723.0
+ },
+ {
+  "quote_number": "Q-2026-4054",
+  "customer_id": "C-1077",
+  "customer": "Fox Park Fabrication",
+  "account_manager": "Nina Patel",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-23T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-23T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-367",
+    "product": "Proseware ShieldEndpoint 4 X",
+    "qty": 71,
+    "list_price": 80,
+    "discount_pct": 8,
+    "unit_price": 73.6,
+    "extended": 5225.6
+   },
+   {
+    "line": 2,
+    "sku": "WI-251",
+    "product": "Wingtip QuietKeys 3 Plus",
+    "qty": 27,
+    "list_price": 82,
+    "discount_pct": 8,
+    "unit_price": 75.44,
+    "extended": 2036.88
+   }
+  ],
+  "total": 7262.48
+ },
+ {
+  "quote_number": "Q-2026-4055",
+  "customer_id": "C-1297",
+  "customer": "Hollow Landing Savings Bank",
+  "account_manager": "Jake Sorensen",
+  "status": "won",
+  "created": {
+   "$date": "2026-08-13T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-12T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "LI-296",
+    "product": "Litware CoreSwitch 2 L",
+    "qty": 52,
+    "list_price": 2962,
+    "discount_pct": 5,
+    "unit_price": 2813.9,
+    "extended": 146322.8
+   },
+   {
+    "line": 2,
+    "sku": "WI-232",
+    "product": "Wingtip DeskDock 2 L",
+    "qty": 35,
+    "list_price": 197,
+    "discount_pct": 5,
+    "unit_price": 187.15,
+    "extended": 6550.25
+   }
+  ],
+  "total": 152873.05
+ },
+ {
+  "quote_number": "Q-2026-4056",
+  "customer_id": "C-1114",
+  "customer": "Prairie Falls Outfitters",
+  "account_manager": "Tom Becker",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-15T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-15T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70056",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-204",
+    "product": "Wingtip ClearView 3 Pro",
+    "qty": 31,
+    "list_price": 395,
+    "discount_pct": 10,
+    "unit_price": 355.5,
+    "extended": 11020.5
+   },
+   {
+    "line": 2,
+    "sku": "WI-276",
+    "product": "Wingtip HuddleCam 5 L",
+    "qty": 57,
+    "list_price": 965,
+    "discount_pct": 10,
+    "unit_price": 868.5,
+    "extended": 49504.5
+   }
+  ],
+  "total": 60525.0
+ },
+ {
+  "quote_number": "Q-2026-4057",
+  "customer_id": "C-1049",
+  "customer": "Cedar Point Health",
+  "account_manager": "Jake Sorensen",
+  "status": "lost",
+  "created": {
+   "$date": "2026-09-03T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-03T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": null,
+  "lines": [
+   {
+    "line": 1,
+    "sku": "PR-389",
+    "product": "Proseware ShieldID 2 M",
+    "qty": 74,
+    "list_price": 53,
+    "discount_pct": 5,
+    "unit_price": 50.35,
+    "extended": 3725.9
+   },
+   {
+    "line": 2,
+    "sku": "FA-155",
+    "product": "Fabrikam CreatorPro 3 Pro",
+    "qty": 14,
+    "list_price": 2835,
+    "discount_pct": 5,
+    "unit_price": 2693.25,
+    "extended": 37705.5
+   },
+   {
+    "line": 3,
+    "sku": "WI-250",
+    "product": "Wingtip QuietKeys 3 X",
+    "qty": 19,
+    "list_price": 75,
+    "discount_pct": 5,
+    "unit_price": 71.25,
+    "extended": 1353.75
+   }
+  ],
+  "total": 42785.15
+ },
+ {
+  "quote_number": "Q-2026-4058",
+  "customer_id": "C-1267",
+  "customer": "Ironwood Ridge Academy",
+  "account_manager": "Tom Becker",
+  "status": "sent",
+  "created": {
+   "$date": "2026-09-06T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-06T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70058",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "LI-297",
+    "product": "Litware CoreSwitch 3 X",
+    "qty": 18,
+    "list_price": 3229,
+    "discount_pct": 0,
+    "unit_price": 3229.0,
+    "extended": 58122.0
+   },
+   {
+    "line": 2,
+    "sku": "FA-140",
+    "product": "Fabrikam EduBook 3 M",
+    "qty": 53,
+    "list_price": 578,
+    "discount_pct": 0,
+    "unit_price": 578.0,
+    "extended": 30634.0
+   },
+   {
+    "line": 3,
+    "sku": "FA-127",
+    "product": "Fabrikam OfficeBook 4 Pro",
+    "qty": 63,
+    "list_price": 1141,
+    "discount_pct": 0,
+    "unit_price": 1141.0,
+    "extended": 71883.0
+   }
+  ],
+  "total": 160639.0
+ },
+ {
+  "quote_number": "Q-2026-4059",
+  "customer_id": "C-1039",
+  "customer": "Harbor Falls Community College",
+  "account_manager": "Elena Ruiz",
+  "status": "sent",
+  "created": {
+   "$date": "2026-08-16T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-09-15T00:00:00Z"
+  },
+  "title": "Hardware order",
+  "deal_registration_id": "DR-70059",
+  "lines": [
+   {
+    "line": 1,
+    "sku": "WI-270",
+    "product": "Wingtip HuddleCam 4 S",
+    "qty": 64,
+    "list_price": 825,
+    "discount_pct": 5,
+    "unit_price": 783.75,
+    "extended": 50160.0
+   }
+  ],
+  "total": 50160.0
+ }
+]

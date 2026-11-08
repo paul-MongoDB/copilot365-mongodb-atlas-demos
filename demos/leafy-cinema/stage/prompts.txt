@@ -1,0 +1,90 @@
+MOVIE DEMO: NATURAL PROMPTS (use these on stage)
+No project, cluster or database names. Prompt 5 names Atlas on purpose, for the Source column. This is what a real user would type.
+Set the Copilot model picker to "6.1 sol", NOT Auto. Auto failed to reach the database in the
+insurance demo. Open ONE new chat and run every prompt in it.
+STATUS: the Atlas side of every prompt was checked on 2026-11-04 with scripts/demo_queries.py.
+The main flow passed in Copilot on 2026-11-04 in the old order. This simple-to-advanced order has not been run yet.
+The Q&A prompts and the follow-ups marked below have not been run in Copilot.
+
+PROMPT 1a  (Atlas: simple lookup, BEFORE the insert. Expect: Drinking Buddies, Va Savoir, A Town Like Alice, all dated Sept 2015.)
+What are the three most recently updated films in our movie catalog? Show title, year and last updated.
+
+-- terminal, project root:  .venv/bin/python demos/leafy-cinema/scripts/live_insert.py   (wait for "vector search sees it")
+
+PROMPT 1b  (same chat, AFTER the insert. Expect: The Projectionist of Marigold Falls at the top, dated today.)
+Check again. What are the three most recently updated films in our movie catalog?
+  If Copilot repeats the old list: Query the catalog again right now.
+  Optional follow-up if there is time: Would it qualify for our Hidden Gems series?
+  (Expect yes: 98% from 62 critics, 3,100 votes, 92 minutes, PG.)
+
+PROMPT 2  (Atlas: filter and sort. The hidden gems)
+Which movies do critics love that hardly anyone has seen? I mean a critic score of 95% or higher from at least 40 critic reviews, and under 15,000 IMDb votes. Movies only, no TV series. Show the 10 with the most critic reviews: title, year, runtime, rating, critic score, critic reviews and votes.
+
+  Expect 112 films qualify (111 plus the film just inserted). Top 10 by critic reviews: 13 Hours in a Warehouse (267), Life Itself (186),
+  Mr. Turner (175), Amy (152), Murderball (138), Spellbound (137), Shaun the Sheep Movie (134),
+  Project Nim (132), Winged Migration (132), Gloria (123).
+
+PROMPT 3  (Atlas: aggregation pipeline. Critics vs audiences. Keep it.)
+Which movies did critics love but audiences didn't? Among movies with at least 40 critic reviews and at least 10,000 audience ratings, show the five with the biggest gap between the critic score and the audience score: title, year, critic score and audience score. Then one sentence on what you notice.
+
+  Expect: Spy Kids (2001) 93 vs 45, Night Moves (2013) 86 vs 41, Antz (1998) 95 vs 51,
+  Mr. Turner (2014) 98 vs 56, Stuart Little 2 (2002) 81 vs 41.
+  Fifth place is a tie at 40 points: Copilot may show Nurse Betty (2000) 84 vs 44 instead.
+  Technical room follow-up, not yet run in Copilot: Show me the exact query you ran for that answer.
+
+PROMPT 4  (Teams + Atlas: vector search. The half-remembered movie)
+Dana at the box office has a customer who can't remember the name of a movie. Find out how the customer described it, then tell me which movie it is by matching that description to the plots in our movie catalog. Keep it under 60 words.
+
+  Expect: Wings of Desire (1987), a one-line reason (angels, a city, one gives up immortality for a
+  trapeze artist). Runner-up in the data is Faraway, So Close! (1993).
+  If Copilot searches by keyword and gets it wrong, use:
+  "Using semantic search on the plots, which movie is closest in meaning to the customer's description?"
+
+PROMPT 5  (Atlas + Teams + OneDrive: the decision)
+Helen needs me to check her draft Hidden Gems lineup. Show one table with Film, Fee, Problem and Source columns. For Source, say Atlas, Teams or OneDrive, and name the document. Then give the total against the budget and three swaps that fix every problem and stay within budget. Keep it short.
+
+  If the answer skips a source or the table comes back messy, use this longer version:
+  Helen asked me to check her draft Hidden Gems lineup before she signs the contracts. Using our movie catalog, the series guidelines, the license rate card, last year's lineups and what the team has said: what breaks the rules, and what does it cost against the budget? Show one table with Film, Year, Minutes, Rating, License fee and Problem columns. Name where each rule comes from: catalog, guidelines, rate card, last year's lineups or team notes. Then give the total against the budget and three swaps that fix every problem. Keep it short.
+
+  Expect five problems and $5,350 against $4,800 (over by $550):
+    Leviathan (2014): 140 minutes, over the 125-minute limit (team notes)
+    Wings of Desire: 128 minutes, over the limit (team notes)
+    The Fog of War: played last year (last year's lineups), even though Sam wants it back
+    Three R-rated films ('71, Murderball, Leviathan) when the guidelines allow two (guidelines)
+    Budget: $5,350 against $4,800 (rate card plus Helen's post)
+  Swaps must come out under $4,800 and keep at least two non-English films. One valid fix is
+  Robin Hood (1938), The Rules of the Game (1939), Belle de Jour (1967): total $4,350.
+  Copilot may pick other films. Check them against the five rules, not against this list.
+
+OPTIONAL CLOSER  (only if under 8:30 on the clock)
+Draft my Teams reply to Helen with the fixed lineup and the new total.
+
+-----------------------------------------------------------------
+Q&A PROMPTS  (only if someone asks "can it do X?". Not yet run in Copilot.)
+
+Analytics across films:
+Which directors with at least six films since 1980 have the highest average IMDb rating? Show the top three with film count and average.
+  Expect: Christopher Nolan 9 films 8.34, Hayao Miyazaki 16 films 8.07, Majid Majidi 8 films 8.03.
+
+Location search:
+Which movie theaters are closest to downtown Minneapolis? Show the three nearest and how far each is in miles.
+  Expect: two in Minneapolis (0.4 and 0.7 miles), then Roseville (5.2 miles).
+
+Counting:
+Which five states have the most movie theaters in our theater list?
+  Expect: CA 169, TX 160, FL 111, NY 81, IL 70.
+
+-----------------------------------------------------------------
+FALLBACKS
+
+Copilot says it needs a connection, or picks the wrong Atlas project:
+Check the model picker first (not Auto). Then add: "In the Atlas project '<your-project>', cluster <your-cluster>, database sample_mflix, ..."
+to the front of the prompt.
+
+Prompt 1b, if the new film is missing:
+Show me the film "The Projectionist of Marigold Falls".
+
+Teams posts not found: upload fallback/Hidden Gems channel export.docx to OneDrive. The prompts find it
+unchanged, and Copilot says "channel export, not live Teams". Say "the team's notes".
+
+After the demo, in the terminal:  .venv/bin/python demos/leafy-cinema/scripts/live_insert.py --undo

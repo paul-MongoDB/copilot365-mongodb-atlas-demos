@@ -1,0 +1,65 @@
+NATURAL PROMPTS (use these on stage)
+No project, cluster, database or source names. This is what a real user would type.
+Set the Copilot model picker to the stronger model ("6.1 sol"), NOT Auto. Auto failed to
+connect to the database on the same prompt. If a prompt still fails, use prompts-explicit.txt.
+
+PROMPT 1  (Atlas + Teams)
+Pull up claim CLM-2026-10482 and check what my team has said about it. Does anything not add up? Keep it under 100 words.
+
+  (No source named on purpose. Saying "in Teams" made Copilot search only Teams and skip the
+  OneDrive channel export. Without it, Copilot finds whichever source is indexed.)
+
+PROMPT 2  (Atlas aggregation: the discovery)
+Look at our water damage claims since August 1 that used a contractor. Is anything unusual about the contractors? Compare them on number of claims, average percent above our pricing guide estimate, assignments of benefits, and how much we've already paid. Show a small table sorted by average above guide, highest first, and one sentence on what stands out.
+
+PROMPT 3  (Atlas vector search)
+Find other claims whose descriptions are most similar in meaning to the Brennan claim: homeowner away, water coming through a ceiling under an upstairs bathroom, and a restoration company on site right away recommending a full tear-out. Rank them by similarity. List only the close matches: claim number, city, contractor and similarity score, then one sentence on what they have in common.
+
+  If it runs keyword searches instead, use this version:
+Using semantic search on the claim descriptions, find other claims that tell the same story as the Brennan claim: homeowner away, water coming through a ceiling under an upstairs bathroom, and a restoration company on site right away recommending a full tear-out. List only the close matches: claim number, city, contractor and similarity score, then one sentence on what they have in common.
+
+PROMPT 4a  (Atlas, live: BEFORE the insert. Expect: none today. Tested 2026-11-02: passes.)
+Have any new LeafyDry Restoration claims come in today?
+
+-- terminal:  .venv/bin/python demos/insurance-claims/scripts/live_insert.py   (wait for "vector search sees it")
+
+PROMPT 4b  (same chat, AFTER the insert. Expect: CLM-2026-10531. Tested 2026-11-02: passes.)
+Check again. Have any new LeafyDry Restoration claims come in today?
+  If Copilot repeats "none": Query the claims system again right now.
+
+PROMPT 5  (Atlas + Teams + OneDrive: the decision. Reworded 2026-11-03 to spell out SIU and HO-3: re-run once before the demo.)
+I need to settle the Brennan claim today. Using the claim and policy records, Jordan's findings, and our homeowners policy and claims handling guidelines: what do we pay, what do we deny and why, does it need a fraud investigation, and who approves it? Show the math in one table with Item, Amount, Decision and Source columns. Name the source as claim record, team notes, policy or guidelines. Leave out living expenses. Then answer the investigation and approver questions in two lines.
+
+OPTIONAL CLOSER  (only if under 8:30 on the clock)
+Draft my Teams reply to Maya approving the undisputed amount and listing what she needs to do for the Brennan family this week.
+
+-----------------------------------------------------------------
+Q&A PROMPTS  (only if Microsoft asks "can it do X?". Tested 2026-11-02 on 6.1 sol: all returned the expected numbers. The hailstorm prompt was reworded 2026-11-03, not retested.)
+
+Analytics, not just lookups:
+For the October hailstorm, CAT-2026-17, break down the number of claims, the total money set aside for open claims, and the total paid by city. Show a small table sorted by claims, highest first.
+  Expect: 110 claims. Irving 24 and $297,500 open, Frisco 19, Garland 17, Dallas 15, Plano 14, McKinney 11, Allen 10.
+
+Joins across data and documents:
+Priya has two sewer backup claims on Shady Elm Ct in Irving. Check each policy's endorsements and our water backup endorsement document. Is each one covered, and for how much? Keep it under 80 words.
+  Expect: Grace Thompson (CLM-2026-10407) has no water backup endorsement, so deny. The Parks (CLM-2026-10408) have HO-WB-10, so covered up to $10,000.
+
+Revenue angle:
+How many sewer backup claims have we denied this year because the policy had no water backup endorsement, and how much was claimed? What would the endorsement have cost? Keep it under 60 words.
+  Expect: 8 claims, $103,850 claimed. The endorsement costs $45 to $140 a year.
+
+Open-ended (riskiest):
+What needs my attention this morning?
+  Expect: the Brennan escalation first, then Shady Elm and the hail inspections. It leaned on earlier chat context and
+  did not mention LeafyDry. Ask it in the same chat, after the main demo and before --undo. Treat it as a bonus.
+
+-----------------------------------------------------------------
+FALLBACKS
+
+Prompt 3, if Copilot does a text match instead:
+Use the claims_semantic vector search index on loss_description. (Plain "find other claims" ran keyword regex searches, not vector search. The word "semantic" is what triggers it.)
+
+Prompt 4, if the new claim is missing:
+Show me claim CLM-2026-10531.
+
+After the demo, in the terminal:  .venv/bin/python demos/insurance-claims/scripts/live_insert.py --undo

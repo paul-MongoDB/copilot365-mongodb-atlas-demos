@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Monday morning at Contoso Mutual</title>
+<style>
+  :root { --bg: #0b1620; --fg: #e8eef3; --dim: #8aa0b2; --accent: #00ed64; --warn: #ff9f43; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .screen { display: none; height: 100%; flex-direction: column; justify-content: center;
+    padding: 6vh 8vw; }
+  .screen.on { display: flex; }
+  h1 { font-size: 5vh; font-weight: 600; margin-bottom: 4vh; }
+  h1 small { display: block; font-size: 2.6vh; color: var(--dim); font-weight: 400; margin-top: 1vh; }
+  ol { font-size: 3.2vh; line-height: 1.7; padding-left: 4vh; color: var(--fg); }
+  ol li::marker { color: var(--dim); }
+  .cost { margin-top: 5vh; font-size: 4vh; color: var(--warn); font-weight: 600; }
+  .label { font-size: 3vh; color: var(--dim); text-transform: uppercase; letter-spacing: .2em; }
+  .clock { font-size: 28vh; font-weight: 700; font-variant-numeric: tabular-nums;
+    color: var(--accent); line-height: 1; margin: 3vh 0; }
+  .old { font-size: 3.2vh; color: var(--warn); }
+  .compare { display: flex; gap: 8vw; margin: 4vh 0 6vh; }
+  .compare div { flex: 1; }
+  .compare .big { font-size: 11vh; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .compare .was .big { color: var(--warn); }
+  .compare .now .big { color: var(--accent); }
+  ul { list-style: none; font-size: 3.2vh; line-height: 1.8; }
+  ul li::before { content: "\2713  "; color: var(--accent); }
+  .hint { position: fixed; bottom: 2vh; right: 2vw; font-size: 1.6vh; color: #3b5163; }
+</style>
+</head>
+<body>
+
+<section class="screen on" id="s0">
+  <h1>Monday, 8:00 a.m.
+    <small>To answer one question about an insurance claim, a manager today:</small></h1>
+  <ol>
+    <li>Opens the claims system and reads the claim</li>
+    <li>Scrolls the team channel for the field adjuster's notes</li>
+    <li>Opens the policy form for the mold and seepage clauses</li>
+    <li>Opens the claims guidelines for authority and fraud rules</li>
+    <li>Checks the vendor list</li>
+    <li>Asks analytics for contractor statistics, and waits</li>
+  </ol>
+  <p class="cost">45 minutes &middot; 5 apps &middot; a 2-day wait &middot; and the fraud pattern stays hidden</p>
+</section>
+
+<section class="screen" id="s1">
+  <p class="label">With Copilot + MongoDB Atlas</p>
+  <p class="clock" id="clock">0:00</p>
+  <p class="old">The old way: 45 minutes and a 2-day wait</p>
+</section>
+
+<section class="screen" id="s2">
+  <p class="label">One claim, one Monday morning</p>
+  <div class="compare">
+    <div class="was"><p class="label">The old way</p><p class="big">45 min</p><p class="old">+ a 2-day wait</p></div>
+    <div class="now"><p class="label">Today</p><p class="big" id="final">0:00</p></div>
+  </div>
+  <ul>
+    <li>Live Atlas data, joined with Teams and OneDrive through Work IQ, in one conversation</li>
+    <li>One Copilot federated connector: no data copied, no custom app</li>
+    <li>$97,950 paid to a suspect contractor, found by asking</li>
+  </ul>
+</section>
+
+<p class="hint">Space: next &middot; R: reset</p>
+
+<script>
+  // Space advances: list -> running clock -> final comparison. R resets.
+  let step = 0, started = 0, timer = null;
+  const fmt = ms => { const s = Math.floor(ms / 1000); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
+  const show = n => document.querySelectorAll(".screen").forEach((el, i) => el.classList.toggle("on", i === n));
+  function tick() { document.getElementById("clock").textContent = fmt(Date.now() - started); }
+  function next() {
+    if (step === 0) { started = Date.now(); tick(); timer = setInterval(tick, 250); step = 1; }
+    else if (step === 1) { clearInterval(timer); document.getElementById("final").textContent = fmt(Date.now() - started); step = 2; }
+    show(step);
+  }
+  function reset() { clearInterval(timer); step = 0; document.getElementById("clock").textContent = "0:00"; show(0); }
+  document.addEventListener("keydown", e => {
+    if (e.code === "Space") { e.preventDefault(); next(); }
+    if (e.key === "r" || e.key === "R") reset();
+  });
+</script>
+</body>
+</html>
