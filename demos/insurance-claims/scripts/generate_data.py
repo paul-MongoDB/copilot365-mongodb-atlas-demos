@@ -3,16 +3,26 @@
 Deterministic (fixed seed), so the expected answers in DEMO_SCRIPT.md stay true
 every time you regenerate. Writes MongoDB Extended JSON to data/.
 
+From the repo root:
+    .venv/bin/python demos/insurance-claims/scripts/generate_data.py
+
 All people, companies, addresses and policies are fictional.
 """
 
 from __future__ import annotations
 
+import argparse
 import datetime as dt
 import random
 from pathlib import Path
 
 from bson import json_util
+
+if __name__ == "__main__":
+    # Parse before the module-level generation below runs, so --help prints and exits
+    # without building anything. There are no options.
+    argparse.ArgumentParser(description=__doc__,
+                            formatter_class=argparse.RawDescriptionHelpFormatter).parse_args()
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data"
@@ -179,7 +189,9 @@ PERIL_PLAN = [
     ("Freeze", 16, [1, 2], (5_000, 38_000), (20, 60)),
     ("Liability", 10, list(range(1, 11)), (2_500, 55_000), (30, 100)),
 ]
-CAT_CLAIMS = 108  # hail and wind claims from the Oct 14-15 storm
+# Hail and wind claims from the Oct 14-15 storm. The two Shady Elm Ct sewer backups
+# further down also carry the CAT code, so 110 claims in all have CAT-2026-17.
+CAT_CLAIMS = 108
 
 
 # --------------------------------------------------------------------------
@@ -263,14 +275,12 @@ def make_policy(insured: str, addr: dict, *, endorsements: list[str] | None = No
     if eff > AS_OF:
         eff = eff.replace(year=2025)
     if endorsements is None:
-        pool = list(ENDORSEMENTS)
         endorsements = []
         if rng.random() < 0.35:
             endorsements.append(rng.choice(["HO-WB-10", "HO-WB-25"]))
         for code in ["HO-SPP", "HO-ID", "HO-OL", "HO-RCC"]:
             if rng.random() < 0.25:
                 endorsements.append(code)
-        assert all(e in pool for e in endorsements)
     pid = policy_id()
     return {
         "_id": pid,

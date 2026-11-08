@@ -12,6 +12,7 @@ demo's math depends on them.
 
 from __future__ import annotations
 
+import argparse
 import datetime as dt
 import random
 from pathlib import Path
@@ -196,7 +197,7 @@ def orders(products: list[dict], custs: list[dict]) -> list[dict]:
                         "account_manager": c["account_manager"], "order_date": date, "lines": lines,
                         "total": round(sum(x["extended"] for x in lines), 2),
                         "status": rng.choices(["delivered", "cancelled"], [19, 1])[0]})
-    # Willow Bend is a real account, so it needs a real order in the last 12 months.
+    # Willow Bend is an active account, so it needs an order in the last 12 months.
     lines = [{"sku": "FB-MT11", "product": "Fabrikam MedTab 11", "category": "Tablets", "qty": 300,
               "unit_price": 990.0, "extended": 297000.0},
              {"sku": "AD-CART1", "product": "Adatum RoundsCart Mobile Workstation", "category": "Peripherals",
@@ -261,4 +262,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # No options: this only makes --help print the description instead of running.
+    argparse.ArgumentParser(description=__doc__,
+                            formatter_class=argparse.RawDescriptionHelpFormatter).parse_args()
     main()

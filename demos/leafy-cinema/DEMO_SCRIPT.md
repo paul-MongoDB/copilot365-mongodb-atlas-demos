@@ -15,7 +15,7 @@ product catalog, order system or customer list.
 | Kind of query | Prompt | What Atlas has to do |
 |---|---|---|
 | Simple lookup | Prompts 1a, 1b | Sort by last updated and return three films |
-| Filter and sort | Prompt 2 | Apply three conditions to 21,000 films and rank them |
+| Filter and sort | Prompt 2 | Apply four conditions to 21,000 films and rank them |
 | Aggregation pipeline | Prompt 3 | Calculate a critic-audience gap per film, then rank on it |
 | Vector search | Prompt 4 | Match a description to plots by meaning |
 
@@ -41,17 +41,23 @@ and last year's lineup live in **OneDrive**.
 | 6:00 | Prompt 5: check the lineup | Five rule breaks, found across three systems |
 | 9:00 | Close | What it means for Copilot |
 
-If you run past 9:30, skip the optional closer. Keep Prompt 3: it is the aggregation example.
+If the clock is past 8:30 after Prompt 5, skip the optional closer. Keep Prompt 3: it is the
+aggregation example.
 
 ## Setup on stage
 
 - Copilot Chat with the MongoDB Atlas source on, **one new conversation** for the whole demo.
-  New chats start on Auto, which failed to reach the database in the insurance demo. Switch the
-  model picker to **6.1 sol** before the first prompt.
+  New chats start on Auto. In Copilot's model picker, choose a named model, not Auto. Auto did
+  not call the connector in our tests. We rehearsed this demo on **6.1 sol**. Rehearse with the
+  model you will present on.
 - `stage/prompts.txt` open. Paste the prompts; don't type them.
 - A terminal at the project root for the live insert (the connection string loads from `.env`).
-- A screen recording of a good dry run, in case Copilot stalls.
-- `live_insert.py --undo` has been run since the last rehearsal.
+- A recording of your own dry run, in case Copilot stalls. The repo does not include one.
+- The film from your last rehearsal is removed. If you rehearsed since you last ran it, run:
+
+  ```bash
+  .venv/bin/python demos/leafy-cinema/scripts/live_insert.py --undo
+  ```
 
 ---
 
@@ -66,7 +72,8 @@ simplest question there is, then make them harder."
 What are the three most recently updated films in our movie catalog? Show title, year and last updated.
 ```
 
-What comes back: three films last updated in September 2015 (Drinking Buddies, Va Savoir, A Town Like Alice). Say: "Nothing new in years. Now watch."
+What comes back: three films last updated in September 2015 (Drinking Buddies, Va Savoir (Who
+Knows?), A Town Like Alice). Say: "Nothing new in years. Now watch."
 
 **Then insert.** Say: "A distributor just uploaded a film." In the terminal:
 
@@ -103,12 +110,14 @@ and no overnight copy. Copilot asked Atlas, and Atlas answered with what's true 
 Which movies do critics love that hardly anyone has seen? I mean a critic score of 95% or higher from at least 40 critic reviews, and under 15,000 IMDb votes. Movies only, no TV series. Show the 10 with the most critic reviews: title, year, runtime, rating, critic score, critic reviews and votes.
 ```
 
-What comes back: the top ten. Copilot doesn't state the total, so don't quote one (112 qualify after the insert): **13 Hours in a Warehouse** (98% from 267
-critics, only 734 votes), Life Itself, Mr. Turner, Amy, Murderball, Spellbound, Shaun the Sheep
-Movie, Project Nim, Winged Migration, Gloria.
+What comes back: the top ten. Copilot doesn't state the total, so don't quote one. (112 films
+qualify after the insert.) The ten are **13 Hours in a Warehouse** (98% from 267 critics, only
+734 votes), Life Itself, Mr. Turner, Amy, Murderball, Spellbound, Shaun the Sheep Movie, Project
+Nim, Winged Migration and Gloria.
 
-Say: "One step harder: three conditions and a sort. I didn't export anything. Copilot asked Atlas, and Atlas filtered 21,000 films and sorted
-them where the data lives. These are the movies critics love and the public hasn't found."
+Say: "One step harder: four conditions and a sort. I didn't export anything. Copilot asked Atlas,
+and Atlas filtered 21,000 films and sorted them where the data lives. These are the movies
+critics love and the public hasn't found."
 
 ## 3:00 Prompt 3: critics vs audiences (aggregation pipeline)
 
@@ -117,12 +126,13 @@ Which movies did critics love but audiences didn't? Among movies with at least 4
 ```
 
 What comes back: **Spy Kids** (critics 93%, audiences 45%), Night Moves, Antz, Mr. Turner,
-Stuart Little 2.
+Stuart Little 2. Fifth place is a tie at 40 points, so Copilot may show Nurse Betty (critics 84%,
+audiences 44%) instead of Stuart Little 2. Both are right.
 
 Say: "Harder again: an aggregation. No field in the data holds this gap. It has to be calculated
 for every film, then ranked. Critics gave Spy Kids 93%. Audiences gave it 45%."
 
-For a technical room, follow with this prompt. It has not been run in Copilot yet:
+For a technical room, follow with this prompt. It is optional, so rehearse it first:
 
 ```text
 Show me the exact query you ran for that answer.
@@ -138,10 +148,10 @@ What comes back: **Wings of Desire (1987)**. Copilot read Dana's Teams post ("an
 a city... one of them wants to become human because he falls in love with a trapeze
 artist"), then matched it to plots in Atlas.
 
-Say: "The hardest kind: there's nothing to filter on. That's vector search. She never said the title,
-or a single word from the plot summary. Atlas matched the meaning, not the words. Atlas builds that meaning index itself, so there's no pipeline to
-build." (Behind the scenes: vector search on `fullplot`, score 0.83. The next closest film
-scores 0.77.)
+Say: "The hardest kind: there's nothing to filter on. That's vector search. She never said the
+title, or a single word from the plot summary. Atlas matched the meaning, not the words. Atlas
+builds that meaning index itself, so there's no pipeline to build." (Behind the scenes: vector
+search on `fullplot`, score 0.83. The next closest film scores 0.77.)
 
 ## 5:15 The old way (45 seconds)
 
@@ -171,13 +181,14 @@ Helen's draft, and what is wrong with it:
 | **Total** | | | | **$5,350** | **$550 over the $4,800 budget** (Helen's post plus the rate card) |
 
 Copilot's answer will vary. Check it against the five problems above. Its swaps must keep
-the total under $4,800 and keep at least two non-English films. One valid fix is Robin Hood
-(1938), The Rules of the Game (1939) and Belle de Jour (1967), which brings the total to $4,350.
+the total under $4,800 and keep at least two non-English films. One valid fix is The Adventures
+of Robin Hood (1938), The Rules of the Game (1939) and Belle de Jour (1967), which brings the
+total to $4,350.
 
-Point at the table. Say: "Read down the Source column. Every number came from a different place: the runtimes and ratings from Atlas, the
-curfew from Walt in Teams, the rules from a Word document, the prices from the rate card,
-last year's films from another file. That's the hour I mentioned, in one answer, with
-receipts."
+Point at the table. Say: "Read down the Source column. Every number came from a different place:
+the runtimes and ratings from Atlas, the curfew from Walt in Teams, the rules from a Word
+document, the prices from the rate card, last year's films from another file. That's the hour I
+mentioned, in one answer, with receipts."
 
 **Optional closer** (only if the clock shows under 8:30):
 
@@ -189,8 +200,8 @@ Draft my Teams reply to Helen with the fixed lineup and the new total.
 
 Say: "A simple lookup, an aggregation and a vector search, all from plain English in one chat. Under
 ten minutes, against an hour of tab hopping. A film added a minute ago, a list of hidden gems
-from 21,000 titles, a lost movie found from a vague description, and a lineup checked against
-five rules in three systems.
+from 21,000 titles, a lost movie found from a vague description, and a lineup checked for
+five problems across three systems.
 
 The film catalog was a sample. Swap in your own orders, customers or tickets, and the
 pattern is the same. Copilot reaches the data the business runs on, live, together with
@@ -205,20 +216,38 @@ After the session, run:
 
 ---
 
-## Q&A prompts (not yet run in Copilot)
+## Q&A prompts
 
-See `stage/prompts.txt`: top directors by average rating (Nolan 8.34, Miyazaki 8.07, Majidi 8.03),
-the theaters nearest downtown Minneapolis (location search), and theaters by state.
+Use these only if someone asks "can it do X?". They are optional, so rehearse them first.
+
+Analytics across films. Expect Christopher Nolan (9 films, 8.34), Hayao Miyazaki (16 films, 8.07)
+and Majid Majidi (8 films, 8.03):
+
+```text
+Which directors with at least six films since 1980 have the highest average IMDb rating? Show the top three with film count and average.
+```
+
+Location search. Expect two theaters in Minneapolis (0.4 and 0.7 miles), then Roseville (5.2 miles):
+
+```text
+Which movie theaters are closest to downtown Minneapolis? Show the three nearest and how far each is in miles.
+```
+
+Counting. Expect CA 169, TX 160, FL 111, NY 81, IL 70:
+
+```text
+Which five states have the most movie theaters in our theater list?
+```
 
 ## If something goes wrong
 
 - **A prompt takes more than 60 seconds.** Talk over it with the "same pattern for any
-  catalog" point. If it fails, switch to the recording for that beat.
-- **Copilot can't reach the database.** Check the model picker is not on Auto. Then add this to
-  the front of the prompt, with your own project and cluster:
+  catalog" point. If it fails, switch to your dry-run recording for that beat.
+- **Copilot can't reach the database.** Check the model picker is not on Auto. Then put this at
+  the front of the prompt, with your own project and cluster, then paste your prompt after it:
 
   ```text
-  In the Atlas project '<your-project>', cluster <your-cluster>, database sample_mflix, 
+  In the Atlas project '<your-project>', cluster <your-cluster>, database sample_mflix,
   ```
 
 - **Prompt 1b misses the new film.** Check the terminal printed `vector search sees it`, then ask:
@@ -262,6 +291,9 @@ the theaters nearest downtown Minneapolis (location search), and theaters by sta
   Helen's post says "2014, the Russian drama" on purpose.
 - The comments collection is placeholder text, so the demo doesn't use it.
 - The data stops in 2015. That's why the series is "hidden gems", which age well.
+- Prompt 2 asks for under 15,000 IMDb votes, while the series guidelines allow under 50,000. The
+  tighter cut keeps the list to films almost nobody has seen, and every film it returns still
+  meets the guidelines.
 
 ## Before you present
 
@@ -273,5 +305,11 @@ the theaters nearest downtown Minneapolis (location search), and theaters by sta
   .venv/bin/python demos/leafy-cinema/scripts/demo_queries.py --check
   ```
 
-- Run every prompt once in Copilot, in order, in one chat on 6.1 sol, and time them.
+- Run every prompt once in Copilot, in order, in one chat, on the model you will present on,
+  and time them. Record your own dry run as a fallback.
 - Stage Teams at least two days ahead, or upload the fallback export.
+- Remove the film from your rehearsal:
+
+  ```bash
+  .venv/bin/python demos/leafy-cinema/scripts/live_insert.py --undo
+  ```

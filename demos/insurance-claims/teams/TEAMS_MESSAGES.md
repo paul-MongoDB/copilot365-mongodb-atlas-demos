@@ -1,24 +1,34 @@
 # Teams messages to seed before the demo
 
-Post these a day or more before the demo, so Copilot has indexed them. Copilot only
-sees Teams content you have access to.
+Post these at least two days before the demo. Teams posts can take several hours or more
+to become searchable in Copilot. Copilot only sees Teams content you have access to.
 
 **Where:** create a team called **Contoso Claims (DEMO)** with a standard channel called
-**DFW Property Claims**. Using a team you own keeps fictional claim chatter out of real
-MongoDB channels, and channel posts are easy to show on screen.
+**DFW Property Claims**. Using a team you own keeps fictional claim chatter out of your
+organization's real channels, and channel posts are easy to show on screen.
+
+**What to paste:** each post's message is the quoted block under its heading. When you
+paste it, drop the leading `>` from each line.
 
 **Who posts:** each message names its sender. You have two options.
 
-- **With colleagues (best):** add 2 or 3 MongoDB colleagues to the team and ask each to
-  paste their lines. Copilot will then attribute findings to the right person ("Jordan
+- **With colleagues (best):** add 2 or 3 colleagues to the team and ask each to paste
+  their posts. Copilot will then attribute findings to the right person ("Jordan
   Reyes reported...").
-- **Solo:** post everything yourself. Start each message with the line in *italics* under
-  it (for example "Field notes from Jordan Reyes, Oct 22:"). Copilot still finds the
-  facts; it just attributes them to you.
+- **Solo:** post everything yourself. Each post has a *Solo prefix* line under its
+  sender. Paste that line first, without the quotation marks, then the message. For
+  example, Post 1 starts with `Field notes from Jordan Reyes, inspection on Thu Oct 22:`.
+  Copilot still finds the facts; it just attributes them to you.
+
+**Paul** is the presenter, the Team Lead in the story. Post 2 is addressed to him and
+he replies to it. If you present under another name, replace "Paul" in Post 2 and in
+its reply line, then rebuild the fallback document as described below.
 
 Teams stamps each post with the day you post it, so every message carries its own
 dates in the text. Do not reword the dollar amounts. The expected answers in
-`DEMO_SCRIPT.md` depend on them.
+`DEMO_SCRIPT.md` depend on them. If you edit any post, rerun
+`.venv/bin/python demos/insurance-claims/scripts/build_documents.py` from the repo root:
+it rebuilds the fallback channel export from this file.
 
 ---
 
@@ -47,7 +57,7 @@ dates in the text. Do not reword the dollar amounts. The expected answers in
 
 > Paul, the Brennan claim (CLM-2026-10482) needs you. LeafyDry's number is $41,850, which is over my $25k authority, and I'm not comfortable paying it anyway. Rachel Brennan has called three times this week. They have two kids under five and haven't had a working kitchen since Sunday Oct 18. Can you review it and sign off on Monday?
 
-**Reply from Paul (you), in the same thread:**
+**Reply from Paul (Team Lead), in the same thread:**
 
 > Yes, first thing Monday. Hold any payment until then.
 
@@ -68,6 +78,6 @@ dates in the text. Do not reword the dollar amounts. The expected answers in
 ## Post 5: background noise (optional)
 
 **From:** Marcus Bell (Senior Adjuster)
-*Solo prefix: "From Marcus Bell:"*
+*Solo prefix: "From Marcus Bell, Oct 27:"*
 
 > CAT-2026-17 update: the Houston field team arrives Wednesday to help with the hail backlog in Irving and Garland. Send me any hail claims over $25k that still need an inspection.

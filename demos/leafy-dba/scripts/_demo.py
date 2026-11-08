@@ -16,6 +16,11 @@ DATABASE = os.environ.get("MONGODB_DB_DBA", "leafy_dba")
 COLLECTION = "work_items"
 OWNER = "copilot365-atlas-demo/leafy-dba/v1"
 COUNT = 30_000
+TENANTS = 100
+OPEN_PER_TENANT = 75
+START = dt.datetime(2026, 10, 1)
+STATUSES = ("open", "running", "complete", "failed")
+SERVICES = ("ingestion", "reporting", "sync")
 INDEX = "tenant_status_created"
 INDEX_KEYS = [("tenant_id", 1), ("status", 1), ("created_at", -1)]
 FILTER = {"tenant_id": "tenant-042", "status": "open"}
@@ -43,15 +48,14 @@ PROFILE_FILTER = {"$or": [{"docsExamined": {"$gte": 100}}, {"hasSortStage": True
 
 def documents():
     """300 items per tenant, 75 open. Timestamps are unique and reproducible."""
-    start = dt.datetime(2026, 10, 1)
     for n in range(COUNT):
         yield {
             "_id": n,
             "_demo_owner": OWNER,
-            "tenant_id": f"tenant-{n % 100:03d}",
-            "status": ("open", "running", "complete", "failed")[(n // 100) % 4],
-            "created_at": start + dt.timedelta(minutes=n),
-            "service": ("ingestion", "reporting", "sync")[(n // 400) % 3],
+            "tenant_id": f"tenant-{n % TENANTS:03d}",
+            "status": STATUSES[(n // 100) % 4],
+            "created_at": START + dt.timedelta(minutes=n),
+            "service": SERVICES[(n // 400) % 3],
             "attempts": (n // 400) % 4,
             "description": "Synthetic work item for a query tuning demonstration.",
         }

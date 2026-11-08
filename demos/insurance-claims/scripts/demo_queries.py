@@ -1,22 +1,33 @@
-"""Run the queries each demo prompt should make Copilot issue, and print the answers.
+"""Run the queries behind the demo prompts and the Q&A prompts, plus a few extra
+queries, and print the answers. It only reads; it never changes data.
 
-Use this the day before the demo to confirm what Copilot ought to say.
+Use it the day before the demo to see what Copilot should say. From the repo root,
+with MONGODB_URI set in the root .env file:
 
-    python scripts/demo_queries.py              # find + aggregate queries
-    python scripts/demo_queries.py --vector     # also run $vectorSearch (Atlas only)
+    .venv/bin/python demos/insurance-claims/scripts/demo_queries.py            # find and aggregate queries
+    .venv/bin/python demos/insurance-claims/scripts/demo_queries.py --vector   # also run $vectorSearch (Atlas only)
+
+Which output answers which prompt:
+    F1  Prompt 1 (the claim record)
+    A2  Prompt 2 (contractor comparison)
+    V1  Prompt 3 (vector search; needs --vector)
+    K1  the keyword contrast you quote after Prompt 3
+    A1, A5, A6  the Q&A prompts (hailstorm, Shady Elm sewer backups, denied sewer backups)
+    F2, F3, A3, A4  extra queries for questions from the audience
 """
 
 from __future__ import annotations
-
-import sys as _sys
-from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "common"))
-import _env  # noqa: F401  loads the top-level .env
 
 import argparse
 import datetime as dt
 import json
 import os
+import sys
+from collections import Counter
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "common"))
+import _env  # noqa: F401  loads the top-level .env
 
 from pymongo import MongoClient
 
@@ -107,10 +118,14 @@ def show(rows) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--vector", action="store_true")
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--vector", action="store_true", help="also run the $vectorSearch query (Atlas only)")
     args = ap.parse_args()
-    db = MongoClient(os.environ["MONGODB_URI"])[os.environ.get("MONGODB_DB", "contoso_claims")]
+    uri = os.environ.get("MONGODB_URI")
+    if not uri:
+        sys.exit("Set MONGODB_URI first.")
+    db = MongoClient(uri)[os.environ.get("MONGODB_DB", "contoso_claims")]
 
     for title, (coll, flt, proj, sort) in FIND.items():
         print(f"\n{title}\n    db.{coll}.find({json.dumps(flt)})")
@@ -124,8 +139,11 @@ def main() -> None:
         show(db[coll].aggregate(pipeline))
 
     print("\nK1  Keyword contrast: claims whose description mentions 'ceiling'")
-    for r in db.claims.find({"loss_description": {"$regex": "ceiling", "$options": "i"}},
-                            {"peril": 1, "contractor.name": 1}):
+    hits = list(db.claims.find({"loss_description": {"$regex": "ceiling", "$options": "i"}},
+                               {"peril": 1, "contractor.name": 1}))
+    by_peril = ", ".join(f"{n} {p}" for p, n in Counter(r["peril"] for r in hits).most_common())
+    print(f"    {len(hits)} hits: {by_peril}")
+    for r in hits:
         print(f"    {r['_id']}  {r['peril']:<20} {(r.get('contractor') or {}).get('name')}")
 
     if args.vector:

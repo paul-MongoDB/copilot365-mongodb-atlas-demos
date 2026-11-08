@@ -1,8 +1,9 @@
 LEAFY TECH DEMO: NATURAL PROMPTS (use these on stage)
 No project, cluster or database names. Prompt 5 names Atlas on purpose, for the Source column. This is what a real user would type.
-Set the Copilot model picker to "Opus 5.5", NOT Auto. Backup: "6.1 sol". Open ONE new chat and run every prompt in it.
-STATUS: the Atlas side of every prompt was checked on 2026-11-04 with scripts/demo_queries.py --check.
-Prompts 1a to 4 passed on 6.1 sol on 2026-11-06. Prompts 4 and 5 also passed on Opus 5.5. Prompts 1a to 3 have not been run on Opus 5.5.
+In Copilot's model picker, choose a named model, not Auto. Auto did not call the connector in our tests.
+This demo uses "Opus 5.5". Backup: "6.1 sol". Rehearse with the model you will present on.
+Open ONE new chat and run every prompt in it. Rehearse every prompt before presenting.
+Check the Atlas side first: .venv/bin/python demos/leafy-tech/scripts/demo_queries.py --check
 
 PROMPT 1a  (Atlas: simple lookup, BEFORE the truck)
 How many MedBook 14 Clinical laptops can we ship right now? Show each warehouse with on hand, reserved and available, then the total available.
@@ -30,7 +31,7 @@ Which customers have the most device warranties running out between November 1, 
 
   Expect first: Willow Bend Health 640, Ironwood Heights Law Group 254, Lakeshore Park Family Clinics 231,
   Redwood Crossing Water Authority 227, Sable Creek County 179. Tenth is Fox Heights Plastics 153.
-  Technical room follow-up, not yet run in Copilot: Show me the exact query you ran for that answer.
+  Technical room follow-up. Optional. Rehearse it first: Show me the exact query you ran for that answer.
 
 PROMPT 4  (Teams + Atlas: vector search)
 Nina has a hospital customer who described what their nurses need in their own words. Find out what they said, then match that description to the product descriptions in our catalog by meaning. Show the three closest products with a one-line reason each. Keep it under 80 words.
@@ -58,14 +59,15 @@ Nina needs my sign-off on the Willow Bend quote. Show one table with Line, Produ
   Approver: Sales Director, because it is over $500,000. That is you.
   Stock is NOT a problem after the truck. If Copilot flags 320, the truck did not run.
 
-OPTIONAL CLOSER
+OPTIONAL CLOSER  (Optional. Rehearse it first.)
 Draft my Teams reply to Nina with the corrected quote and what she needs to do before Friday.
 
 -----------------------------------------------------------------
 FALLBACKS
 
 Copilot says it needs a connection: check the model picker first (not Auto). Then check Settings > Sources
-shows the Atlas connection is still signed in. Atlas ends the connection after 7 days of inactivity or 30 days.
+shows the Atlas connection is still signed in. Atlas ends the connection after 7 days of inactivity,
+or 30 days from the grant.
 Then add this to the front of the prompt:
 "In the Atlas project '<your-project>', cluster <your-cluster>, database leafy_tech, ..."
 

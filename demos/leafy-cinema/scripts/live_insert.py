@@ -55,7 +55,7 @@ def build(now: dt.datetime) -> dict:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--undo", action="store_true", help="remove the added film")
     ap.add_argument("--no-wait", action="store_true", help="skip waiting for the vector index")
     args = ap.parse_args()
@@ -87,8 +87,11 @@ def main() -> None:
             if any(r["_id"] == FILM_ID for r in db.embedded_movies.aggregate(pipeline)):
                 print(f"vector search sees it after {time.time() - start:.0f}s")
                 return
-        except OperationFailure:
-            print("no vector index on this deployment; find and aggregate already see the film")
+        except OperationFailure as e:
+            # Show the server's message only. It never contains the connection string.
+            reason = (e.details or {}).get("errmsg") or str(e)
+            print(f"vector search failed: {reason}\n"
+                  "Find and aggregate already see the film. Check the index vector_index_fullplot (see README.md).")
             return
         time.sleep(2)
     print("vector search does not see it yet after 60s; find and aggregate already do")

@@ -3,8 +3,8 @@ import argparse
 import itertools
 import sys
 
-from _demo import (COLLECTION, COUNT, DATABASE, OWNER, PLANTED_INDEXES, client, documents, dump,
-                   run, state)
+from _demo import (COLLECTION, COUNT, DATABASE, OPEN_PER_TENANT, OWNER, PLANTED_INDEXES, client,
+                   documents, dump, run, state)
 
 
 def load(db, reset=False):
@@ -40,7 +40,7 @@ def main():
     args = parser.parse_args()
     if args.preview:
         dump({"namespace": f"{DATABASE}.{COLLECTION}", "documents": COUNT,
-              "tenant_042_open": 75, "sample": next(documents())})
+              "tenant_042_open": OPEN_PER_TENANT, "sample": next(documents())})
         return
     with client() as connection:
         load(connection[DATABASE], args.reset)

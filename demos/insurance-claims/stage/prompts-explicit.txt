@@ -1,41 +1,69 @@
 EXPLICIT PROMPTS (backup only; do not show these unless the natural ones fail)
-Every Atlas prompt names the project and cluster, because Copilot can pick the wrong
-Atlas project if you have more than one. Replace <your-project> and <your-cluster> with
-your own values before you use these. Database: contoso_claims.
+These are the prompts from prompts.txt with the Atlas project, cluster and database named
+in front, because Copilot can pick the wrong Atlas project if you have more than one.
+Replace <your-project> and <your-cluster> with your own values before you use these.
+Follow-up prompts in the same chat need no prefix.
 
 PROMPT 1  (Atlas + Teams)
-In the Atlas project "<your-project>", cluster <your-cluster>, pull up claim CLM-2026-10482 from the contoso_claims database (claims collection) and check what my team has said about it in Teams. Does anything not add up? Keep it under 100 words.
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Pull up claim CLM-2026-10482 and check what my team has said about it. Does anything not add up? Keep it under 100 words.
 
-  If Teams is not indexed, use this version (reads the OneDrive export instead):
-In the Atlas project "<your-project>", cluster <your-cluster>, pull up claim CLM-2026-10482 from the contoso_claims database (claims collection). Then read the "DFW Property Claims channel export" document in my OneDrive for what my team said about it. Does anything not add up? Keep it under 100 words.
+  If Copilot does not find the team's notes, use this version (names the OneDrive channel export):
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Pull up claim CLM-2026-10482. Then read the "DFW Property Claims channel export" document in my OneDrive for what my team has said about it. Does anything not add up? Keep it under 100 words.
 
 PROMPT 2  (Atlas aggregation: the discovery)
-In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims, look at our water damage claims since August 1 that used a contractor. Is anything unusual about the contractors? Compare them on number of claims, average percent above our pricing guide estimate, assignments of benefits, and how much we've already paid. Show a small table sorted by average above guide, highest first, and one sentence on what stands out.
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Look at our water damage claims since August 1, 2026 that used a contractor. Is anything unusual about the contractors? Compare them on number of claims, average percent above our pricing guide estimate, assignments of benefits, and how much we've already paid. Show a small table sorted by average above guide, highest first, and one sentence on what stands out.
 
 PROMPT 3  (Atlas vector search)
-In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims, use vector search on the claim descriptions to find other claims that tell the same story as the Brennan claim: homeowner away, water coming through a ceiling under an upstairs bathroom, and a restoration company on site right away recommending a full tear-out. List only the close matches: claim number, city, contractor and similarity score, then one sentence on what they have in common.
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Find other claims whose descriptions are most similar in meaning to the Brennan claim: homeowner away, water coming through a ceiling under an upstairs bathroom, and a restoration company on site right away recommending a full tear-out. Rank them by similarity. List only the close matches: claim number, city, contractor and similarity score, then one sentence on what they have in common.
 
--- terminal:  .venv/bin/python demos/insurance-claims/scripts/live_insert.py
+PROMPT 4a  (Atlas, live: BEFORE the insert. Expect: none today.)
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Have any new LeafyDry Restoration claims come in today?
 
-PROMPT 4  (Atlas, live)
-In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: have any new LeafyDry Restoration claims come in today?
+-- terminal:  .venv/bin/python demos/insurance-claims/scripts/live_insert.py   (wait for "vector search sees it")
+
+PROMPT 4b  (same chat, AFTER the insert. Expect: CLM-2026-10531.)
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Check again. Have any new LeafyDry Restoration claims come in today?
 
 PROMPT 5  (Atlas + Teams + OneDrive: the decision)
-I need to decide the Brennan claim today. Using the claim and policy records in the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims, Jordan's findings in Teams (or the DFW Property Claims channel export in OneDrive), and our HO-3 policy and claims handling guidelines in OneDrive: what do we pay, what do we deny and why, does it go to SIU, and who approves it? Show the math in one table with Item, Amount, Decision and Source columns. Name the source as claim record, team notes, policy or guidelines. Leave out living expenses. Then answer SIU and approver in two lines.
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: I need to settle the Brennan claim today. Using the claim and policy records, Jordan's findings, and our homeowners policy and claims handling guidelines: what do we pay, what do we deny and why, does it need a fraud investigation, and who approves it? Show the math in one table with Item, Amount, Decision and Source columns. Name the source as claim record, team notes, policy or guidelines. Leave out living expenses. Then answer the investigation and approver questions in two lines.
 
-OPTIONAL CLOSER  (only if under 8:30 on the clock)
+OPTIONAL CLOSER  (only if under 8:30 on the clock; no Atlas query, so no prefix)
 Draft my Teams reply to Maya approving the undisputed amount and listing what she needs to do for the Brennan family this week.
+
+-----------------------------------------------------------------
+Q&A PROMPTS
+
+Analytics, not just lookups:
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: For the October hailstorm, CAT-2026-17, break down the number of claims, the total money set aside for open claims, and the total paid by city. Show a small table sorted by claims, highest first.
+
+Joins across data and documents:
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Priya has two sewer backup claims on Shady Elm Ct in Irving. Check each policy's endorsements and our water backup endorsement document. Is each one covered, and for how much? Keep it under 80 words.
+
+Revenue angle:
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: How many sewer backup claims have we denied in 2026 because the policy had no water backup endorsement, and how much was claimed? What would the endorsement have cost? Keep it under 60 words.
+
+Open-ended:
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: What needs my attention this morning?
 
 -----------------------------------------------------------------
 FALLBACKS
 
 Prompt 2, if the answer is vague:
-In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: for water damage claims since August 1 that have a contractor, compare the contractors: number of claims, average estimate, average percent above our pricing guide estimate, how many had an assignment of benefits, and how much we have already paid.
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: For water damage claims since August 1, 2026 that have a contractor, compare the contractors: number of claims, average estimate, average percent above our pricing guide estimate, how many had an assignment of benefits, and how much we have already paid.
 
-Prompt 3, if Copilot does a text match instead:
+Prompt 3, if Copilot runs keyword searches instead of vector search:
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Using semantic search on the claim descriptions, find other claims that tell the same story as the Brennan claim: homeowner away, water coming through a ceiling under an upstairs bathroom, and a restoration company on site right away recommending a full tear-out. List only the close matches: claim number, city, contractor and similarity score, then one sentence on what they have in common.
+
+  If it still does a text match, name the index (same chat):
 Use the claims_semantic vector search index on loss_description.
 
-Prompt 4, if the new claim is missing:
-In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: show me claim CLM-2026-10531.
+  To see which search ran (same chat):
+Which query did you run? Show the exact query.
+
+Prompt 4b, if Copilot repeats "none" (same chat):
+Query the claims system again right now.
+
+  If the new claim is still missing:
+In the Atlas project "<your-project>", cluster <your-cluster>, database contoso_claims: Show me claim CLM-2026-10531.
 
 After the demo, in the terminal:  .venv/bin/python demos/insurance-claims/scripts/live_insert.py --undo

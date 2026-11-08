@@ -1,9 +1,11 @@
 """Run the movie demo's queries straight against Atlas and print what Copilot should find.
 
     python demos/leafy-cinema/scripts/demo_queries.py            # all queries
-    python demos/leafy-cinema/scripts/demo_queries.py --check    # exit 1 if a number drifted
+    python demos/leafy-cinema/scripts/demo_queries.py --check    # exit 1 if a checked number drifted
 
-Read-only. Use it to confirm the data and the vector index before the demo.
+Read-only. Use it to confirm the data and the vector index before the demo. It checks the
+vector index, Prompts 1a, 2, 3 and 4, Helen's draft lineup and the reference fix. The Q&A
+answers are printed but not checked.
 """
 
 from __future__ import annotations
@@ -14,6 +16,7 @@ _sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "common"))
 import _env  # noqa: F401  loads the top-level .env
 
 import argparse
+import datetime as dt
 import os
 import sys
 
@@ -22,8 +25,19 @@ from pymongo import MongoClient
 DB = os.environ.get("MONGODB_DB_MOVIES", "sample_mflix")
 
 # The customer's half-remembered description, exactly as Dana posts it in Teams.
-CUSTOMER_STORY = ("angels who watch over a city and can hear what everyone is thinking, "
-                  "and one of them wants to become human because he falls in love with a trapeze artist")
+CUSTOMER_STORY = ("It is about angels who watch over a city and can hear what everyone is thinking. "
+                  "One of them wants to become human because he falls in love with a trapeze artist.")
+
+LIVE_FILM = "The Projectionist of Marigold Falls"  # added by live_insert.py
+# Prompt 1a, before the live insert: the three most recently updated films.
+RECENT_BEFORE = ["Drinking Buddies", "Va Savoir (Who Knows?)", "A Town Like Alice"]
+# Prompt 2: films that qualify before the live insert (the inserted film adds one), and the top 10.
+GEMS_BEFORE = 111
+GEMS_TOP10 = ["13 Hours in a Warehouse", "Life Itself", "Mr. Turner", "Amy", "Murderball", "Spellbound",
+              "Shaun the Sheep Movie", "Project Nim", "Winged Migration", "Gloria"]
+# Prompt 3: the four biggest critic-audience gaps. Fifth place is a 40-point tie.
+GAP_TOP4 = ["Spy Kids", "Night Moves", "Antz", "Mr. Turner"]
+GAP_FIFTH = {"Stuart Little 2", "Nurse Betty"}
 
 DRAFT = [  # Helen's draft lineup (title, year)
     ("Song of the Sea", 2014), ("'71", 2014), ("Murderball", 2005),
@@ -67,8 +81,8 @@ def problems(films: list[dict], budget: int = 4800) -> list[str]:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true")
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--check", action="store_true", help="exit 1 if a checked number drifted")
     args = ap.parse_args()
     uri = os.environ.get("MONGODB_URI") or sys.exit("Set MONGODB_URI (or put it in .env).")
     db = MongoClient(uri, serverSelectionTimeoutMS=10_000)[DB]
@@ -92,17 +106,26 @@ def main() -> int:
     if not top or top[0]["title"] != "Wings of Desire":
         bad.append("Prompt 4 top match is not Wings of Desire")
 
+    live_film_in = movies.count_documents({"title": LIVE_FILM}) > 0
+
     print("\n== Prompt 2: hidden gems (critics 95%+, 40+ critic reviews, under 15,000 IMDb votes)")
     gems = list(movies.aggregate([
         {"$match": {"type": "movie", "tomatoes.critic.meter": {"$gte": 95},
                     "tomatoes.critic.numReviews": {"$gte": 40}, "imdb.votes": {"$lt": 15_000}}},
         {"$sort": {"tomatoes.critic.numReviews": -1, "imdb.votes": 1}},
         {"$facet": {"top": [{"$limit": 10}], "n": [{"$count": "n"}]}}]))[0]
-    print("   qualifying films:", gems["n"][0]["n"])
+    n_gems = gems["n"][0]["n"] if gems["n"] else 0
+    want_gems = GEMS_BEFORE + live_film_in
+    print(f"   qualifying films: {n_gems}   (expect {GEMS_BEFORE} before the live insert, "
+          f"{GEMS_BEFORE + 1} after)")
     for d in gems["top"]:
         t = d["tomatoes"]["critic"]
         print(f"   {d['title'][:42]:42} {d['year']}  {d.get('runtime')}m  {d.get('rated')}  "
               f"critics {t['meter']}% of {t['numReviews']}  votes {d['imdb']['votes']:,}")
+    if n_gems != want_gems:
+        bad.append(f"Prompt 2 count is {n_gems}, expected {want_gems}")
+    if [d["title"] for d in gems["top"]] != GEMS_TOP10:
+        bad.append("Prompt 2 top 10 changed")
 
     print("\n== Prompt 3: critics loved it, audiences did not (40+ critic reviews, 10,000+ audience ratings)")
     gap = list(movies.aggregate([
@@ -111,17 +134,28 @@ def main() -> int:
                     "tomatoes.critic.meter": {"$exists": True}, "tomatoes.viewer.meter": {"$exists": True}}},
         {"$project": {"title": 1, "year": 1, "critic": "$tomatoes.critic.meter", "audience": "$tomatoes.viewer.meter",
                       "gap": {"$subtract": ["$tomatoes.critic.meter", "$tomatoes.viewer.meter"]}}},
-        {"$sort": {"gap": -1}}, {"$limit": 5}]))
+        {"$sort": {"gap": -1, "title": 1}}, {"$limit": 6}]))
     for d in gap:
         print(f"   {d['title']} ({d['year']})  critics {d['critic']}%  audiences {d['audience']}%  gap {d['gap']}")
-    if not gap or gap[0]["title"] != "Spy Kids":
-        bad.append("Prompt 3 top gap is not Spy Kids")
+    titles = [d["title"] for d in gap]
+    if titles[:4] != GAP_TOP4 or len(gap) < 5 or titles[4] not in GAP_FIFTH or gap[4]["gap"] != 40:
+        bad.append("Prompt 3 top five changed (fifth may be Stuart Little 2 or Nurse Betty, both 40 points)")
 
-    print("\n== Prompt 1: anything added today? (lastupdated starts with today's year-month-day)")
-    import datetime as dt
+    print("\n== Prompts 1a/1b: the three most recently updated films")
+    recent = list(movies.find({}, {"title": 1, "year": 1, "lastupdated": 1}).sort("lastupdated", -1).limit(3))
+    for d in recent:
+        print(f"   {d['title']} ({d['year']})  last updated {str(d['lastupdated'])[:19]}")
     today = dt.date.today().isoformat()
     n = movies.count_documents({"lastupdated": {"$regex": f"^{today}"}})
     print(f"   {n} films added on {today}   (expect 0 before the live insert, 1 after)")
+    # The live insert puts its film at the top, so check the list without it.
+    base = [d["title"] for d in movies.find({"title": {"$ne": LIVE_FILM}}, {"title": 1})
+            .sort("lastupdated", -1).limit(3)]
+    if base != RECENT_BEFORE:
+        bad.append(f"Prompt 1a list (without the live film) is {base}, expected {RECENT_BEFORE}")
+    if live_film_in and n == 0:
+        bad.append(f"{LIVE_FILM} is left over from an earlier run, so Prompt 1a would show it before "
+                   "the insert. Run live_insert.py --undo")
 
     print("\n== Prompt 5: Helen's draft lineup")
     total = 0

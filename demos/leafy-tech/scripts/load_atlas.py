@@ -2,22 +2,23 @@
 
     python demos/leafy-tech/scripts/load_atlas.py
 
-Database: leafy_tech (override with MONGODB_DB_TECH). This drops and reloads only that database's
-four collections and the receipts collection. Atlas Automated Embedding embeds
-products.description, so $vectorSearch takes plain English and no vectors live in the documents.
+Database: leafy_tech (override with MONGODB_DB_TECH). It touches only that database. It drops
+and reloads customers, orders and quotes, and drops receipts (live_insert.py's truck). It empties
+products and reloads it without dropping it, so the vector index on products survives. Atlas
+Automated Embedding embeds products.description, so $vectorSearch takes plain English and no
+vectors live in the documents.
 """
 
 from __future__ import annotations
 
-import sys as _sys
-from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "common"))
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "common"))
 import _env  # noqa: F401  loads the top-level .env
 
+import argparse
 import os
-import sys
 import time
-from pathlib import Path
 
 from bson import json_util
 from pymongo import ASCENDING, DESCENDING, MongoClient
@@ -79,4 +80,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # No options: this only makes --help print the description instead of running.
+    argparse.ArgumentParser(description=__doc__,
+                            formatter_class=argparse.RawDescriptionHelpFormatter).parse_args()
     main()

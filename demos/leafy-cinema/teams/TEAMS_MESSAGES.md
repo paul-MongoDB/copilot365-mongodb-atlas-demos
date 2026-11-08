@@ -1,8 +1,8 @@
 # Teams messages to seed before the demo
 
-**Post these at least two days before the demo.** On 2026-11-02, Teams posts were still not
-searchable by Copilot several hours after posting. If they are still missing on the day,
-upload `fallback/Hidden Gems channel export.docx` to OneDrive. It holds the same posts.
+Teams posts can take several hours or more to become searchable. **Post them at least two days
+ahead.** If they are still missing on the day, upload `fallback/Hidden Gems channel export.docx`
+to OneDrive. It holds the same posts.
 
 **Where:** create a team called **Leafy Cinema (DEMO)** with a standard channel called **Hidden Gems**.
 Use the exact names. The expected answers do not depend on them, but the export file does.

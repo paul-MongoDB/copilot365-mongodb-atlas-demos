@@ -7,7 +7,7 @@ and after adding a compound index. No business storyline or Microsoft 365 conten
 required.
 
 Presenter walkthrough: [DEMO_SCRIPT.md](DEMO_SCRIPT.md). Copy-and-paste questions:
-[stage/prompts.txt](stage/prompts.txt). Use this category when the audience asks about operating
+[stage/prompts.txt](stage/prompts.txt). Use this demo when the audience asks about operating
 MongoDB rather than a sales, claims or movie workflow.
 
 ## What is live and what is synthetic
@@ -29,7 +29,7 @@ The loader also plants three indexes, so there is something to clean up:
 | `service_1` | Redundant: `service_1_attempts_1` starts with the same key. Never used. |
 | `description_1` | Never used. Every document has the same description. |
 
-`run_workload.py` then plays 60 seconds of application traffic from 8 parallel clients: the
+`run_workload.py` then plays 60 seconds of application traffic from 8 parallel threads: the
 tenant queue query (no index fits it), the retry job, a daily report on a `created_at` range
 (no index fits it either) and lookups by `_id`. It reads only. While it runs, the database
 profiler is on for `leafy_dba` alone and records operations that read 100 or more documents
@@ -39,15 +39,18 @@ operations also appear in the server log as slow-query lines while the profiler 
 
 The usage counters and profiler records are real measurements of synthetic traffic. Usage
 counters reset when the cluster restarts, so run the workload within a few hours of
-presenting. The database user needs permission to run the `profile` command on `leafy_dba`
-(the `dbAdmin` role on that database covers it).
+presenting.
 
 ## Prepare the sandbox
 
-Use the root Python environment and `MONGODB_URI` from the [shared setup](../../README.md).
-The URI should point to a dedicated sandbox and a database user allowed to read, write and
-manage indexes in `leafy_dba`. The Python scripts use that database user; Copilot uses the
-signed-in Atlas user's delegated access. Verify both reach the same cluster.
+Use the root Python environment and `MONGODB_URI` from the [shared setup](../../README.md#shared-setup).
+The URI should point to a dedicated sandbox cluster. Give its database user the `readWrite` and
+`dbAdmin` roles on `leafy_dba`: `readWrite` to load data and manage indexes, `dbAdmin` to run
+the `profile` command and replace `system.profile`. The Python scripts use that database user;
+Copilot uses the signed-in Atlas user's delegated access. Verify both reach the same cluster.
+
+The scripts read `MONGODB_DB_DBA` to use a database other than `leafy_dba`. If you set it,
+change `leafy_dba` in the prompts too.
 
 Run from the repository root:
 
@@ -73,9 +76,8 @@ Run from the repository root:
 
 `load_atlas.py` refuses to overwrite an existing collection by default. To regenerate this
 demo's fixture, use `--reset`; this replaces `work_items` and all its indexes, and recreates
-the planted ones. It requires the
-ownership marker and refuses if any document has a different owner. It never drops a database
-or touches the other demos. `manage_index.py --undo` removes only `tenant_status_created`.
+the planted ones. It requires the ownership marker and refuses if any document has a different
+owner. It never drops a database or touches the other demos. `manage_index.py --undo` removes only `tenant_status_created`.
 Do not run a reset while presenting or against a shared production workload.
 
 ## Rehearse the connector separately
@@ -84,13 +86,22 @@ Do not run a reset while presenting or against a shared production workload.
    calls the connector in your rehearsal. Open one new conversation per run.
 2. Keep organization AI client access in **Read** mode. Index changes are made by the presenter
    through the terminal script, so this demo needs no AI write access.
-3. Run prompt 1. Record the chosen project name, project ID and sandbox cluster name in your
-   presenter notes. Replace `<PROJECT_ID>` and `<CLUSTER_NAME>` in the stage prompts.
+3. Run prompt 1. Note the chosen project ID and sandbox cluster name. Copy the stage prompts to
+   a private file that git ignores, and replace `<PROJECT_ID>` and `<CLUSTER_NAME>` there:
+
+   ```bash
+   cp demos/leafy-dba/stage/prompts.txt demos/leafy-dba/stage/prompts.local.txt
+   ```
+
 4. Rehearse prompts 2 through 7 on that cluster. Confirm the source actually exposes inventory,
    collection indexes, `aggregate` (for `$indexStats` and `system.profile`) and `explain` with
-   `executionStats`; tool availability can vary by client,
-   connector setup and permissions. Tools visible in another AI client do not prove Copilot has them.
-5. If discovery is unavailable, open the Atlas project's Clusters view and identify the sandbox
+   `executionStats`. Tool availability can vary by client, connector setup and permissions.
+   Tools visible in another AI client do not prove Copilot has them.
+5. Check the Copilot user's Atlas role. Prompt 4 reads `$indexStats` and prompt 5 reads
+   `system.profile`. A read-only data role may not allow either. If Copilot reports an
+   authorization error, give the presenter's Atlas user a role that includes those actions on
+   `leafy_dba`, or use the workload's terminal output instead.
+6. If discovery is unavailable, open the Atlas project's Clusters view and identify the sandbox
    there. Continue with the database prompts if those work. If `explain` is unavailable, use
    `demo_queries.py --explain` and label it as a direct database query from the terminal.
 
@@ -143,4 +154,4 @@ the two `--check` commands still need to pass on your Atlas sandbox before prese
 - [Equality, Sort, Range guideline](https://www.mongodb.com/docs/manual/tutorial/equality-sort-range-guideline/): index field order.
 - [Index usage statistics](https://www.mongodb.com/docs/manual/reference/operator/aggregation/indexstats/): node-local counters and their reset behavior.
 
-Documentation checked November 6, 2026. Copilot prompts still require a live rehearsal.
+Copilot prompts still require a live rehearsal on your own tenant and cluster.

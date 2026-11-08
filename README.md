@@ -18,6 +18,16 @@ against Atlas and needs no Microsoft 365 content seeding.
 
 ## Shared setup
 
+You need:
+
+- Python 3 (tested with 3.13).
+- A dedicated sandbox Atlas cluster. We used an M10. The Leafy DBA demo runs the database
+  profiler, which free and shared tiers may not allow.
+- Microsoft 365 Copilot licenses, with Work IQ on, and an admin who can turn on the MongoDB
+  Atlas connector. [SETUP_ORIENTATION.md](SETUP_ORIENTATION.md) has the five setup steps.
+- For the business demos, Teams and OneDrive in the same tenant, to hold the seeded posts and
+  documents.
+
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 cp .env.example .env   # then put your connection string in .env
@@ -44,9 +54,10 @@ Copy a folder under `demos/`, change the data and prompts, and keep the same lay
 - Use a dedicated sandbox Atlas cluster. Never point these scripts at production data.
   `load_atlas.py` drops and reloads the `contoso_claims` and `leafy_tech` collections.
   `live_insert.py` writes a demo record, and `--undo` removes it.
-  The Leafy DBA loader creates `leafy_dba.work_items`; `--reset` replaces only its owned fixture and
-  indexes. Its presenter script creates or removes one named index in that collection. Its
-  workload script turns the database profiler on for `leafy_dba` only, and off again when done.
+  The Leafy DBA loader creates `leafy_dba.work_items` and a `_demo_state` marker; `--reset`
+  replaces only its owned fixture and indexes. Its presenter script creates or removes one named
+  index in that collection. Its workload script turns the database profiler on for `leafy_dba`
+  only, replaces `leafy_dba.system.profile`, and turns the profiler off again when done.
 - Keep your connection string in `.env`, which git ignores. Never commit it or paste it into a
   prompt, issue or pull request.
 - Give the scripts a database user limited to the demo databases. Give Copilot users read-only

@@ -27,7 +27,8 @@ check must say PASS.
 
 - Open Copilot Chat with the Atlas source signed in and a rehearsed tool-capable model.
 - In the prompts below, replace `<PROJECT_ID>` and `<CLUSTER_NAME>` with the sandbox values from
-  rehearsal. Doing it once in `stage/prompts.txt` and copying from there also works.
+  rehearsal. Or copy `stage/prompts.txt` to `stage/prompts.local.txt`, which git ignores, fill
+  the values in once and paste from there.
 - Open a terminal at the repository root and enlarge its font. Keep the workload output in
   the scrollback: it is your fallback for prompts 4 and 5.
 - Open the sandbox project's Atlas Clusters page as a fallback for inventory questions.
@@ -184,7 +185,7 @@ the build completed, and that Copilot did not change the query.
 
 Pick what they ask about.
 
-Slow query log (not yet run in Copilot; the connector may not expose the log tool):
+Slow query log (depends on the connector exposing the log tool):
 
 ```text
 Check the server's recent log for slow query entries on leafy_dba.work_items. Summarize the query shapes, durations and plan summaries you find. Does the log tell the same story as the profiler? Keep this read-only.
@@ -215,7 +216,8 @@ Say: "We found the environment, found two indexes to drop, read the profiler to 
 slow, explained the worst query, fixed it and proved it does 1,500 times less work. Every step
 showed its evidence."
 
-For a five-minute version, run prompts 4, 5 and 7, with the index change before prompt 7.
+For a five-minute version, run prompts 3, 4, 6 and 7, with the index change before prompt 7.
+Add prompt 5 if there is time.
 
 ## Reset after the session
 
@@ -224,6 +226,7 @@ For a five-minute version, run prompts 4, 5 and 7, with the index change before 
 .venv/bin/python demos/leafy-dba/scripts/demo_queries.py --check --phase baseline
 ```
 
-This removes only the index you created on stage. The planted indexes and profiler records
-stay, so you can present again. Before the next audience, rerun the three commands under
-"Before the audience arrives" to refresh the counters. No other demo needs to be reset.
+This removes only the index you created on stage. The planted indexes, usage counters and
+profiler records stay, so you can present again the same day as is. If the cluster has
+restarted, or the counters are from an earlier day, rerun the three commands under "Before the
+audience arrives" first. No other demo needs to be reset.

@@ -16,6 +16,5 @@ __pycache__/
 *.pptx
 *.key
 
-# Private stage copies and test logs
+# Private stage copies with your real project and cluster names
 *.local.txt
-demos/insurance-claims/stage/timing_results.md

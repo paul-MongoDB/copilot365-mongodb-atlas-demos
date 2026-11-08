@@ -3,8 +3,8 @@ import argparse
 import sys
 
 from _demo import (BASELINE_INDEXES, COLLECTION, COUNT, DATABASE, FILTER, INDEX, INDEX_KEYS, LIMIT,
-                   MAX_TIME_MS, SORT, client, dump, explain, find_command, require_fixture, run,
-                   summary)
+                   MAX_TIME_MS, OPEN_PER_TENANT, SORT, client, dump, explain, find_command,
+                   require_fixture, run, summary)
 
 
 def validate(db, result, phase):
@@ -13,7 +13,7 @@ def validate(db, result, phase):
     indexes = {i["name"]: i for i in coll.list_indexes()}
     checks = {
         "fixture count": coll.count_documents({}, maxTimeMS=MAX_TIME_MS) == COUNT,
-        "matching items": coll.count_documents(FILTER, maxTimeMS=MAX_TIME_MS) == 75,
+        "matching items": coll.count_documents(FILTER, maxTimeMS=MAX_TIME_MS) == OPEN_PER_TENANT,
         "returned items": got["nReturned"] == LIMIT,
     }
     if phase == "baseline":
@@ -37,7 +37,8 @@ def validate(db, result, phase):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Exit 1 if fixture or plan differs from the selected phase")
-    parser.add_argument("--phase", choices=("baseline", "indexed"), default="baseline")
+    parser.add_argument("--phase", choices=("baseline", "indexed"), default="baseline",
+                        help="Expected state for --check (default baseline)")
     parser.add_argument("--explain", action="store_true", help="Also print the complete explain result")
     args = parser.parse_args()
     with client() as connection:

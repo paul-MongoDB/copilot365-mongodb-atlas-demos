@@ -1,7 +1,8 @@
 """Insert one new LeafyDry claim during the demo, to prove Copilot reads Atlas live.
 
-    python scripts/live_insert.py          # insert CLM-2026-10531 (reported "now")
-    python scripts/live_insert.py --undo   # remove it again after the demo
+From the repo root, with MONGODB_URI set in the root .env file:
+    .venv/bin/python demos/insurance-claims/scripts/live_insert.py          # insert CLM-2026-10531 (reported "now")
+    .venv/bin/python demos/insurance-claims/scripts/live_insert.py --undo   # remove it again after the demo
 
 The federated connector queries Atlas when the question is asked. There is no
 copy, no sync job and no re-index. So a claim inserted 30 seconds ago shows up
@@ -13,16 +14,15 @@ Running it twice is safe: the second run replaces the first insert.
 
 from __future__ import annotations
 
-import sys as _sys
-from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "common"))
-import _env  # noqa: F401  loads the top-level .env
-
 import argparse
 import datetime as dt
 import os
 import sys
 import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "common"))
+import _env  # noqa: F401  loads the top-level .env
 
 from pymongo import MongoClient
 from pymongo.errors import OperationFailure
@@ -69,7 +69,8 @@ def build(now: dt.datetime) -> tuple[dict, dict]:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--undo", action="store_true", help="remove the inserted claim and policy")
     ap.add_argument("--no-wait", action="store_true", help="skip waiting for the vector index")
     args = ap.parse_args()
@@ -102,8 +103,10 @@ def main() -> None:
             if any(r["_id"] == CLAIM_ID for r in db.claims.aggregate(pipeline)):
                 print(f"vector search sees it after {time.time() - start:.0f}s")
                 return
-        except OperationFailure:
-            print("no vector index on this deployment; find and aggregate already see the claim")
+        except OperationFailure as e:
+            # errmsg is the server's message; it never contains the connection string.
+            msg = (e.details or {}).get("errmsg") or str(e)
+            print(f"vector search failed: {msg}\nfind and aggregate already see the claim")
             return
         time.sleep(2)
     print("vector search does not see it yet after 60s; find and aggregate already do")

@@ -1,7 +1,6 @@
 # 15-minute demo: "The Willow Bend quote"
 
-**Audience:** technical people at an IT reseller. They want to know how it works, not only
-what it does.
+**Audience:** technical audiences. They want to know how it works, not only what it does.
 
 **The one thing they should leave with:** one chat can query live Atlas data and read Teams and
 OneDrive together, using the signed-in user's permissions, with no data copied and no custom app.
@@ -80,16 +79,19 @@ If you run long, skip Prompt 2.
 
 ## Setup on stage
 
-- Copilot Chat, **one new conversation**, model picker on **Opus 5.5** (under Sonnet 5, Anthropic). Backup: 6.1 sol.
+- Copilot Chat, **one new conversation**. In Copilot's model picker, choose a named model, not
+  Auto. Auto did not call the connector in our tests. Use **Opus 5.5**, with **6.1 sol** as the
+  backup. Rehearse with the model you will present on.
 - In Settings, Sources, confirm the Atlas connection is still signed in.
 - `stage/prompts.txt` open. Paste the prompts; don't type them.
 - A terminal at the project root, with the font enlarged.
-- `SETUP_ORIENTATION.md` open for the wiring section at 2:00.
+- [SETUP_ORIENTATION.md](../../SETUP_ORIENTATION.md) open for the wiring section at 2:00.
+- A recording of your own dry run, in case Copilot stalls. The repo does not include one.
 - Stock is back to 320. Run this if you rehearsed since the last reset:
 
-```bash
-.venv/bin/python demos/leafy-tech/scripts/live_insert.py --undo
-```
+  ```bash
+  .venv/bin/python demos/leafy-tech/scripts/live_insert.py --undo
+  ```
 
 ---
 
@@ -103,8 +105,9 @@ start with the simplest question there is, then make them harder. Can we ship th
 How many MedBook 14 Clinical laptops can we ship right now? Show each warehouse with on hand, reserved and available, then the total available.
 ```
 
-What comes back: **320 available**. Dallas has 240 on hand, but 100 are reserved. Say: "That's a simple lookup: one product, one read. We need
-500. We're 180 short, but a truck is due at Chicago today."
+What comes back: **320 available**. Dallas has 240 on hand, but 100 are reserved. Say: "That's a
+simple lookup: one product, one read. We need 500. We're 180 short, but a truck is due at Chicago
+this week."
 
 In the terminal:
 
@@ -129,7 +132,8 @@ true now."
 
 ## 2:00 How it's wired
 
-Say: "So how did that work?" Then walk through `SETUP_ORIENTATION.md`: the path of one question, then the five setup steps.
+Say: "So how did that work?" Then walk through [SETUP_ORIENTATION.md](../../SETUP_ORIENTATION.md):
+the path of one question, then the five setup steps.
 
 Say: "What you just saw ran through that path, and so does everything else today. There's no copy
 of the data in Microsoft 365, and Copilot gets exactly the access I have."
@@ -163,7 +167,7 @@ To show the steps, run this in the terminal. It prints the pipeline and its resu
 .venv/bin/python demos/leafy-tech/scripts/demo_queries.py --pipeline
 ```
 
-To show Copilot's own query, try this prompt. It has not been run in Copilot yet:
+To show Copilot's own query, try this prompt. It is optional, so rehearse it first:
 
 ```text
 Show me the exact query you ran for that answer.
@@ -186,9 +190,9 @@ If Copilot answers with no search, or searches by keyword:
 Using semantic search on the product descriptions, which product is closest in meaning to what the nurses said?
 ```
 
-Say: "The hardest kind: there's nothing to filter on. That's vector search. The nurse said 'harsh cleaning chemicals' and 'knocked off the cart.' The catalog says
-'disinfectant wipes' and 'drop-tested.' A keyword search misses that. Vector search matches
-on meaning."
+Say: "The hardest kind: there's nothing to filter on. That's vector search. The nurse said
+'harsh cleaning chemicals' and 'knocked off the cart.' The catalog says 'disinfectant wipes' and
+'drop-tested.' A keyword search misses that. Vector search matches on meaning."
 
 ## 9:30 Under the hood
 
@@ -209,7 +213,7 @@ It prints three things. Point at each:
 
 ## 10:30 Prompt 5: the quote
 
-Say: "Now the real job. Today this is an hour across five tools. I'm adding one column to show
+Say: "Now the real job. Today this is an hour across six tools. I'm adding one column to show
 where each fact came from."
 
 ```text
@@ -238,12 +242,15 @@ What comes back:
 Draft: **$930,950 at 14.1%**. Corrected: **$1,003,500 at 18.3%**, plus the $27,000 rebate if
 the deal is registered first. Paul approves it, because it is over $500,000.
 
-Point at the table. Say: "Read down the Source column: Atlas, Teams and OneDrive, in one answer. The price went up $72,550 and the quote got safer. Stock isn't on this list, because the
-truck we just landed fixed it. That's the live data feeding the decision."
+Point at the table. Say: "Read down the Source column: Atlas, Teams and OneDrive, in one answer.
+The price went up $72,550 and the quote got safer. Stock isn't on this list, because the truck
+we just landed fixed it. That's the live data feeding the decision."
 
-Then give the decision. Say: "So I'm not signing this draft. It goes back to Nina with these fixes. Once the corrected quote has its deal registration, I'll sign it. Copilot did the checking. The decision is still mine."
+Then give the decision. Say: "So I'm not signing this draft. It goes back to Nina with these
+fixes. Once the corrected quote has its deal registration, I'll sign it. Copilot did the
+checking. The decision is still mine."
 
-Optional, if you have time. This prompt has not been run in Copilot yet:
+Optional, if you have time. Rehearse it first:
 
 ```text
 Draft my Teams reply to Nina with the corrected quote and what she needs to do before Friday.
@@ -251,26 +258,29 @@ Draft my Teams reply to Nina with the corrected quote and what she needs to do b
 
 ## 13:00 Close
 
-Say: "You saw a simple lookup, an aggregation pipeline and a vector search, all from plain English in one chat. Three things to take away. The data stayed in Atlas. Copilot used my permissions, not a
-service account with the keys to everything. And the setup was a settings change, an index and a
-sign-in, not an application. Any customer with data in Atlas can start there."
+Say: "You saw a simple lookup, an aggregation pipeline and a vector search, all from plain
+English in one chat. Three things to take away. The data stayed in Atlas. Copilot used my
+permissions, not a service account with the keys to everything. And the setup was a settings
+change, an index and a sign-in, not an application. Any customer with data in Atlas can start
+there."
 
 ---
 
 ## If something goes wrong
 
 - **Copilot says it needs a connection.** Check the model picker, then Settings, Sources. Atlas
-  ends a connection after 7 days of inactivity or 30 days. If it still can't connect, put this at the front of the prompt,
-  with your own project and cluster:
+  ends a connection after 7 days of inactivity, or 30 days from the grant. If it still can't
+  connect, put this at the front of the prompt, with your own project and cluster, then paste
+  your prompt after it:
 
-```text
-In the Atlas project '<your-project>', cluster <your-cluster>, database leafy_tech,
-```
+  ```text
+  In the Atlas project '<your-project>', cluster <your-cluster>, database leafy_tech,
+  ```
 
 - **Copilot cites the channel export, not Teams.** That's expected if Teams hasn't indexed the
   posts. Say: "Teams content goes through Microsoft 365's index, which takes time. Atlas doesn't,
   and you just saw the difference."
-- **Copilot stalls.** Use the screen recording of your dry run.
+- **Copilot stalls.** Switch to the recording of your own dry run.
 
 ## Things to know about the data
 

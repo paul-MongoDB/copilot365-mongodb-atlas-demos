@@ -63,7 +63,7 @@ class FixtureTests(unittest.TestCase):
 class LocalMongoTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.temp = tempfile.TemporaryDirectory(prefix="dba-demo-test-")
+        cls.temp = tempfile.TemporaryDirectory(prefix="leafy-dba-test-")
         cls.addClassCleanup(cls.temp.cleanup)
         with socket.socket() as sock:
             sock.bind(("127.0.0.1", 0))
@@ -149,7 +149,7 @@ class LocalMongoTests(unittest.TestCase):
         self.assertEqual(level["was"], 0)
         self.assertNotIn("filter", level)
         self.assertGreater(self.db["system.profile"].count_documents({}), 0)
-        # The planted indexes and the stage change still behave as the script expects.
+        # The workload changes no data or indexes, so the opening state still checks out.
         self.cli("demo_queries.py", "--check", "--phase", "baseline")
 
     def test_unowned_collection_is_never_replaced(self):

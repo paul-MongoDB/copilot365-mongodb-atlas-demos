@@ -1,4 +1,4 @@
-# Copilot 365 + MongoDB Atlas demo: Contoso Mutual claims
+# Microsoft 365 Copilot + MongoDB Atlas demo: Contoso Mutual claims
 
 This is a demo of Microsoft 365 Copilot answering an insurance claims question. It
 combines three sources: claim records in MongoDB Atlas (through the federated connector),
@@ -17,17 +17,21 @@ No real business is accused of anything. See the [disclaimer](../../README.md#di
 | `onedrive/*.docx` | 4 Word documents to upload to OneDrive |
 | `teams/TEAMS_MESSAGES.md` | 5 Teams posts to seed, with who posts each |
 | `DEMO_SCRIPT.md` | The 10-minute run of show: prompts, expected answers, what to say |
-| `stage/stopwatch.html` | Optional on-screen clock. Space advances, R resets |
-| `stage/prompts.txt` | The five natural-language prompts (no database names), for copy and paste |
-| `stage/prompts-explicit.txt` | The same prompts naming the Atlas project and cluster. Backup only |
-| `fallback/*.docx` | The five Teams posts as a Word file. Upload it to OneDrive only if Teams is not indexed |
+| `stage/stopwatch.html` | Optional on-screen clock, with an opening screen (the old way in six steps) and a closing screen (old way vs today). Space advances, R resets |
+| `stage/prompts.txt` | Every prompt for copy and paste, with no database names: Prompts 1 to 5 (Prompt 4 is two questions, 4a and 4b, around the live insert), the optional closer, the Q&A prompts and the fallbacks |
+| `stage/prompts-explicit.txt` | The same prompts naming the Atlas project, cluster and database. Backup only |
+| `fallback/*.docx` | The five Teams posts as a Word file. Upload it to OneDrive too, as a backup in case Teams is not indexed |
 | `scripts/generate_data.py` | Rebuilds `data/` (fixed seed, so the answers stay the same) |
-| `scripts/build_documents.py` | Rebuilds `onedrive/` |
+| `scripts/build_documents.py` | Rebuilds `onedrive/`, and rebuilds `fallback/` from `teams/TEAMS_MESSAGES.md`. Rerun it after editing the posts |
 | `scripts/load_atlas.py` | Loads Atlas and creates the indexes, including the vector index |
-| `scripts/demo_queries.py` | Runs every query the demo needs and prints the expected answers |
-| `scripts/live_insert.py` | Adds one new LeafyDry claim during Act 4 to show Copilot reads Atlas live; `--undo` removes it |
+| `scripts/demo_queries.py` | Read only. Runs the queries behind the prompts and prints the expected answers |
+| `scripts/live_insert.py` | Adds one new LeafyDry claim during Prompt 4 (the live insert) to show Copilot reads Atlas live; `--undo` removes it |
 
-## Setup (about 30 minutes, plus a day for Teams indexing)
+## Setup (about 30 minutes, plus two days for Teams indexing)
+
+Before you start, the MongoDB federated connector must be on in Microsoft 365 and Atlas
+must allow AI clients. [Setup in five steps](../../SETUP_ORIENTATION.md#setup-in-five-steps)
+covers both. Run every command below from the repo root.
 
 ### 1. Atlas
 
@@ -53,7 +57,8 @@ Two requirements to check on your cluster:
   inside an aggregation.
 
 `demo_queries.py --vector` settles the first one. If it prints a ranked list, the index
-works. Prompt 5 in Copilot settles the second.
+works. Prompts 2 and 3 in Copilot settle the second: Prompt 2 needs `aggregate` for a
+`$group`, and Prompt 3 needs it for `$vectorSearch`.
 
 ### 2. OneDrive
 
@@ -66,14 +71,34 @@ Upload the four files in `onedrive/` to a folder such as `OneDrive/Contoso Claim
 
 ### 3. Teams
 
-Follow [teams/TEAMS_MESSAGES.md](teams/TEAMS_MESSAGES.md). Post at least a day before the
-demo so Copilot has indexed the messages. Teams was still not indexed several hours after
-posting, so also upload `fallback/DFW Property Claims channel export.docx` to OneDrive.
+Follow [teams/TEAMS_MESSAGES.md](teams/TEAMS_MESSAGES.md). Teams posts can take several
+hours or more to become searchable, so post at least two days ahead. Also upload
+`fallback/DFW Property Claims channel export.docx` to the same OneDrive folder, as a backup
+in case Teams is not indexed by demo day.
+
+The story's team lead is Paul, the presenter. If you present under another name, replace
+"Paul" in `teams/TEAMS_MESSAGES.md` (Post 2 and its reply), then rebuild the fallback:
+
+```bash
+.venv/bin/python demos/insurance-claims/scripts/build_documents.py
+```
 
 ### 4. Dry run
 
-Open one new Copilot chat, set the model picker to 6.1 sol (not Auto), and run every prompt in `DEMO_SCRIPT.md` once and compare the answers with the expected
-answers there. Copilot's wording will vary between runs. The numbers should not.
+Open one new Copilot chat. In Copilot's model picker, choose a named model, not Auto. Auto
+did not call the connector in our tests. "6.1 sol" worked in rehearsal. Rehearse with the
+model you will present on.
+
+Run every prompt in `DEMO_SCRIPT.md` once, including the live insert, and compare the
+answers with the expected answers there. Copilot's wording will vary between runs. The
+numbers should not. Record your own dry run, so you have a backup if Copilot stalls on
+stage.
+
+When you finish, remove the live claim so the data is back to the scripted state:
+
+```bash
+.venv/bin/python demos/insurance-claims/scripts/live_insert.py --undo
+```
 
 ## Regenerating
 

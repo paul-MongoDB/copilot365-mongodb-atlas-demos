@@ -17,18 +17,15 @@ import sys
 import threading
 import time
 
-from _demo import (COLLECTION, DATABASE, MAX_TIME_MS, PROFILE_FILTER, UNUSED_INDEX, USED_INDEX,
-                   client, require_fixture, run)
+from _demo import (COLLECTION, COUNT, DATABASE, MAX_TIME_MS, PROFILE_FILTER, REDUNDANT_INDEX, SERVICES,
+                   START, STATUSES, TENANTS, UNUSED_INDEX, USED_INDEX, client, require_fixture, run)
 
-START = dt.datetime(2026, 10, 1)
 PROFILE_BYTES = 16 * 1024 * 1024
-SERVICES = ("ingestion", "reporting", "sync")
-STATUSES = ("open", "running", "complete", "failed")
 
 
 def tenant_queue(coll, rng):
     """The worker's main screen: newest 20 items in one tenant's queue. No index fits it."""
-    return list(coll.find({"tenant_id": f"tenant-{rng.randrange(100):03d}", "status": rng.choice(STATUSES)})
+    return list(coll.find({"tenant_id": f"tenant-{rng.randrange(TENANTS):03d}", "status": rng.choice(STATUSES)})
                 .sort("created_at", -1).limit(20).max_time_ms(MAX_TIME_MS))
 
 
@@ -47,7 +44,7 @@ def daily_report(coll, rng):
 
 def item_lookup(coll, rng):
     """Detail page: one item by _id. Always efficient."""
-    return coll.find_one({"_id": rng.randrange(30_000)}, max_time_ms=MAX_TIME_MS)
+    return coll.find_one({"_id": rng.randrange(COUNT)}, max_time_ms=MAX_TIME_MS)
 
 
 # Weights are rough shares of traffic: the queue screen dominates, the report is occasional.
@@ -110,6 +107,7 @@ def report(db, counts, seconds):
             s["plan"] == "COLLSCAN" and set(s["filter"] or {}) == {"created_at"} for s in shapes),
         f"{USED_INDEX} was used": usage.get(USED_INDEX, 0) > 0,
         f"{UNUSED_INDEX} was never used": usage.get(UNUSED_INDEX) == 0,
+        f"{REDUNDANT_INDEX} was never used": usage.get(REDUNDANT_INDEX) == 0,
         "profiler is off and its filter is unset": level.get("was") == 0 and not level.get("filter"),
     }
     print()

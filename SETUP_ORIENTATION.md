@@ -41,8 +41,9 @@ Copilot combines them in one reply.
 5. **Each user connects once.** In Copilot Chat: the ... menu, Settings, Sources, select the
    source, Connect. The user signs in to Atlas in the browser.
 
-A user sees the connector only if all of these allow it: Agent and plugin access, the connector
-being enabled, User access, staged rollout, and a Microsoft 365 Copilot license.
+A user sees the connector only if all of these allow it: the agent and plugin access setting,
+the connector being enabled, the user access setting, staged rollout, and a Microsoft 365
+Copilot license.
 
 ## Questions technical people ask
 
@@ -58,22 +59,22 @@ being enabled, User access, staged rollout, and a Microsoft 365 Copilot license.
 | What about a database outside Atlas? | The managed MCP server reaches Atlas clusters only. For anything else, run the MCP server yourself. |
 | Can we build our own connector? | Yes: a custom federated connector needs an MCP server URL, a description, and Entra SSO, OAuth 2.0 or no authentication. |
 
-## What we learned building these demos
+## Tips from building these demos
 
-- Copilot's model picker matters. New chats start on Auto, and Auto failed to reach the database.
-  6.1 sol worked.
+- Pick a named model in Copilot's model picker. New chats start on Auto, and in our tests Auto
+  did not call the connector. Each demo names the models that worked in rehearsal.
 - Prompt wording drives tool choice. "Similar in meaning" brought back `$vectorSearch`. "In Teams"
   limited Copilot to Teams.
 - A field has to exist for a question to work. "Added today" failed because the catalog had no
   date-added field. "Most recently updated" worked.
 - Atlas is live, but Teams is not instant. Atlas changes appear in the next answer. Teams posts
-  were still not searchable several hours after posting.
+  can take several hours or more to become searchable, so post them at least two days ahead.
 - The connector must expose `aggregate`, because `$vectorSearch` runs inside an aggregation.
 
 ## Sources
 
 - [Federated connectors overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview)
 - [Set up custom federated connectors](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors)
-- [MCP access models for MongoDB Atlas](https://www.mongodb.com/docs/mcp-server/remote-mcp/access-models.md)
-- [Manage AI client access](https://www.mongodb.com/docs/mcp-server/remote-mcp/manage-ai-client-access.md)
-- [Security, governance and auditability](https://www.mongodb.com/docs/mcp-server/remote-mcp/security.md)
+- [MCP access models for MongoDB Atlas](https://www.mongodb.com/docs/mcp-server/remote-mcp/access-models)
+- [Manage AI client access](https://www.mongodb.com/docs/mcp-server/remote-mcp/manage-ai-client-access)
+- [Security, governance and auditability](https://www.mongodb.com/docs/mcp-server/remote-mcp/security)

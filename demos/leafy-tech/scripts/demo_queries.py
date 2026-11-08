@@ -29,15 +29,27 @@ QUOTE = "Q-2026-4471"
 FIXED_LINES = [("FB-MB14C", 10), ("WT-CD2", 10), ("FB-W4", 10), ("LT-IMG", 0)]  # (sku, discount %)
 QTY = 500
 REBATE_PCT = 4
+# Prompt 2: the top five healthcare customers with no security spend.
+CROSS_SELL_TOP5 = [("Copper Crossing Family Clinics", 1235175), ("Hollow Heights Family Clinics", 1172221),
+                   ("Hollow Crossing Health", 1023571), ("Lakeshore Park Family Clinics", 967707),
+                   ("Clover Heights Regional Hospital", 919405)]
+# Prompt 3: the top 10 customers by devices whose warranty ends in the window.
+WARRANTY_TOP10 = [("Willow Bend Health", 640), ("Ironwood Heights Law Group", 254),
+                  ("Lakeshore Park Family Clinics", 231), ("Redwood Crossing Water Authority", 227),
+                  ("Sable Creek County", 179), ("Redwood Grove County", 174), ("Bluff Heights Medical Center", 173),
+                  ("Hollow Crossing Health", 168), ("Birch Heights Regional Hospital", 164),
+                  ("Fox Heights Plastics", 153)]
 
 failures: list[str] = []
 
 
-def check(label: str, got, want) -> None:
+def check(label: str, got, want, hint: str = "") -> None:
     ok = got == want
     print(f"  {'ok ' if ok else 'BAD'} {label}: {got}" + ("" if ok else f" (expected {want})"))
     if not ok:
         failures.append(label)
+        if hint:
+            print(f"      {hint}")
 
 
 def vector_match(db, limit: int = 5) -> list[dict]:
@@ -87,7 +99,9 @@ def quote_math(db) -> dict:
 
 
 def hood(db) -> None:
-    idx = next(iter(db.products.list_search_indexes("product_semantic")))
+    idx = next(iter(db.products.list_search_indexes("product_semantic")), None)
+    if not idx:
+        sys.exit("The vector index product_semantic does not exist. Run load_atlas.py first.")
     print("1. The whole vector index. Atlas embeds `description` itself with voyage-4:\n")
     print(json.dumps(idx["latestDefinition"], indent=2))
     doc = db.products.find_one({"sku": "FB-MB14C"}, {"_id": 0, "sku": 1, "name": 1, "list_price": 1, "stock": 1})
@@ -103,10 +117,10 @@ def hood(db) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true")
-    ap.add_argument("--hood", action="store_true")
-    ap.add_argument("--pipeline", action="store_true")
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--check", action="store_true", help="exit 1 if a checked number drifted")
+    ap.add_argument("--hood", action="store_true", help="print the index, a document and the query")
+    ap.add_argument("--pipeline", action="store_true", help="print the warranty aggregation and its result")
     args = ap.parse_args()
     uri = os.environ.get("MONGODB_URI") or sys.exit("Set MONGODB_URI first.")
     db = MongoClient(uri)[os.environ.get("MONGODB_DB_TECH", "leafy_tech")]
@@ -121,24 +135,28 @@ def main() -> None:
     matches = vector_match(db)
     for r in matches:
         print(f"  {r['score']:.3f}  {r['name']}")
-    check("top match", matches[0]["name"], "Fabrikam MedBook 14 Clinical")
+    check("top match", matches[0]["name"] if matches else "no results", "Fabrikam MedBook 14 Clinical",
+          "" if matches else "Vector search returned nothing. Is the index product_semantic built? See load_atlas.py.")
 
     print("Prompt 3: warranties ending by Jan 31, 2027")
     rows = warranties(db)
     for r in rows:
         print(f"  {r['_id']} | {r['industry']} | {r['am']} | {r['devices']} devices | ${r['spend']:,}")
-    check("first customer", rows[0]["_id"], "Willow Bend Health")
-    check("no tie at rank 10", rows[9]["devices"] != rows[10]["devices"], True)
+    check("top 10 in order", [(r["_id"], r["devices"]) for r in rows[:10]], WARRANTY_TOP10)
+    check("no tie at rank 10", len(rows) > 10 and rows[9]["devices"] != rows[10]["devices"], True)
 
     print("Prompt 2: healthcare customers with no security spend")
-    for r in cross_sell(db):
+    top5 = cross_sell(db)
+    for r in top5:
         print(f"  {r['name']} | {r['account_manager']} | ${r['spend_last_12_months']:,}")
+    check("top five in order", [(r["name"], r["spend_last_12_months"]) for r in top5], CROSS_SELL_TOP5)
 
-    print("Prompt 1: stock")
+    print("Prompts 1a/1b: stock")
     stock = db.products.find_one({"sku": "FB-MB14C"})["stock"]
     for s in stock:
         print(f"  {s['warehouse']}: on hand {s['on_hand']}, reserved {s['reserved']}, available {s['available']}")
-    check("available before the truck", sum(s["available"] for s in stock), 320)
+    check("available before the truck", sum(s["available"] for s in stock), 320,
+          "The truck from an earlier run is still in. Run live_insert.py --undo first.")
     check("G2 docks available", sum(s["available"] for s in db.products.find_one({"sku": "WT-CD2"})["stock"]) >= QTY, True)
 
     print("Prompt 5: the quote")

@@ -1,12 +1,11 @@
-MOVIE DEMO: NATURAL PROMPTS (use these on stage)
+LEAFY CINEMA DEMO: NATURAL PROMPTS (use these on stage)
 No project, cluster or database names. Prompt 5 names Atlas on purpose, for the Source column. This is what a real user would type.
-Set the Copilot model picker to "6.1 sol", NOT Auto. Auto failed to reach the database in the
-insurance demo. Open ONE new chat and run every prompt in it.
-STATUS: the Atlas side of every prompt was checked on 2026-11-04 with scripts/demo_queries.py.
-The main flow passed in Copilot on 2026-11-04 in the old order. This simple-to-advanced order has not been run yet.
-The Q&A prompts and the follow-ups marked below have not been run in Copilot.
+In Copilot's model picker, choose a named model, not Auto. Auto did not call the connector in our tests.
+We rehearsed this demo on "6.1 sol". Rehearse with the model you will present on.
+Open ONE new chat and run every prompt in it. Rehearse every prompt before presenting.
+Check the Atlas side first: .venv/bin/python demos/leafy-cinema/scripts/demo_queries.py --check
 
-PROMPT 1a  (Atlas: simple lookup, BEFORE the insert. Expect: Drinking Buddies, Va Savoir, A Town Like Alice, all dated Sept 2015.)
+PROMPT 1a  (Atlas: simple lookup, BEFORE the insert. Expect: Drinking Buddies, Va Savoir (Who Knows?), A Town Like Alice, all dated Sept 2015.)
 What are the three most recently updated films in our movie catalog? Show title, year and last updated.
 
 -- terminal, project root:  .venv/bin/python demos/leafy-cinema/scripts/live_insert.py   (wait for "vector search sees it")
@@ -30,7 +29,7 @@ Which movies did critics love but audiences didn't? Among movies with at least 4
   Expect: Spy Kids (2001) 93 vs 45, Night Moves (2013) 86 vs 41, Antz (1998) 95 vs 51,
   Mr. Turner (2014) 98 vs 56, Stuart Little 2 (2002) 81 vs 41.
   Fifth place is a tie at 40 points: Copilot may show Nurse Betty (2000) 84 vs 44 instead.
-  Technical room follow-up, not yet run in Copilot: Show me the exact query you ran for that answer.
+  Technical room follow-up. Optional. Rehearse it first: Show me the exact query you ran for that answer.
 
 PROMPT 4  (Teams + Atlas: vector search. The half-remembered movie)
 Dana at the box office has a customer who can't remember the name of a movie. Find out how the customer described it, then tell me which movie it is by matching that description to the plots in our movie catalog. Keep it under 60 words.
@@ -45,6 +44,9 @@ Helen needs me to check her draft Hidden Gems lineup. Show one table with Film, 
 
   If the answer skips a source or the table comes back messy, use this longer version:
   Helen asked me to check her draft Hidden Gems lineup before she signs the contracts. Using our movie catalog, the series guidelines, the license rate card, last year's lineups and what the team has said: what breaks the rules, and what does it cost against the budget? Show one table with Film, Year, Minutes, Rating, License fee and Problem columns. Name where each rule comes from: catalog, guidelines, rate card, last year's lineups or team notes. Then give the total against the budget and three swaps that fix every problem. Keep it short.
+  Or name the missing source, in the same chat:
+  Also check last year's lineups.
+  Also check what Walt said about show length.
 
   Expect five problems and $5,350 against $4,800 (over by $550):
     Leviathan (2014): 140 minutes, over the 125-minute limit (team notes)
@@ -53,14 +55,14 @@ Helen needs me to check her draft Hidden Gems lineup. Show one table with Film, 
     Three R-rated films ('71, Murderball, Leviathan) when the guidelines allow two (guidelines)
     Budget: $5,350 against $4,800 (rate card plus Helen's post)
   Swaps must come out under $4,800 and keep at least two non-English films. One valid fix is
-  Robin Hood (1938), The Rules of the Game (1939), Belle de Jour (1967): total $4,350.
-  Copilot may pick other films. Check them against the five rules, not against this list.
+  The Adventures of Robin Hood (1938), The Rules of the Game (1939), Belle de Jour (1967): total $4,350.
+  Copilot may pick other films. Check them against the rules, not against this list.
 
 OPTIONAL CLOSER  (only if under 8:30 on the clock)
 Draft my Teams reply to Helen with the fixed lineup and the new total.
 
 -----------------------------------------------------------------
-Q&A PROMPTS  (only if someone asks "can it do X?". Not yet run in Copilot.)
+Q&A PROMPTS  (only if someone asks "can it do X?". Optional. Rehearse them first.)
 
 Analytics across films:
 Which directors with at least six films since 1980 have the highest average IMDb rating? Show the top three with film count and average.

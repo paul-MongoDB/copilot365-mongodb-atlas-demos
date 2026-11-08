@@ -1,9 +1,8 @@
 """Load the demo data into MongoDB and create the indexes the demo needs.
 
-Usage:
-    export MONGODB_URI="mongodb+srv://<user>:<password>@<cluster-host>/"
-    python scripts/load_atlas.py            # drop + reload claims and policies
-    python scripts/load_atlas.py --no-vector  # skip the vector index (local testing)
+From the repo root, with MONGODB_URI set in the root .env file:
+    .venv/bin/python demos/insurance-claims/scripts/load_atlas.py              # drop and reload claims and policies
+    .venv/bin/python demos/insurance-claims/scripts/load_atlas.py --no-vector  # skip the vector index (local testing)
 
 Database: contoso_claims (override with MONGODB_DB).
 
@@ -16,16 +15,14 @@ Copilot: the connector can pass the user's words straight through.
 
 from __future__ import annotations
 
-import sys as _sys
-from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "common"))
-import _env  # noqa: F401  loads the top-level .env
-
 import argparse
 import os
 import sys
 import time
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "common"))
+import _env  # noqa: F401  loads the top-level .env
 
 from bson import json_util
 from pymongo import ASCENDING, DESCENDING, MongoClient
@@ -56,7 +53,8 @@ def load(db, name: str) -> int:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--no-vector", action="store_true", help="skip the Atlas vector search index")
     args = ap.parse_args()
 

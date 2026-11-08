@@ -1,8 +1,9 @@
 LEAFY DBA DEMO: one new Copilot chat, Atlas source connected.
-Replace <PROJECT_ID> and <CLUSTER_NAME> with the sandbox values from rehearsal.
+Copy this file to prompts.local.txt (git ignores it), then replace <PROJECT_ID> and
+<CLUSTER_NAME> there with the sandbox values from rehearsal.
 Paste one numbered prompt at a time. Notes and optional prompts are not part of the core run.
-Before presenting: load_atlas.py, then run_workload.py (60 seconds), so index usage and the
-profiler hold real traffic. Counts below are from a 60-second run and vary a little per run.
+Before presenting: load_atlas.py --reset, then run_workload.py (60 seconds), so index usage and
+the profiler hold real traffic. Counts below are from a 60-second run and vary a little per run.
 
 1  PROJECTS
 Use the MongoDB Atlas source to list the projects my signed-in account can access. Show each project's name and ID. Retrieve remaining pages if supported; otherwise say the list is partial. Use returned inventory, not examples. Do not make changes or show connection strings. Keep all operations read-only throughout this conversation.
@@ -26,7 +27,7 @@ For leafy_dba.work_items, are there any indexes I should remove? Use the index d
   A strong answer also says: hide the index first (hideIndex), watch, then drop. And: the
   counters are per node and reset on restart, so check every node over a full business cycle.
 
-5  WHAT IS SLOW? (the database profiler)
+5  WHAT IS SLOW? (DATABASE PROFILER)
 The database profiler has been recording inefficient operations in leafy_dba. Read the system.profile collection and group the operations on work_items by query shape. For each shape show the filter fields, sort, number of runs, average milliseconds, average documents examined, average documents returned, plan summary and whether it sorted in memory. Then recommend the indexes that would fix them, with exact key order, following the equality, sort, range guideline. Do not create anything.
 
   Expect two shapes:
@@ -56,7 +57,7 @@ OPTIONAL  SLOW QUERY LOG
 Check the server's recent log for slow query entries on leafy_dba.work_items. Summarize the query shapes, durations and plan summaries you find. Does the log tell the same story as the profiler? Keep this read-only.
 
   The workload's profiler filter also writes these operations to the log as "Slow query" lines.
-  Not run in Copilot yet: the connector may not expose the log tool.
+  Depends on the connector exposing the log tool.
 
 OPTIONAL  ALERTS AND ADVISOR
 In project <PROJECT_ID>, inspect triggered alerts and any available Performance Advisor recommendations for <CLUSTER_NAME>. Separate actual findings from unavailable data. If recommendations are empty, say so. Do not infer that the cluster is healthy or fabricate slow queries. Keep this read-only.
