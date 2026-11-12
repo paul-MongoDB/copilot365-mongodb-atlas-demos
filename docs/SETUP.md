@@ -98,9 +98,11 @@ search unconfigured. See each [demo's README](../README.md) for its own loading 
 
 Leafy Tech uses Automated Embedding on `products.description` with `voyage-4`. Atlas generates
 and stores embeddings rather than requiring application-managed vectors. Dedicated M10+
-clusters require storage auto-scaling for this feature. Automated Embedding is documented as
-Preview independently of the GA connector; verify supported deployments and feature status in
-the [MongoDB documentation](https://www.mongodb.com/docs/vector-search/crud-embeddings/automated-embedding/).
+clusters require storage auto-scaling for this feature. Automated Embedding in Atlas Vector
+Search is generally available, as confirmed in MongoDB's
+[August 12, 2026 announcement](https://www.mongodb.com/products/updates/now-ga-automated-embedding-in-atlas-vector-search/).
+Verify supported deployments, models and regions in the
+[MongoDB documentation](https://www.mongodb.com/docs/vector-search/crud-embeddings/automated-embedding/).
 
 To inspect the index, open the cluster's **Search & Vector Search**, select **leafy_tech →
 products**, and check **product_semantic**. Its definition is:
