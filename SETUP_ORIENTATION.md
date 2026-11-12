@@ -2,6 +2,9 @@
 
 For technical audiences. Takes about three minutes to present.
 
+For accounts, licensing, administrative configuration and validation, use
+the [setup guide](docs/SETUP.md). This page is the architecture overview.
+
 ## The path of one question
 
 ```
@@ -36,8 +39,10 @@ Copilot combines them in one reply.
 
 **In Microsoft 365**
 
-4. **Turn on the connector.** A Global Administrator or AI Administrator opens the Microsoft 365
+4. **Turn on the connector.** An administrator with the effective connector-management role opens the Microsoft 365
    admin center, then Copilot, then Connectors. Enable the connector and stage it to a pilot group.
+   Microsoft's connector availability guide currently lists Global Administrator or Search Administrator;
+   see the setup guide for the role/task distinction and current navigation.
 5. **Each user connects once.** In Copilot Chat: the ... menu, Settings, Sources, select the
    source, Connect. The user signs in to Atlas in the browser.
 
@@ -49,7 +54,7 @@ Copilot license.
 
 | Question | Answer |
 |---|---|
-| Is our data copied to Microsoft? | No. Federated connectors fetch at question time and index nothing into Microsoft 365. |
+| Is our data indexed in Microsoft 365? | Federated Atlas retrieval does not synchronize data into the Microsoft 365 search index. Requested results are transmitted to Copilot for reasoning. |
 | Whose permissions apply? | The signed-in user's. Copilot cannot exceed their Atlas role. |
 | Does Copilot see a connection string? | No. Atlas never exposes database connection details or user credentials to the client. |
 | Can it write? | In Read mode, write tools are not offered to the client. `aggregate` is still offered, but `$out` and `$merge` fail. |
@@ -60,6 +65,9 @@ Copilot license.
 | Can we build our own connector? | Yes: a custom federated connector needs an MCP server URL, a description, and Entra SSO, OAuth 2.0 or no authentication. |
 
 ## Tips from building these demos
+
+These are historical presenter observations, not guaranteed behavior for every tenant or model.
+Validate the actual model and tool calls before relying on a demo.
 
 - Pick a named model in Copilot's model picker. New chats start on Auto, and in our tests Auto
   did not call the connector. Each demo names the models that worked in rehearsal.

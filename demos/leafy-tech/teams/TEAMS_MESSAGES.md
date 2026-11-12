@@ -19,7 +19,7 @@ Willow Bend quote ready for sign-off
 ```
 Posting for Nina Patel, Account Manager:
 
-Paul, the Willow Bend Health laptop refresh is in the system as quote Q-2026-4471: 500 clinical laptops with docks, warranty and imaging. They pushed hard on price, so I went to 14% off on every line. They want it by Friday, and it is over $500,000, so it needs your sign-off.
+Sales Director, the Willow Bend Health laptop refresh is in the system as quote Q-2026-4471: 500 clinical laptops with docks, warranty and imaging. They pushed hard on price, so I went to 14% off on every line. They want it by Friday, and it is over $500,000, so it needs your sign-off.
 ```
 
 ---

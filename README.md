@@ -1,4 +1,4 @@
-# Copilot + MongoDB Atlas demos
+# Microsoft 365 Copilot + MongoDB Atlas demos
 
 Demos of Microsoft 365 Copilot (with Work IQ) reading live data in MongoDB Atlas through the
 Atlas federated connector, together with Teams and OneDrive.
@@ -10,6 +10,7 @@ Atlas federated connector, together with Teams and OneDrive.
 | Leafy Tech (IT reseller) | A sales director checks a laptop quote for technical audiences | `leafy_tech`, generated and loaded by script | [demos/leafy-tech](demos/leafy-tech/README.md) |
 | Leafy DBA (operations) | A DBA finds indexes to drop, reads the profiler for slow queries, and verifies an index fix | `leafy_dba`, generated and loaded by script | [demos/leafy-dba](demos/leafy-dba/README.md) |
 
+Start with the [setup guide](docs/SETUP.md) for accounts, licensing, permissions and configuration.
 For how Copilot connects to Atlas, see [SETUP_ORIENTATION.md](SETUP_ORIENTATION.md).
 
 Each demo folder has `DEMO_SCRIPT.md`, `README.md`, `stage/` (prompts) and `scripts/`.
@@ -23,7 +24,8 @@ You need:
 - Python 3 (tested with 3.13).
 - A dedicated sandbox Atlas cluster. We used an M10. The Leafy DBA demo runs the database
   profiler, which free and shared tiers may not allow.
-- Microsoft 365 Copilot licenses, with Work IQ on, and an admin who can turn on the MongoDB
+- Qualifying Microsoft base subscriptions and assigned Microsoft 365 Copilot licenses, with Work IQ available,
+  and an admin who can turn on the MongoDB
   Atlas connector. [SETUP_ORIENTATION.md](SETUP_ORIENTATION.md) has the five setup steps.
 - For the business demos, Teams and OneDrive in the same tenant, to hold the seeded posts and
   documents.
@@ -58,6 +60,8 @@ Copy a folder under `demos/`, change the data and prompts, and keep the same lay
   replaces only its owned fixture and indexes. Its presenter script creates or removes one named
   index in that collection. Its workload script turns the database profiler on for `leafy_dba`
   only, replaces `leafy_dba.system.profile`, and turns the profiler off again when done.
+- The Leafy Tech loader refuses nonempty demo collections by default; `--replace-demo-data` explicitly
+  replaces them. Use it only when intentionally reloading disposable demo data.
 - Keep your connection string in `.env`, which git ignores. Never commit it or paste it into a
   prompt, issue or pull request.
 - Give the scripts a database user limited to the demo databases. Give Copilot users read-only

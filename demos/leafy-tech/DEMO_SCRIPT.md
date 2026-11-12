@@ -3,7 +3,7 @@
 **Audience:** technical audiences. They want to know how it works, not only what it does.
 
 **The one thing they should leave with:** one chat can query live Atlas data and read Teams and
-OneDrive together, using the signed-in user's permissions, with no data copied and no custom app.
+OneDrive together, using the signed-in user's permissions, with no Atlas synchronization into the Microsoft 365 search index and no custom app.
 
 ## Simple to advanced, one chat
 
@@ -18,19 +18,19 @@ Copilot picks the query at run time, so say what the question needs, not what yo
 
 ## The story
 
-Leafy Tech is a fictional IT reseller. Paul is its Sales Director. Nina, an account manager, has
-drafted a quote for 500 clinical laptops for Willow Bend Health, and it needs Paul's sign-off
+Leafy Tech is a fictional IT reseller. You are its Sales Director. Nina, an account manager, has
+drafted a quote for 500 clinical laptops for Willow Bend Health, and it needs the Sales Director's sign-off
 before Friday. The catalog, stock, customers and quotes live in **Atlas**. The team's notes live
 in **Teams**. The policy, rebate rules and customer contract live in **OneDrive**.
 
-### What Paul has to do to sign off
+### What the Sales Director has to do to sign off
 
 Nina posted quote Q-2026-4471 in Teams: 500 laptops with docks, warranty and imaging, at 14% off
 every line. Any quote over $500,000 needs the Sales Director's sign-off before it goes to the
-customer, so it can't go out until Paul approves it. To approve it, Paul has to confirm five
+customer, so it can't go out until the Sales Director approves it. To approve it, the Sales Director has to confirm five
 things:
 
-| What Paul must confirm | The rule | Where the answer is | Prompt |
+| What the Sales Director must confirm | The rule | Where the answer is | Prompt |
 |---|---|---|---|
 | We can ship all 500 | Available stock must cover the quantity quoted | Atlas | 1a, 1b |
 | It's the right product | It has to meet what the nurses asked for | Teams, Atlas | 4 |
@@ -38,23 +38,23 @@ things:
 | The deal makes money | Gross margin must be at least 15%, with no exceptions | OneDrive, Atlas | 5 |
 | The rebate is protected | The Fabrikam deal registration must be approved before the quote goes out | Atlas, Teams, OneDrive | 5 |
 
-### How Paul uses the system
+### How the Sales Director uses the system
 
-Without Copilot, Paul opens the quote system, the inventory screen, the contract, the discount
+Without Copilot, the Sales Director opens the quote system, the inventory screen, the contract, the discount
 policy, the rebate rules and the Teams channel, then works out the margin himself. In this demo
 he stays in one Copilot chat and asks plain questions. Copilot reads Atlas, Teams and OneDrive
-with Paul's own permissions and shows the source for each fact.
+with the Sales Director's own permissions and shows the source for each fact.
 
-Copilot doesn't approve anything. It only reads the data, and Paul makes the decision:
+Copilot doesn't approve anything. It only reads the data, and the Sales Director makes the decision:
 
-1. **Paul checks the quote in Copilot.** The stock is covered once the truck lands. The draft
+1. **The Sales Director checks the quote in Copilot.** The stock is covered once the truck lands. The draft
    fails on price, warranty, the dock and margin, and the deal isn't registered.
-2. **Paul sends it back to Nina.** He doesn't sign the draft, because $930,950 at 14.1% is under
-   the 15% floor. Copilot can draft his Teams reply, and Paul reviews and sends it.
+2. **The Sales Director sends it back to Nina.** He doesn't sign the draft, because $930,950 at 14.1% is under
+   the 15% floor. Copilot can draft his Teams reply, and the Sales Director reviews and sends it.
 3. **Nina fixes it.** The quote changes to 10% off, the G2 dock, the 4-year warranty and imaging at
    list price. The new total is $1,003,500 at 18.3%. Nina also gets the deal registration filed,
    which takes one business day to approve.
-4. **Paul signs off.** Once the corrected quote has its registration ID, Paul approves it and it
+4. **The Sales Director signs off.** Once the corrected quote has its registration ID, the Sales Director approves it and it
    goes to Willow Bend by Friday.
 
 Say it in 20 seconds: "Nina can't send this quote without my sign-off. Before I sign, I have to
@@ -135,8 +135,8 @@ true now."
 Say: "So how did that work?" Then walk through [SETUP_ORIENTATION.md](../../SETUP_ORIENTATION.md):
 the path of one question, then the five setup steps.
 
-Say: "What you just saw ran through that path, and so does everything else today. There's no copy
-of the data in Microsoft 365, and Copilot gets exactly the access I have."
+Say: "What you just saw ran through that path, and so does everything else today. Atlas is queried at question time rather than synchronized into Microsoft 365's search index.
+Requested results are returned to Copilot, bounded by my Atlas roles and the organization access mode."
 
 ## 5:00 Prompt 2: cross-sell (filter and sort, optional)
 
@@ -240,7 +240,7 @@ What comes back:
 | No deal registration, so $27,000 of rebate at risk | Atlas quote, OneDrive rebate rules, Grace's Teams note |
 
 Draft: **$930,950 at 14.1%**. Corrected: **$1,003,500 at 18.3%**, plus the $27,000 rebate if
-the deal is registered first. Paul approves it, because it is over $500,000.
+the deal is registered first. The Sales Director approves it, because it is over $500,000.
 
 Point at the table. Say: "Read down the Source column: Atlas, Teams and OneDrive, in one answer.
 The price went up $72,550 and the quote got safer. Stock isn't on this list, because the truck

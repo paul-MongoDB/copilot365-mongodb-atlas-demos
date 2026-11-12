@@ -39,12 +39,15 @@ hours or more to become searchable by Copilot, so do this first.
 
 ### 2. Atlas
 
-The data is already in `data/*.json`. Load it, which replaces the data in `leafy_tech` and builds
+The data is already in `data/*.json`. In an empty sandbox, load it, which populates `leafy_tech` and builds
 the indexes, including the vector index `product_semantic`:
 
 ```bash
 .venv/bin/python demos/leafy-tech/scripts/load_atlas.py
 ```
+
+The loader refuses an existing demo by default. To intentionally replace disposable demo data,
+pass `--replace-demo-data`. Do not reload while another process is using the demo.
 
 Then check the numbers the demo depends on:
 

@@ -37,8 +37,17 @@ VECTOR_DEFINITION = {
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--replace-demo-data", action="store_true", help="explicitly replace existing demo collections")
+    ap.add_argument("--no-vector", action="store_true", help="local integration testing only; skips semantic search setup")
+    args = ap.parse_args()
     uri = os.environ.get("MONGODB_URI") or sys.exit("Set MONGODB_URI first.")
-    db = MongoClient(uri)[os.environ.get("MONGODB_DB_TECH", "leafy_tech")]
+    db = MongoClient(uri, serverSelectionTimeoutMS=10000)[os.environ.get("MONGODB_DB_TECH", "leafy_tech")]
+
+    if not args.replace_demo_data and any(db[n].count_documents({}, limit=1)
+                                         for n in ("products", "customers", "orders", "quotes", "receipts")):
+        sys.exit("Demo data already exists. Loader stopped before changes. Run demo_queries.py --check, or explicitly "
+                 "pass --replace-demo-data only in your dedicated sandbox.")
 
     db.receipts.drop()
     for name in ("customers", "orders", "quotes"):
@@ -61,7 +70,14 @@ def main() -> None:
     db.quotes.create_index([("quote_number", ASCENDING)], unique=True)
     print("b-tree indexes created")
 
-    if not next(iter(db.products.list_search_indexes(VECTOR_INDEX)), None):
+    if args.no_vector:
+        print("Vector setup skipped. Semantic search has not been configured or verified.")
+        return
+
+    existing = next(iter(db.products.list_search_indexes(VECTOR_INDEX)), None)
+    if existing and existing.get("latestDefinition") != VECTOR_DEFINITION:
+        sys.exit("Existing product_semantic definition differs. Inspect it in Atlas before continuing.")
+    if not existing:
         try:
             db.products.create_search_index(
                 SearchIndexModel(definition=VECTOR_DEFINITION, name=VECTOR_INDEX, type="vectorSearch"))
@@ -76,11 +92,8 @@ def main() -> None:
             return
         print(".", end="", flush=True)
         time.sleep(5)
-    print("\nStill building after 10 minutes. Check the Atlas UI.")
+    sys.exit("\nStill building after 10 minutes. Preparation is incomplete. Check the Atlas UI.")
 
 
 if __name__ == "__main__":
-    # No options: this only makes --help print the description instead of running.
-    argparse.ArgumentParser(description=__doc__,
-                            formatter_class=argparse.RawDescriptionHelpFormatter).parse_args()
     main()

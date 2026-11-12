@@ -18,3 +18,6 @@ __pycache__/
 
 # Private stage copies with your real project and cluster names
 *.local.txt
+
+# Local delivery notes and evidence; never publish this directory
+/private-delivery/
